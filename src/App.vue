@@ -4,7 +4,7 @@ import TheHeader
 </script>
 
 <template>
-  <header>
+  <header >
     <TheHeader />
   </header>
   <main>

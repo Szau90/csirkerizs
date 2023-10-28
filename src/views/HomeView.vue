@@ -1,4 +1,8 @@
 <template>
-
-    <p class="text-red-600 font-extrabold text-[69px]">HOME PAGE</p>
+<TheHero/>
 </template>
+
+<script setup>
+import TheHero from "../components/Home/TheHero.vue";
+
+</script>
