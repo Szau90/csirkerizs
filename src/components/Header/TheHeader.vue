@@ -1,11 +1,14 @@
 <template>
+
+
   <div
-    class="flex flex-row  flex-auto items-center justify-center md:justify-between mt-2 md:px-6 lg:px-[10.41%]"
+    class="container mx-auto flex flex-row flex-auto items-center justify-center  mt-2 px-2 "
   >
     <TheNavigation />
     <TheLogo />
     <HeaderActions />
   </div>
+
 </template>
 
 <script setup>
