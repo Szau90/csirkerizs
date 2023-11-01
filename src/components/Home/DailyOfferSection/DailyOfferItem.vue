@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+const props = defineProps ({
+  meal: {
+ title: {type: String}
+  }
+})
+
+</script>
 
 <template>
   <div
@@ -12,7 +19,7 @@
       class="-mb-1/2 pr-5"
     />
    <div class="flex flex-col gap-2">
-    <h1 class="text-title-xl text-center">Az étel hangzatos neve</h1>
+    <h1 class="text-title-xl text-center">{{ props.meal.title }}</h1>
     <p class="text-textColor text-center">
       Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika,
       kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring
