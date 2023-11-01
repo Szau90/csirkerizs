@@ -2,7 +2,7 @@
 
 
   <div
-    class="container mx-auto flex flex-row flex-auto items-center justify-center  mt-2 px-2 "
+    class="container mx-auto flex flex-row flex-auto items-center justify-center  mt-7 px-2 overflow-hidden"
   >
     <TheNavigation />
     <TheLogo />
