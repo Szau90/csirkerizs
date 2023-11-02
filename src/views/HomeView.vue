@@ -1,12 +1,12 @@
 <script setup>
 import TheHero from "../components/Home/HeroSection/TheHero.vue";
 import SectionContent from "../components/Home/BodóImreSection/SectionContent.vue";
-import DailyOfferItem from "../components/Home/DailyOfferSection/DailyOfferItem.vue";
+import DailyOfferList from "../components/Home/DailyOfferSection/DailyOfferList.vue";
 </script>
 
 <template>
   <TheHero />
   <SectionContent />
-  <DailyOfferItem/>
+  <DailyOfferList />
 </template>
 

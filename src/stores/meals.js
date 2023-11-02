@@ -22,7 +22,7 @@ export const useMealsStore = defineStore('meals', () => {
     },
     {
       id: Math.floor(Math.random() * 100),
-      title: 'Az étel hangzatos neve',
+      title: 'termék 2',
       image: 'src/assets/images/csirke_rizs_home-image.png',
       description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
       category: 'tálcás menük',
@@ -34,7 +34,24 @@ export const useMealsStore = defineStore('meals', () => {
         zsír: 3.44
       },
       price: '2 390 Forint',
-      isOnWishlist: false,
+      isOnWishlist: true,
+      isHighlightedProduct: false
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'termék 3',
+      image: 'src/assets/images/csirke_rizs_home-image.png',
+      description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
+      category: 'tálcás menük',
+      allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
+      energy:{
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44
+      },
+      price: '2 390 Forint',
+      isOnWishlist: true,
       isHighlightedProduct: false
     },
     
@@ -44,7 +61,9 @@ export const useMealsStore = defineStore('meals', () => {
 
   // Egyéb funkciók és állapotok hozzáadása
 
+ 
+
   //const firstThreeProduct = ref(products.value.slice(0, 3))
 
-  return { meals }
+  return { meals}
 })
