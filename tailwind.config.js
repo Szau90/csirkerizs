@@ -33,6 +33,7 @@ export default {
       'title-md': ['24px', '34px'],
       'title-sm': ['20px', '30px'],
       'content': ['16px', '21px'],
+      'content-sm': ['11px', '15px'],
     }
   },
   plugins: [],

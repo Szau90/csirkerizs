@@ -13,12 +13,12 @@ defineProps({
     >
 
       <div class="flex flex-col gap-2">
-        <h1 class="text-title-xl text-center">{{ meal.title }}</h1>
-        <p class="text-textColor text-center">
+        <h1 class=" text-title-md md:text-title-xl text-center">{{ meal.title }}</h1>
+        <p class="text-textColor text-center text-[13px] leading-4">
           {{ meal.description }}
         </p>
       </div>
-      <ul class="flex flex-col items-center justify-center mt-2 text-textColor">
+      <ul class="flex flex-col items-center justify-center mt-2 text-textColor text-content-sm">
         <li
           v-for="(item, key) in meal.energy"
           :key="key"
