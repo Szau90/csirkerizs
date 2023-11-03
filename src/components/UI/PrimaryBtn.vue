@@ -1,20 +1,15 @@
 <script setup>
-import { defineProps, ref } from "vue";
 import ArrowRight from "../../assets/icons/ArrowRight.vue";
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true,
     default: "__NO_TITLE",
   },
-  width: {
-    type: String,
-    required: false,
-    default: '223'
-  }
+  
 });
 
-const btnWidth = ref(props.width)
+
 </script>
 
 <template>

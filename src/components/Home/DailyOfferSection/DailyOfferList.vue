@@ -2,17 +2,6 @@
 import { useMealsStore } from "../../../stores/meals";
 import { computed } from "vue";
 import DailyOfferItem from "./DailyOfferItem.vue";
-import WishlistIcon from "../../../assets/icons/WhishlistIcon.vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import { defineComponent } from "vue";
-defineComponent({
-  name: "WrapAround",
-  components: {
-    Carousel,
-    Slide,
-    Navigation,
-  },
-});
 
 const store = useMealsStore();
 
@@ -26,15 +15,18 @@ const meals = computed(() => store.meals);
   <div
     class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mx-auto mt-6"
   />
-
-  <div class="w-full flex flex-row">
-    <div class="flex flex-row w-full">
-      <DailyOfferItem
-        v-for="(meal, index) in meals"
-        :key="meal.id"
-        :index="index"
-        :meal="meal"
-      />
-    </div>
+  <div class="md:hidden">
+    <v-sheet
+      class="mx-auto h-fit"
+      elevation="0"
+      max-width="800"
+      color="#F0F0F8"
+    >
+      <v-slide-group class="">
+        <v-slide-group-item v-for="meal in meals" :key="meal.id">
+          <DailyOfferItem :meal="meal" />
+        </v-slide-group-item>
+      </v-slide-group>
+    </v-sheet>
   </div>
 </template>

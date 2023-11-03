@@ -2,6 +2,7 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useMealsStore = defineStore('meals', () => {
+
   const meals = ref([
     {
       id: Math.floor(Math.random() * 100),
@@ -18,7 +19,7 @@ export const useMealsStore = defineStore('meals', () => {
       },
       price: '2 390 Forint',
       isOnWishlist: false,
-      isHighlightedProduct: false
+      isHighlightedProduct: true
     },
     {
       id: Math.floor(Math.random() * 100),
@@ -60,10 +61,15 @@ export const useMealsStore = defineStore('meals', () => {
   ])
 
   // Egyéb funkciók és állapotok hozzáadása
-
+  const toggleWishlistStatus = (id) => {
+    const meal = meals.value.find((m) => m.id === id)
+    if (meal) {
+      meal.isOnWishlist = !meal.isOnWishlist
+    }
+  }
  
 
   //const firstThreeProduct = ref(products.value.slice(0, 3))
 
-  return { meals}
+  return { meals, toggleWishlistStatus}
 })

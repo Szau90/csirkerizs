@@ -15,7 +15,9 @@ export default {
 
       },
       backgroundImage: {
-        'heroPattern': "url('src/assets/shapes/HomePattern.svg')"
+        'heroPattern': "url('src/assets/shapes/HomePattern.svg')",
+        'highlightedBg': "url('src/assets/shapes/HighlightedBg.svg')",
+        'highlightedBgMobile': "url('src/assets/shapes/HighlightedBgMobile.svg')"
         
       },
       backgroundSize: {
