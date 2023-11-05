@@ -16,13 +16,13 @@ import PrimaryBtn from "../../UI/PrimaryBtn.vue";
       class="w-full mt-4 md:mt-0 md:w-1/2 flex flex-col gap-3 lg:gap-6 xl:pl-[2.5rem] justify-center items-center md:items-start"
     >
       <h1
-        class="text-title-sm text-center md:text-start md:text-title-md 2xl:text-title w-[20rem] md:w-[24rem] xl:w-[30rem]"
+        class="text-title-smmd:text-title-md 2xl:text-title w-[20rem] md:w-[24rem] xl:w-[30rem]"
       >
         A vákuumba zárt frissesség Bodó Imre ajánlásával
       </h1>
       <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
       <p
-        class="text-content text-center md:text-start md:text-[15px] lg:text-content text-textColor w-20rem selection:md:w-[24rem] xl:w-[37rem]"
+        class="text-content  md:text-[15px] lg:text-content text-textColor w-20rem selection:md:w-[24rem] xl:w-[37rem]"
       >
         Ez a vállalkozás olyan szellemiségben született, amelyben az egészséges,
         fitt életmód alapját képező tudatos táplálkozást igyekszünk úgy

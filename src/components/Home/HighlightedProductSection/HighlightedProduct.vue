@@ -10,20 +10,34 @@ const meals = computed(() => store.meals.filter((f) => f.isHighlightedProduct));
 
 <template>
   <section
-    class="container mx-auto bg-highlightedBgMobile md:bg-highlightedBg h-[650px]"
+    class="container w-[368px] md:w-[736px] xl:w-full max-w-[1265px] mx-auto bg-highlightedBgMobile md:bg-highlightedBgTablet xl:bg-highlightedBg h-[650px] md:h-[400px] xl:h-[650px] shadow-xl rounded-[30px]"
   >
     <div
-      class="flex flex-col h-[650px] md:flex-row w-full md:items-center  md:pb-[6%] xl:pb-[4%] 2xl:pb-0 md:ml-[4%] 2xl:ml-0 md:gap-[5%] 2xl:gap-[1%]"
+      id="content"
+      class="flex flex-col h-[650px] md:h-[400px] xl:h-[650px] md:flex-row w-full lg:text-start xl:justify-start xl:ml-10 md:gap-2 xl:gap-20"
     >
-      <div class="w-[60%] ml-[14%] mt-[10%]  md:m-0 md:w-[38%]  2xl:w-[48%] flex items-center justify-center">
-        <img
-          src="../../../assets/Images/csirke_rizs_home-image.png"
-          class=""
-        />
-      </div>
-      <div class="flex md:place-self-end ">
+      <img
+        src="../../../assets/Images/csirke_rizs_home-image.png"
+        class="w-[290px] md:w-[350px] xl:w-[609px]  md:ml-8 xl:ml-2  md:mb-12"
+      />
+
+      <div class="flex ml-3">
         <ProductDetails v-for="meal in meals" :key="meal.id" :meal="meal" />
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+@media screen and (max-width: 767px) {
+  img {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  #content {
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+  }
+}
+</style>

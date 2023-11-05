@@ -18,7 +18,7 @@ defineProps({
 <template>
   <section class="p-4">
     <div
-      class="flex flex-col items-center justify-end w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40 mr-6"
+      class="flex flex-col items-center justify-end w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40 "
     >
       <div class="-mb-1/2 flex flex-row relative">
         <img

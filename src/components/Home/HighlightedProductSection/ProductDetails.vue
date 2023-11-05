@@ -1,5 +1,5 @@
 <script setup>
-import PrimaryBtn from '../../UI/PrimaryBtn.vue';
+import PrimaryBtn from "../../UI/PrimaryBtn.vue";
 defineProps({
   meal: {
     type: Object,
@@ -7,22 +7,26 @@ defineProps({
 });
 </script>
 <template>
-     <section class="p-4">
+  <section class="flex flex-col justify-center items-center">
     <div
-      class="flex flex-col items-center justify-end w-[24.812rem]  p-4 bg-inherit rounded-[30px] shadow-xl"
+      class="flex flex-col items-center justify-end w-[23rem] sm:w-[18rem] xl:w-[24.6rem] bg-inherit"
     >
-
-      <div class="flex flex-col gap-2">
-        <h1 class=" text-title-md md:text-title-xl text-center">{{ meal.title }}</h1>
-        <p class="text-textColor text-center text-[13px] leading-4">
+      <div class="flex flex-col gap-5 items-center lg:items-start">
+        <h1 class="text-title-md xl:text-title">{{ meal.title }}</h1>
+        <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
+        <p
+          class="text-textColor w-[17.687rem] min-h-[4.25rem] md:min-h-[5.625rem]  text-content-md  md:text-content"
+        >
           {{ meal.description }}
         </p>
       </div>
-      <ul class="flex flex-col items-center justify-center mt-2 text-textColor text-content-sm">
+      <ul
+        class="flex flex-col w-full imt-2 text-textColor text-content-sm md:text-content justify-center items-center"
+      >
         <li
           v-for="(item, key) in meal.energy"
           :key="key"
-          class="flex justify-between py-2 w-[22rem] border-b last:border-b-0"
+          class="flex justify-between py-1.5 w-[17.687rem] sm:w-[16rem] md:w-[18rem] xl:w-full last:border-b-0"
         >
           <span>{{ key }}</span
           ><span>{{ item }}</span>
@@ -30,13 +34,34 @@ defineProps({
       </ul>
     </div>
 
-    <div class="flex flex-row items-center mt-9">
+    <div class="flex flex-row w-[18.875rem]  xl:w-full items-center mt-5">
       <div
-        class="w-40 h-12 flex items-center justify-center border-2 rounded-tl-[30px] rounded-br-[30px] bg-primaryColor text-white"
+      id="price"
+        class="w-40 h-11 xl:h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
       >
         {{ meal.price }}
       </div>
-      <PrimaryBtn title="rendeld meg!" class="w-[14.437rem]" />
+      <PrimaryBtn
+        id="button"
+        title="rendeld meg!"
+        class="w-40 xl:w-[14.437rem] h-11 xl:h-14 rounded-l-none  md:text-content"
+      />
     </div>
   </section>
 </template>
+
+
+<style scoped>
+@media screen and (max-width: 767px) {
+  li {
+    border-bottom: 1px;
+    padding: 0.375rem 1rem;
+  }
+  #price {
+    font-size: 13px;
+  }
+  #button {
+    font-size: 13px;
+  }
+}
+</style>

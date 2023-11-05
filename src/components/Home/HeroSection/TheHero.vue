@@ -14,7 +14,7 @@ import ActionItemRegistration from "./ActionItems/ActionItemRegistration.vue";
       <HeroImage />
     </div>
     <div
-      class="flex flex-col mx-4 lg:mx-12 xl:mx-auto md:flex-row justify-center items-center gap-14 md:gap-4 lg:gap-9 mt-6"
+      class="flex flex-col max-w-[1265px] lg:mx-12 xl:mx-auto md:flex-row justify-center items-center gap-14 md:gap-4 lg:gap-9 mt-6"
     >
       <ActionsCard class="pl-4">
         <ActionItemMenu />
