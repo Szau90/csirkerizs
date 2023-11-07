@@ -16,9 +16,9 @@ defineProps({
 </script>
 
 <template>
-  <section class="p-4">
+  <section class="p-4 mt-9 lg:mt-20">
     <div
-      class="flex flex-col items-center justify-end w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40 "
+      class="flex flex-col items-center justify-end w-[18.85rem] sm:w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40 "
     >
       <div class="-mb-1/2 flex flex-row relative">
         <img
@@ -50,7 +50,7 @@ defineProps({
         <li
           v-for="(item, key) in meal.energy"
           :key="key"
-          class="flex justify-between py-2 w-[22rem] border-b last:border-b-0"
+          class="flex justify-between py-2 w-[16.812rem] sm:w-[22rem] last:border-b-0"
         >
           <span>{{ key }}</span
           ><span>{{ item }}</span>
@@ -58,13 +58,25 @@ defineProps({
       </ul>
     </div>
 
-    <div class="flex flex-row items-center mt-9">
+    <div class="flex flex-row w-[18.85rem] sm:w-full items-center justify-center  mt-5">
       <div
-        class="w-40 h-12 flex items-center justify-center border-2 rounded-tl-[30px] rounded-br-[30px] bg-primaryColor text-white"
+      id="price"
+        class="w-40 h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
       >
         {{ meal.price }}
       </div>
-      <PrimaryBtn title="rendeld meg!" class="w-[14.437rem]" />
+      <PrimaryBtn
+        id="button"
+        title="rendeld meg!"
+        class="w-[14.437rem] h-14 rounded-l-none text-content"
+      />
     </div>
   </section>
 </template>
+
+<style scoped>
+ li {
+    border-bottom: 1px solid #D9D9E5;
+   
+  }
+</style>

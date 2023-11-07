@@ -11,7 +11,7 @@ defineProps({
     <div
       class="flex flex-col items-center justify-end w-[23rem] sm:w-[18rem] xl:w-[24.6rem] bg-inherit"
     >
-      <div class="flex flex-col gap-5 items-center lg:items-start">
+      <div class="flex flex-col gap-5 items-center md:items-start">
         <h1 class="text-title-md xl:text-title">{{ meal.title }}</h1>
         <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
         <p
@@ -53,10 +53,6 @@ defineProps({
 
 <style scoped>
 @media screen and (max-width: 767px) {
-  li {
-    border-bottom: 1px;
-    padding: 0.375rem 1rem;
-  }
   #price {
     font-size: 13px;
   }
@@ -64,4 +60,8 @@ defineProps({
     font-size: 13px;
   }
 }
+li {
+    border-bottom: 1px solid #D9D9E5;
+    padding: 0.375rem 0;
+  }
 </style>

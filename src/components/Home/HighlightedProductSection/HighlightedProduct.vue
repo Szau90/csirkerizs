@@ -10,7 +10,7 @@ const meals = computed(() => store.meals.filter((f) => f.isHighlightedProduct));
 
 <template>
   <section
-    class="container w-[368px] md:w-[736px] xl:w-full max-w-[1265px] mx-auto bg-highlightedBgMobile md:bg-highlightedBgTablet xl:bg-highlightedBg h-[650px] md:h-[400px] xl:h-[650px] shadow-xl rounded-[30px]"
+    class="container mt-20 lg:mt-36 w-[368px] md:w-[736px] xl:w-full max-w-[1265px] mx-auto bg-highlightedBgMobile md:bg-highlightedBgTablet xl:bg-highlightedBg h-[650px] md:h-[400px] xl:h-[650px] shadow-xl rounded-[30px]"
   >
     <div
       id="content"

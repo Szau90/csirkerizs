@@ -14,7 +14,7 @@ import TwitterIcon from "../../assets/icons/TwitterIcon.vue";
       <div class="flex w-[40.843rem] mx-5 lg:mx-10 h-px bg-textColor" />
     </div>
     <nav
-      class="flex flex-row flex-wrap mt-7  gap-5 lg:gap-8 xl:gap-[50px] justify-center text-textColor text-[14px] sm:text-[15px] leading-5"
+      class="flex flex-row flex-wrap mt-7  md:max-lg:w-[31.25rem] md:max-lg:mx-auto gap-5 lg:gap-8 xl:gap-[50px] justify-center text-textColor text-[14px] sm:text-[15px] leading-5"
     >
       <RouterLink :to="'/'">Home</RouterLink>
       <RouterLink :to="'/etelrendeles'">Ételrendelés</RouterLink>
@@ -31,7 +31,7 @@ import TwitterIcon from "../../assets/icons/TwitterIcon.vue";
       <TwitterIcon />
     </div>
     <div class="hidden sm:block h-px bg-lightBorder w-full mt-10" />
-    <div class="text-textColor text-[14px] sm:text-[15px] flex flex-row gap-10 sm:gap-32 md:gap-16 lg:gap-44 justify-center mt-8">
+    <div class="text-textColor w-full text-[14px] sm:text-[15px] flex flex-row gap-10 sm:gap-32 md:gap-16 lg:gap-44 justify-around md:justify-center mt-8">
       <div class="flex flex-col gap-7">
         <p>Kapcsolat</p>
 
