@@ -11,12 +11,21 @@ const router = createRouter({
     },
     {
         path: '/etelrendeles',
-        name: 'about',
+        name: 'etelrendeles',
         // route level code-splitting
         // this generates a separate chunk (About.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import('../views/FoodOrderView.vue')
-      }
+      },
+      {
+        path: '/vip',
+        name: 'vip',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      
    
   ]
 })
