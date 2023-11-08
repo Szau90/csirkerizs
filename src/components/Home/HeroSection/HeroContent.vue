@@ -4,7 +4,7 @@ import PrimaryBtn from "../../UI/PrimaryBtn.vue";
 
 <template>
   <div
-    class="flex flex-col  order-2 gap-3 lg:gap-4 w-full md:w-[43%] xl:w-[35%] justify-center items-center md:items-start  lg:pl-28 2xl:pl-32  "
+    class="flex flex-col  order-2 gap-3 lg:gap-4 w-full md:w-[43%] xl:w-[35%] justify-center items-center md:items-start  lg:pl-28 2xl:pl-32"
   >
     <h1
       class="text-title-sm md:text-title-md 2xl:text-title  w-[18rem] md:w-full  md:text-start lg:w-96 xl:w-full 2xl:w-[524px]"

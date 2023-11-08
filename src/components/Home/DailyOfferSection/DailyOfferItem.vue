@@ -3,11 +3,11 @@ import WishlistIcon from "../../../assets/icons/WhishlistIcon.vue";
 import AddedToWishlistIcon from "../../../assets/icons/AddedToWishlistIcon.vue";
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
 import { useMealsStore } from "../../../stores/meals";
-import {computed} from 'vue'
+import { computed } from "vue";
 
 const store = useMealsStore();
 
-const toggleWhishlist =  computed(()=>store.toggleWishlistStatus)
+const toggleWhishlist = computed(() => store.toggleWishlistStatus);
 defineProps({
   meal: {
     type: Object,
@@ -18,7 +18,7 @@ defineProps({
 <template>
   <section class="p-4 mt-9 lg:mt-20">
     <div
-      class="flex flex-col items-center justify-end w-[18.85rem] sm:w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40 "
+      class="flex flex-col items-center justify-end w-[18.85rem] sm:w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40"
     >
       <div class="-mb-1/2 flex flex-row relative">
         <img
@@ -28,11 +28,12 @@ defineProps({
           height="286"
           class=""
         />
-        <WishlistIcon
+        <div
           v-if="!meal.isOnWishlist"
-          class="mt-1 cursor-pointer absolute top-4 -right-10"
-          @click="toggleWhishlist(meal.id)"
-        />
+          class="w-16 h-16 flex justify-center items-center rounded-full shadow-lg bg-inherit mt-1 cursor-pointer absolute  -right-14"
+        >
+          <WishlistIcon class="" @click="toggleWhishlist(meal.id)" />
+        </div>
         <AddedToWishlistIcon
           v-else
           class="mt-1 cursor-pointer absolute -right-14"
@@ -58,9 +59,11 @@ defineProps({
       </ul>
     </div>
 
-    <div class="flex flex-row w-[18.85rem] sm:w-full items-center justify-center  mt-5">
+    <div
+      class="flex flex-row w-[18.85rem] sm:w-full items-center justify-center mt-5"
+    >
       <div
-      id="price"
+        id="price"
         class="w-40 h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
       >
         {{ meal.price }}
@@ -75,8 +78,7 @@ defineProps({
 </template>
 
 <style scoped>
- li {
-    border-bottom: 1px solid #D9D9E5;
-   
-  }
+li {
+  border-bottom: 1px solid #d9d9e5;
+}
 </style>

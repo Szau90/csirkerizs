@@ -1,7 +1,7 @@
 <script setup>
 import TheHeader from "./components/Header/TheHeader.vue";
 import TheFooter from "./components/Footer/TheFooter.vue";
-import MenuIcon from "./assets/icons/MenuIcon.vue";
+import CloseIcon from "./assets/icons/CloseIcon.vue";
 import FacebookIcon from "./assets/icons/FacebookIcon.vue";
 import Instagramicon from "./assets/icons/Instagramicon.vue";
 import TwitterIcon from "./assets/icons/TwitterIcon.vue";
@@ -18,8 +18,11 @@ const drawer = ref(null);
     <v-navigation-drawer
       v-model="drawer"
       temporary
-      :style="{ height: '80%', width: '30%', backgroundColor: '#F0F0F8' }"
-      class="rounded-r-[30px] flex flex-col items-center justify-center"
+      :style="{ height: '90%', width: '30%'}"
+      class="rounded-r-[30px] rounded-bl-[30px] flex flex-col items-center justify-center"
+      scrim="#F0F0F8"
+      color="#F0F0F8"
+      
     >
       <v-list
         class="flex flex-row mt-[50px] gap-3 2xl:gap-[1.875rem] "
@@ -27,15 +30,16 @@ const drawer = ref(null);
         base-color="#707070"
       >
         <v-list-item>
-          <MenuIcon @click.stop="drawer = !drawer" class="cursor-pointer" />
+          <CloseIcon @click.stop="drawer = !drawer" class="cursor-pointer" />
         </v-list-item>
         <div class="w-px h-14 bg-textColor"/>
-        <v-list-item  active-color="black" title="home" to="/">
+        <v-list-item  active-color="black" title="home" to="/" variant="plain">
         </v-list-item>
         <v-list-item
           title="ételrendelés"
           to="/etelrendeles"
           active-color="black"
+          variant="plain"
         >
         </v-list-item>
       </v-list>
@@ -48,6 +52,9 @@ const drawer = ref(null);
           :title="link.title"
           base-color="#707070"
           active-color="black"
+          variant="plain"
+          id="navlinks"
+          class="w-[353px]"
           ></v-list-item
         >
       </v-list>
@@ -76,6 +83,15 @@ const drawer = ref(null);
 
 #v-app {
   background-color: inherit;
+}
+#navlinks {
+  padding: 0.75rem 0;
+}
+#navlinks:nth-child(8) {
+  border-top: 1px solid #D9D9E5;
+  margin-top: 1.5rem;
+  padding-top: 2.25rem;
+  
 }
 
 </style>
