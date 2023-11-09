@@ -25,6 +25,70 @@ const router = createRouter({
         // which is lazy-loaded when the route is visited.
         component: () => import('../views/FoodOrderView.vue')
       },
+      {
+        path: '/rólunk',
+        name: 'Kik vagyunk?',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/technológia',
+        name: 'technológia',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/szállítási-terület',
+        name: 'szállítási terület',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/viszonteladóknak',
+        name: 'viszonteladóknak',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/galéria',
+        name: 'galéria',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/shop',
+        name: 'shop',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/adatvédelmi-szabályzat',
+        name: 'adatvédelmi szabályzat',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
+      {
+        path: '/felhasználási-feltételek',
+        name: 'felhasználási feltételek',
+        // route level code-splitting
+        // this generates a separate chunk (About.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/FoodOrderView.vue')
+      },
       
    
   ]

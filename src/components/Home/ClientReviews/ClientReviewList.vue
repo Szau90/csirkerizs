@@ -11,10 +11,10 @@ const reviews = computed(() => store.reviews);
 const styleClasses = computed(() => {
   return reviews.value.map((review, index) => {
     const styles = [
-      "text-red-600 lg:ml-[20%] xl:ml-[25%] 2xl:ml-[35%]",
-      "text-green-600 lg:ml-[10%] xl:ml-[15.5%] 2xl:ml-[25.5%]",
-      "text-purple-600 lg:ml-[18%] xl:ml-[23%] 2xl:ml-[33%]",
-      "text-orange-600 lg:ml-[12%] xl:ml-[17.3%] 2xl:ml-[27.3%]",
+      "lg:ml-[20%] xl:ml-[25%] 2xl:ml-[35%]",
+      "lg:ml-[10%] xl:ml-[15.5%] 2xl:ml-[25.5%]",
+      "lg:ml-[18%] xl:ml-[23%] 2xl:ml-[33%]",
+      "lg:ml-[12%] xl:ml-[17.3%] 2xl:ml-[27.3%]",
     ];
     return styles[index % styles.length];
   });

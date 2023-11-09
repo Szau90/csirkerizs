@@ -6,6 +6,7 @@ import MealSlider from "./MealSlider.vue";
 const store = useMealsStore();
 
 const meals = computed(() => store.meals);
+
 </script>
 
 <template>
@@ -17,7 +18,9 @@ const meals = computed(() => store.meals);
       class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mx-auto mt-6"
     />
     <div id="item" class="hidden mx-auto w-full xl:flex flex-row items-center justify-center">
-      <DailyOfferItem v-for="meal in meals" :key="meal.id" :meal="meal"  />
+      <template v-for="meal in meals" :key="meal.id">
+        <DailyOfferItem v-if="meal.isDailyOffer" :meal="meal"  />
+      </template>
     </div>
     <div class="xl:hidden">
       <MealSlider :meals="meals" />

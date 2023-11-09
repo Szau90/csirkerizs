@@ -36,8 +36,8 @@ export const useSideNavStore = defineStore("sidenav", () => {
       link: "/adatvédelmi-szabályzat",
     },
     {
-      title: "elhasználási feltételek",
-      link: "/elhasználási-feltételek",
+      title: "felhasználási feltételek",
+      link: "/felhasználási-feltételek",
     },
   ]);
 

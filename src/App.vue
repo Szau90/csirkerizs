@@ -33,12 +33,12 @@ const drawer = ref(null);
           <CloseIcon @click.stop="drawer = !drawer" class="cursor-pointer" />
         </v-list-item>
         <div class="w-px h-14 bg-textColor"/>
-        <v-list-item  active-color="black" title="home" to="/" variant="plain">
+        <v-list-item  color="black" title="home" to="/" variant="plain">
         </v-list-item>
         <v-list-item
           title="ételrendelés"
           to="/etelrendeles"
-          active-color="black"
+          color="black"
           variant="plain"
         >
         </v-list-item>
@@ -51,7 +51,7 @@ const drawer = ref(null);
           :to="link.link"
           :title="link.title"
           base-color="#707070"
-          active-color="black"
+          color="black"
           variant="plain"
           id="navlinks"
           class="w-[353px]"

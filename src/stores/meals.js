@@ -9,7 +9,7 @@ export const useMealsStore = defineStore('meals', () => {
       title: 'Az étel hangzatos neve',
       image: 'src/assets/images/csirke_rizs_home-image.png',
       description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
-      category: 'tálcás menük',
+      category: 'Reggelik (széngidrát mentes)',
       allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
       energy:{
         kalória: 436,
@@ -19,14 +19,15 @@ export const useMealsStore = defineStore('meals', () => {
       },
       price: '2 390 Forint',
       isOnWishlist: false,
-      isHighlightedProduct: true
+      isHighlightedProduct: true,
+      isDailyOffer: true
     },
     {
       id: Math.floor(Math.random() * 100),
       title: 'termék 2',
       image: 'src/assets/images/csirke_rizs_home-image.png',
       description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
-      category: 'tálcás menük',
+      category: 'Tálcás menük',
       allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
       energy:{
         kalória: 436,
@@ -36,14 +37,15 @@ export const useMealsStore = defineStore('meals', () => {
       },
       price: '2 390 Forint',
       isOnWishlist: true,
-      isHighlightedProduct: false
+      isHighlightedProduct: false,
+      isDailyOffer: true
     },
     {
       id: Math.floor(Math.random() * 100),
       title: 'termék 3',
       image: 'src/assets/images/csirke_rizs_home-image.png',
       description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
-      category: 'tálcás menük',
+      category: 'Csirkék, marhák, halak',
       allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
       energy:{
         kalória: 436,
@@ -53,7 +55,98 @@ export const useMealsStore = defineStore('meals', () => {
       },
       price: '2 390 Forint',
       isOnWishlist: true,
-      isHighlightedProduct: false
+      isHighlightedProduct: false,
+      isDailyOffer: true
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'Az étel hangzatos neve',
+      image: 'src/assets/images/csirke_rizs_home-image.png',
+      description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
+      category: 'Szénhidrátos köretek',
+      allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
+      energy:{
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44
+      },
+      price: '2 390 Forint',
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'termék 2',
+      image: 'src/assets/images/csirke_rizs_home-image.png',
+      description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
+      category: 'Közepesen szénhidrátos köretek',
+      allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
+      energy:{
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44
+      },
+      price: '2 390 Forint',
+      isOnWishlist: true,
+      isHighlightedProduct: false,
+      isDailyOffer: false
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'termék 3',
+      image: 'src/assets/images/csirke_rizs_home-image.png',
+      description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
+      category: 'Elhanyagolható szénhidrát tartalmú köretek',
+      allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
+      energy:{
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44
+      },
+      price: '2 390 Forint',
+      isOnWishlist: true,
+      isHighlightedProduct: false,
+      isDailyOffer: false
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'termék 3',
+      image: 'src/assets/images/csirke_rizs_home-image.png',
+      description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
+      category: 'Desszertek',
+      allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
+      energy:{
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44
+      },
+      price: '2 390 Forint',
+      isOnWishlist: true,
+      isHighlightedProduct: false,
+      isDailyOffer: false
+    },
+    {
+      id: Math.floor(Math.random() * 100),
+      title: 'termék 3',
+      image: 'src/assets/images/csirke_rizs_home-image.png',
+      description: 'Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ',
+      category: 'Műanyag tányér és evőeszközök',
+      allergens: ['földimogyoró', 'szója', 'diófélék', 'szezám'],
+      energy:{
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44
+      },
+      price: '2 390 Forint',
+      isOnWishlist: true,
+      isHighlightedProduct: false,
+      isDailyOffer: false
     },
     
 
