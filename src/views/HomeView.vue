@@ -11,8 +11,6 @@ import ClientReviewList from "../components/Home/ClientReviews/ClientReviewList.
   <SectionContent />
   <DailyOfferList />
   <HighlightedProduct />
-  <ClientReviewList />
-  
-
+  <ClientReviewList /> 
 </template>
 
