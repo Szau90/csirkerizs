@@ -18,22 +18,16 @@ const uniqueCategories = Array.from(
 );
 const itemsPerPage = ref(6);
 
-const defaultFilter = (value, query, item) => {
-  if (value == null || query == null) return -1
-  if (categories.value.includes(value))
-  return value.toString()
-}
-const selected = ref(['Reggelik (széngidrát mentes)'])
-
 const filter = (value, query, item) => {
-  return value != null &&
-          query != null &&
-          typeof value === 'string' &&
-          categories.value.includes(value)
-}
+  return (
+    value != null &&
+    query != null &&
+    typeof value === "string" &&
+    categories.value.includes(value)
+  );
+};
 
-const search = ref('Reggelik (széngidrát mentes)')
-
+const search = ref("Reggelik (széngidrát mentes)");
 </script>
 
 <template>
@@ -66,11 +60,11 @@ const search = ref('Reggelik (széngidrát mentes)')
     </template>
 
     <v-data-iterator
-      v-model="categories" 
+      v-model="categories"
       :items="meals"
       :items-per-page="itemsPerPage"
       :page.sync="currentPage"
-      :item-value="item => `${item.category}`"
+      :item-value="(item) => `${item.category}`"
       :custom-filter="filter"
       :search="search"
     >
@@ -104,59 +98,96 @@ const search = ref('Reggelik (széngidrát mentes)')
       </template>
 
       <template v-slot:default="{ items }">
-        <v-row>
-          <v-col v-for="(item, i) in items" :key="i" cols="12" sm="12" xl="12">
+        
+          <v-col v-for="(item, i) in items" :key="i" >
+            
             <v-sheet border>
+              <main class="flex flex-row">
+                <v-img
+              :src="item.raw.image"
+              contain
+              width="380"
+              height="380"
+              class="-ml-[25%]"
+              
+            ></v-img>
               <v-list-item
                 :title="item.raw.title"
-                lines="two"
+                lines="five"
                 density="comfortable"
-                subtitle="Lorem ipsum dil orei namdie dkaf"
-                item-selectable
+                :subtitle="item.raw.description"
+                
               >
                 <template v-slot:title>
                   <strong class="text-h6">
                     {{ item.raw.title }}
                   </strong>
-                  <strong class="text-h6">
-                    {{ item.raw.category }}
-                  </strong>
-                  <strong class="text-h6">
-                    {{ item.raw.id }}
-                  </strong>
                 </template>
+                <div class="flex flex-row gap-20 border-b border-b-lightBorder">
+                  <div
+                    v-for="(energy, key) in item.raw.energy"
+                    :key="key"
+                    class="flex flex-row gap-5"
+                  >
+                    <p>{{ key }}</p>
+                    <p class="font-semibold">{{ energy }}</p>
+                  </div>
+                </div>
+                <div class="flex flex-row gap-2 items-center justify-center border-b border-b-lightBorder">
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                  <div class="flex flex-col items-center justify-center">
+                    <label for="date">03.11</label>
+                    <input type="number" id="date" class="w-20" />
+                  </div>
+                </div>
+                <div class="flex flex-row gap-5 items-center">
+                  <h1>Allergének</h1>
+                  <div
+                    v-for="(allergens, index) in item.raw.allergens"
+                    :key="index"
+                  >
+                    <p>{{ allergens }}</p>
+                  </div>
+                  <div class="flex flex-row w-[18.85rem] sm:w-full">
+                    <div
+                      class="w-32 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
+                    >
+                      {{ item.raw.price }}
+                    </div>
+                    <PrimaryBtn
+                      title="rendeld meg!"
+                      class="w-36 h-10 rounded-l-none text-content"
+                    />
+                  </div>
+                </div>
               </v-list-item>
-
-              <v-table density="compact" class="text-caption">
-                <tbody>
-                  <tr align="right">
-                    <th>DPI:</th>
-
-                    <td>{{ categories.join(' ').toString() }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Buttons:</th>
-
-                    <td>{{ item.raw.price }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Weight:</th>
-
-                    <td>{{ item.raw.price }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Price:</th>
-
-                    <td>${{ item.raw.price }}</td>
-                  </tr>
-                </tbody>
-              </v-table>
+              </main>
             </v-sheet>
           </v-col>
-        </v-row>
+        
       </template>
       <template #footer="{ pageCount }">
         <v-footer
