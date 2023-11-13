@@ -15,6 +15,7 @@ import * as labsComponents from 'vuetify/labs/components'
 import '@mdi/font/css/materialdesignicons.css'
 
 
+
 const vuetify = createVuetify({
   components,
   directives,

@@ -1,0 +1,163 @@
+<script setup>
+import PrimaryBtn from "../UI/PrimaryBtn.vue";
+import Orders from "./Orders.vue";
+import {ref} from "vue"
+
+const props = defineProps({
+  id:{
+    type: String,
+    required: true,
+    default: "__NO_ID",
+  },
+    title: {
+    type: String,
+    required: true,
+    default: "__NO_TITLE",
+  },
+  description: {
+    type: String,
+    required: true,
+    default: "__NO_DESCRIPTION",
+  },
+  index: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  energy: {
+    kalória: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    szénhidrát: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    fehérje: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    zsír: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+  },
+  allergens: {
+    type: Array,
+  },
+  price: {
+    type: String,
+    required: true,
+    default: "__NO_PRICE",
+  },
+});
+
+const dates = ref([
+  {
+    id:props.id,
+    name:props.title,
+    date: "03.11",
+    quantity: 0,
+  },
+  {
+    id:props.id,
+    name:props.title,
+    date: "04.11",
+    quantity: 0,
+  },
+  {
+    id:props.id,
+    name:props.title,
+    date: "05.11",
+    quantity: 0,
+  },
+  {
+    id:props.id,
+    name:props.title,
+    date: "06.11",
+    quantity: 0,
+  },
+  {
+    id:props.id,
+    name:props.title,
+    date: "07.11",
+    quantity: 0,
+  },
+  {
+    id:props.id,
+    name:props.title,
+    date: "08.11",
+    quantity: 0,
+  },
+  {
+    id:props.id,
+    name:props.title,
+    date: "09.11",
+    quantity: 0,
+  },
+]);
+
+
+const handleSubmit = () => {
+  console.log(dates)
+
+};
+
+</script>
+
+<template>
+  <v-list-item
+    :title="title"
+    lines="five"
+    density="comfortable"
+    :subtitle="description"
+    class="w-[745px] h-[327px]"
+  >
+    <template v-slot:title>
+      <h1 class="text-title-xl">
+        {{ title }}
+      </h1>
+    </template>
+    <div class="flex flex-row gap-20 border-y border-lightBorder py-2 mt-3">
+      <div
+        v-for="(energy, key) in energy"
+        :key="key"
+        class="flex flex-row gap-5 text-textColor"
+      >
+        <p>{{ key }}</p>
+        <p class="font-semibold">{{ energy }}</p>
+      </div>
+    </div>
+    <div
+      class="flex flex-row py-2 gap-2 items-center justify-center border-b border-b-lightBorder text-textColor"
+    >
+    <form action="submit" @submit.prevent="handleSubmit" class="flex flex-row gap-2">
+        <Orders v-for="(date, index) in dates" :date="date" :key="index"/>
+    </form>
+      
+    </div>
+
+    <div class="flex flex-row mt-5 items-center text-textColor">
+      <h1 class="mr-5">Allergének</h1>
+      <div v-for="(allergen, index) in allergens" :key="index">
+        <p class="mr-2">{{ allergen.concat(",") }}</p>
+      </div>
+      <div class="flex flex-row w-[18.85rem] sm:w-full">
+        <div
+          class="w-32 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
+        >
+          {{ price }}
+        </div>
+        <PrimaryBtn
+          title="rendeld meg!"
+          class="w-36 h-10 rounded-l-none text-content"
+          @click="handleSubmit"
+        />
+      </div>
+    </div>
+  </v-list-item>
+</template>

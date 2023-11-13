@@ -1,13 +1,49 @@
 import { ref } from "vue";
+import { defineStore } from 'pinia'
 
 export const useCartStore = defineStore("cart", () => {
-  const count = ref(0);
+  const maiDatum = new Date();
 
-  const items = ref([]);
+  const honap = ("0" + (maiDatum.getMonth() + 1)).slice(-2);
+  const nap = ("0" + maiDatum.getDate()).slice(-2);
+  const formatum = `${nap}.${honap}`;
 
-  function increment() {
-    count.value++;
+
+
+  const dates = ref([
+    {
+      date: "03.11",
+      quantity: 0,
+    },
+    {
+      date: "04.11",
+      quantity: 0,
+    },
+    {
+      date: "05.11",
+      quantity: 0,
+    },
+    {
+      date: "06.11",
+      quantity: 0,
+    },
+    {
+      date: "07.11",
+      quantity: 0,
+    },
+    {
+      date: "08.11",
+      quantity: 0,
+    },
+    {
+      date: "09.11",
+      quantity: 0,
+    },
+  ]);
+
+  function incrementQuantity() {
+    dates.value.quantity++;
   }
 
-  return { count, items, increment };
+  return { dates, incrementQuantity };
 });
