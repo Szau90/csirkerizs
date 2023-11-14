@@ -56,7 +56,7 @@ const props = defineProps({
   },
 });
 
-const dates = ref([
+const orders = ref([
   {
     id: props.id,
     name: props.title,
@@ -102,7 +102,7 @@ const dates = ref([
 ]);
 
 const handleSubmit = () => {
-  console.log(dates);
+  console.log(orders.value);
 };
 </script>
 
@@ -112,14 +112,14 @@ const handleSubmit = () => {
     lines="five"
     density="comfortable"
     :subtitle="description"
-    class="w-[745px] h-[327px]"
+    class="xl:w-[500px] 2xl:w-[720px] h-fit 2xl:h-[327px]"
   >
     <template v-slot:title>
       <h1 class="text-title-xl">
         {{ title }}
       </h1>
     </template>
-    <div class="flex flex-row gap-20 border-y border-lightBorder py-2 mt-3">
+    <div class="flex flex-row flex-wrap gap-4  2xl:gap-20 border-y border-lightBorder py-2 mt-3">
       <div
         v-for="(energy, key) in energy"
         :key="key"
@@ -135,13 +135,13 @@ const handleSubmit = () => {
       <form
         action="submit"
         @submit.prevent="handleSubmit"
-        class="flex flex-row gap-2"
+        class="flex flex-row flex-wrap gap-2"
       >
-        <Orders v-for="(date, index) in dates" :date="date" :key="index" />
+        <Orders v-for="(date, index) in orders" :date="date" :key="index" />
       </form>
     </div>
 
-    <div class="flex flex-row mt-5 items-center text-textColor">
+    <div class="flex flex-row xl:flex-wrap 2xl:flex-nowrap mt-5 items-center text-textColor">
       <h1 class="mr-5">Allergének</h1>
       <div v-for="(allergen, index) in allergens" :key="index">
         <p class="mr-2">{{ allergen.concat(",") }}</p>

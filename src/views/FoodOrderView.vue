@@ -5,8 +5,8 @@ import { ref, computed } from "vue";
 import { useMealsStore } from "../stores/meals";
 import { VDataIterator } from "vuetify/lib/labs/components.mjs";
 import FoodList from "../components/FoodorderPage/FoodList.vue";
-import NotificationModal from "../components/FoodorderPage/NotificationModal.vue"
-
+import NotificationModal from "../components/FoodorderPage/NotificationModal.vue";
+import CheckIcon from "../assets/icons/CheckIcon.vue";
 
 const store = useMealsStore();
 
@@ -40,32 +40,42 @@ const search = ref("Reggelik (széngidrát mentes)");
 <template>
   <BaseLayout>
     <template #sidebar>
-      <div class="w-[372px] mt-24">
+      <div class="flex flex-col w-[333px] 2xl:w-[400px] mt-24">
         <h1 class="text-title">Ételrendelés</h1>
         <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mt-4" />
-        <PrimaryBtn title="Allergén táblázat" class="w-56 bg-primaryColor text-white mt-10" />
-        <h2 class="mt-10" >Kategóriák</h2>
-        <v-chip-group
-          column
-          multiple
+        <PrimaryBtn
+          title="Allergén táblázat"
+          class="w-56 bg-primaryColor text-white mt-10"
+        />
+        <h2 class="mt-10">Kategóriák</h2>
+
+        <v-item-group
           v-model="categories"
+          multiple
           variant="plain"
-          class="w-[22.125rem] mt-8"
           mandatory
+          class="w-[22.125rem] mt-8"
         >
-          <v-chip
-            color="#FF5F5C"
-            filter
-            v-for="cat in uniqueCategories"
-            :key="cat"
-            :value="cat"
-            class="w-full"
-            ><p class="text-textColor">{{ cat }}</p></v-chip
-          >
-        </v-chip-group>
+          <template v-for="cat in uniqueCategories" :key="cat">
+            <v-item v-slot="{ isSelected, toggle }" :value="cat">
+              <div class="flex flex-row items-center gap-3">
+                <div
+                  @click="toggle"
+                  :value="cat"
+                  class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-contain w-[31px] h-[31px]"
+                >
+                  <CheckIcon v-if="isSelected" />
+                </div>
+                <p class="h-[50px] flex items-center text-textColor">
+                  {{ cat }}
+                </p>
+              </div>
+            </v-item>
+          </template>
+        </v-item-group>
       </div>
     </template>
-    <NotificationModal/>
+    <NotificationModal />
     <v-data-iterator
       v-model="categories"
       :items="meals"
@@ -80,18 +90,25 @@ const search = ref("Reggelik (széngidrát mentes)");
         <FoodList :items="items" />
       </template>
       <template #footer="{ pageCount }">
-        <v-footer
+        
+          <footer
           color="#F0F0F8"
-          class="flex w-full items-center justify-center text-body-2 mt-4"
+          class="absolute left-0 flex w-full items-center justify-center text-body-2 mt-4"
         >
           <v-pagination
             v-model="currentPage"
             :length="pageCount"
             rounded="circle"
-            variant="plain"
+            variant="elevated"
+            color="#F0F0F8"
             :total-visible="pageCount"
-          ></v-pagination>
-        </v-footer>
+          >
+          <template #next></template>
+          <template #prev></template>
+        </v-pagination>
+        </footer>
+        <div class="w-full h-20 "/>
+        
       </template>
     </v-data-iterator>
   </BaseLayout>

@@ -35,7 +35,7 @@ const findFirstIndex = (items, category) => {
     </h1>
 
     <main class="relative flex flex-row items-start">
-      <v-img :src="item.raw.image" contain width="380" height="380"></v-img>
+      <img :src="item.raw.image" aspect-ratio="1.7778" contain width="380" height="380" class="z-10 w-[380px]" >
       <div
         class="w-[945px] -ml-[190px] flex items-center justify-end shadow-lg rounded-[30px]"
       >
@@ -52,3 +52,4 @@ const findFirstIndex = (items, category) => {
     </main>
   </v-col>
 </template>
+
