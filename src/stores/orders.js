@@ -1,14 +1,14 @@
 import { ref } from "vue";
 import { defineStore } from 'pinia'
 
-export const useCartStore = defineStore("cart", () => {
+export const useOrdersStore = defineStore("orders", () => {
   const maiDatum = new Date();
 
   const honap = ("0" + (maiDatum.getMonth() + 1)).slice(-2);
   const nap = ("0" + maiDatum.getDate()).slice(-2);
   const formatum = `${nap}.${honap}`;
 
-
+  const categories = ref(["Reggelik (széngidrát mentes)"]);
 
   const dates = ref([
     {

@@ -28,7 +28,7 @@ const findFirstIndex = (items, category) => {
   <v-col v-for="(item, index) in items" :key="index">
     <h1
       v-if="findFirstIndex(items, item.value) === index"
-      class="flex flex-row w-full mb-14 items-center text-title gap-2"
+      class="flex flex-row w-full mt-20 mb-14 items-center text-title gap-2"
     >
       <div class="w-1 h-10 bg-primaryColor rounded-full" />
       {{ item.value }}

@@ -1,15 +1,15 @@
 <script setup>
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import Orders from "./Orders.vue";
-import {ref} from "vue"
+import { ref } from "vue";
 
 const props = defineProps({
-  id:{
+  id: {
     type: String,
     required: true,
     default: "__NO_ID",
   },
-    title: {
+  title: {
     type: String,
     required: true,
     default: "__NO_TITLE",
@@ -58,55 +58,52 @@ const props = defineProps({
 
 const dates = ref([
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "03.11",
     quantity: 0,
   },
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "04.11",
     quantity: 0,
   },
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "05.11",
     quantity: 0,
   },
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "06.11",
     quantity: 0,
   },
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "07.11",
     quantity: 0,
   },
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "08.11",
     quantity: 0,
   },
   {
-    id:props.id,
-    name:props.title,
+    id: props.id,
+    name: props.title,
     date: "09.11",
     quantity: 0,
   },
 ]);
 
-
 const handleSubmit = () => {
-  console.log(dates)
-
+  console.log(dates);
 };
-
 </script>
 
 <template>
@@ -135,10 +132,13 @@ const handleSubmit = () => {
     <div
       class="flex flex-row py-2 gap-2 items-center justify-center border-b border-b-lightBorder text-textColor"
     >
-    <form action="submit" @submit.prevent="handleSubmit" class="flex flex-row gap-2">
-        <Orders v-for="(date, index) in dates" :date="date" :key="index"/>
-    </form>
-      
+      <form
+        action="submit"
+        @submit.prevent="handleSubmit"
+        class="flex flex-row gap-2"
+      >
+        <Orders v-for="(date, index) in dates" :date="date" :key="index" />
+      </form>
     </div>
 
     <div class="flex flex-row mt-5 items-center text-textColor">

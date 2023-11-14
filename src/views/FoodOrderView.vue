@@ -5,22 +5,25 @@ import { ref, computed } from "vue";
 import { useMealsStore } from "../stores/meals";
 import { VDataIterator } from "vuetify/lib/labs/components.mjs";
 import FoodList from "../components/FoodorderPage/FoodList.vue";
+import NotificationModal from "../components/FoodorderPage/NotificationModal.vue"
+
 
 const store = useMealsStore();
 
 const meals = computed(() => store.meals);
 
-const categories = ref(["Reggelik (széngidrát mentes)"]);
+const categories = ref(store.categories);
 
 const currentPage = ref(1);
+
+const itemsPerPage = ref(6);
 
 const uniqueCategories = Array.from(
   new Set(meals.value.map((meal) => meal.category))
 );
-const itemsPerPage = ref(6);
 
 // filter the array to find selected category
-const filter = (value, query, item) => {
+const filter = (value, query) => {
   return (
     value != null &&
     query != null &&
@@ -37,17 +40,17 @@ const search = ref("Reggelik (széngidrát mentes)");
 <template>
   <BaseLayout>
     <template #sidebar>
-      <div class="w-[372px]">
+      <div class="w-[372px] mt-24">
         <h1 class="text-title">Ételrendelés</h1>
-        <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mt-6" />
-        <PrimaryBtn title="Allergén táblázat" class="w-56" />
-        <h2>Kategóriák</h2>
+        <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mt-4" />
+        <PrimaryBtn title="Allergén táblázat" class="w-56 bg-primaryColor text-white mt-10" />
+        <h2 class="mt-10" >Kategóriák</h2>
         <v-chip-group
           column
           multiple
           v-model="categories"
           variant="plain"
-          class="w-[22.125rem]"
+          class="w-[22.125rem] mt-8"
           mandatory
         >
           <v-chip
@@ -62,7 +65,7 @@ const search = ref("Reggelik (széngidrát mentes)");
         </v-chip-group>
       </div>
     </template>
-
+    <NotificationModal/>
     <v-data-iterator
       v-model="categories"
       :items="meals"

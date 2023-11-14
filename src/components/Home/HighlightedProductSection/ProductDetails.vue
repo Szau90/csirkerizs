@@ -44,7 +44,7 @@ defineProps({
       <PrimaryBtn
         id="button"
         title="rendeld meg!"
-        class="w-40 xl:w-[14.437rem] h-11 xl:h-14 rounded-l-none  md:text-content"
+        class="w-40 xl:w-[14.437rem] h-11 xl:h-14 rounded-l-none  md:text-content bg-secoundaryColor"
       />
     </div>
   </section>
