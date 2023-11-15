@@ -2,8 +2,44 @@ import { ref } from "vue";
 import { defineStore } from "pinia";
 
 export const useMealsStore = defineStore("meals", () => {
+  const categories = ref([
+    "Reggelik (széngidrát mentes)",
+    "Tálcás menük",
+    "Csirkék, marhák, halak",
+    "Szénhidrátos köretek",
+    "Közepesen szénhidrátos köretek",
+    "Elhanyagolható szénhidrát tartalmú köretek",
+    "Desszertek",
+    "Műanyag tányér és evőeszközök",
+  ]);
 
-  const categories = ref(["Reggelik (széngidrát mentes)"]);
+  const getDatesForWeek = () => {
+    const dates = [];
+    let currentDay = new Date();
+    currentDay.setDate(currentDay.getDate() + 2); // Az első dátum mindig az aznapi dátum + 2 nap
+  
+    while (dates.length < 7) {
+      const currentDate = new Date(currentDay);
+  
+      // Kihagyjuk a hétvégéket
+      if (currentDate.getDay() !== 0 && currentDate.getDay() !== 6) {
+        const year = currentDate.getFullYear();
+        const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+        const day = ("0" + currentDate.getDate()).slice(-2);
+        const formattedDate = `${day}-${month}-${year}`;
+  
+        dates.push(formattedDate);
+      }
+  
+      // Következő napra lépünk
+      currentDay.setDate(currentDay.getDate() + 1);
+    }
+  
+    return dates;
+  };
+  
+
+  
 
   const meals = ref([
     {
@@ -462,20 +498,14 @@ export const useMealsStore = defineStore("meals", () => {
       isHighlightedProduct: false,
       isDailyOffer: false,
     },
-
-   
   ]);
 
-  
   const toggleWishlistStatus = (id) => {
     const meal = meals.value.find((m) => m.id === id);
     if (meal) {
       meal.isOnWishlist = !meal.isOnWishlist;
     }
   };
-  
 
-
-
-  return { meals, categories, toggleWishlistStatus, };
+  return { meals, categories, getDatesForWeek, toggleWishlistStatus };
 });

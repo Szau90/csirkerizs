@@ -7,7 +7,8 @@ import Previcon from "../../assets/icons/Previcon.vue";
 defineProps({
     date: {
         type:Object
-    }
+    },
+   
 })
 </script>
 

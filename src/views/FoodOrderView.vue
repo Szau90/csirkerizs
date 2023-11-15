@@ -32,7 +32,7 @@ const filter = (value, query) => {
   );
 };
 
-const sortBy = ref([{ key: "category", order: "asc" }]);
+const sortBy = ref([{ key: "category", order: "desc" }]);
 
 const search = ref("Reggelik (széngidrát mentes)");
 </script>
@@ -56,18 +56,18 @@ const search = ref("Reggelik (széngidrát mentes)");
           mandatory
           class="w-[22.125rem] mt-8"
         >
-          <template v-for="cat in uniqueCategories" :key="cat">
-            <v-item v-slot="{ isSelected, toggle }" :value="cat">
+          <template v-for="category in uniqueCategories" :key="category">
+            <v-item v-slot="{ isSelected, toggle }" :value="category">
               <div class="flex flex-row items-center gap-3">
                 <div
                   @click="toggle"
-                  :value="cat"
-                  class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-contain w-[31px] h-[31px]"
+                  :value="category"
+                  class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
                 >
-                  <CheckIcon v-if="isSelected" />
+                  <CheckIcon v-if="isSelected" class="mt-1 ml-1" />
                 </div>
-                <p class="h-[50px] flex items-center text-textColor">
-                  {{ cat }}
+                <p class="w-[280px] flex items-center text-textColor">
+                  {{ category }}
                 </p>
               </div>
             </v-item>
