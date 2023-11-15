@@ -6,6 +6,10 @@ defineProps({
     required: true,
     default: "__NO_TITLE",
   },
+  fillIcon: {
+    type: String,
+    default: '#000000'
+  }
   
 });
 
@@ -17,6 +21,6 @@ defineProps({
     class="text-[16px] text-black rounded-full flex flex-row justify-around items-center py-4 shadow-lg"
     >
     {{ title }}
-    <ArrowRight />
+    <ArrowRight :fill="fillIcon" />
   </button>
 </template>

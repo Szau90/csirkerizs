@@ -40,12 +40,13 @@ const search = ref("Reggelik (széngidrát mentes)");
 <template>
   <BaseLayout>
     <template #sidebar>
-      <div class="flex flex-col w-[333px] 2xl:w-[400px] mt-24">
+      <div class="hidden md:flex flex-col w-[333px] 2xl:w-[400px] mt-24">
         <h1 class="text-title">Ételrendelés</h1>
         <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mt-4" />
         <PrimaryBtn
           title="Allergén táblázat"
           class="w-56 bg-primaryColor text-white mt-10"
+          :fill-icon="'#ffffff'"
         />
         <h2 class="mt-10">Kategóriák</h2>
 
@@ -66,7 +67,7 @@ const search = ref("Reggelik (széngidrát mentes)");
                 >
                   <CheckIcon v-if="isSelected" class="mt-1 ml-1" />
                 </div>
-                <p class="w-[280px] flex items-center text-textColor">
+                <p class="w-[250px] 2xl:w-[280px] flex items-center text-textColor md:max-2xl:text-content-md">
                   {{ category }}
                 </p>
               </div>

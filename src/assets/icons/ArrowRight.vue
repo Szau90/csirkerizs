@@ -1,9 +1,17 @@
+<script setup>
+defineProps({
+  fill: {
+    type:String
+  }
+})
+</script>
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="14.909"
     height="9.318"
     viewBox="0 0 14.909 9.318"
+    :fill="fill"
   >
     <path
       id="Icon_open-arrow-right"
