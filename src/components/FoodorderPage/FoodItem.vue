@@ -90,12 +90,12 @@ const handleSubmit = () => {
     class="md:w-[410px] lg:max-2xl:w-[460px] 2xl:w-[720px] h-fit 2xl:h-[327px]  md:max-2xl:text-content-md"
   >
     <template v-slot:title>
-      <h1 class="md:max-2xl:text-center text-title-xl">
+      <h1 class="text-title-xl">
         {{ title }}
       </h1>
     </template>
     <template v-slot:subtitle>
-      <h1 class="md:max-2xl:text-center  md:max-2xl:text-content-md">
+      <h1 class="md:max-2xl:text-content-md">
         {{ description }}
       </h1>
     </template>
@@ -133,7 +133,7 @@ const handleSubmit = () => {
       <div v-for="(allergen, index) in allergens" :key="index">
         <p class="mr-2">{{ allergen.concat(",") }}</p>
       </div>
-      <div class="flex flex-row md:max-2xl:justify-center my-4 w-[18.85rem]  sm:w-full">
+      <div id="actions" class="flex before:flex-row md:max-2xl:justify-center my-4 w-[18.85rem]  sm:w-full">
         <div
           class="w-32 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
         >
@@ -154,6 +154,13 @@ const handleSubmit = () => {
   #container {
     flex-wrap: wrap;
     
+  }
+  #actions {
+    margin-left: 2rem;
+    
+  }
+  h1 {
+    text-align: center;
   }
 }
 </style>
