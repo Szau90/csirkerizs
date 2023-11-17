@@ -28,10 +28,11 @@ const findFirstIndex = (items, category) => {
   <v-col v-for="(item, index) in items" :key="index" >
     <h1
       v-if="findFirstIndex(items, item.value) === index"
-      class="flex flex-row w-full md:max-lg:mx-auto md:mt-20 md:mb-14 items-center text-title-xl md:text-title gap-2"
+      class="flex flex-col md:flex-row md:w-full md:max-lg:mx-auto md:mt-20 md:mb-14 items-center text-title-xl md:text-title gap-2"
     >
-      <div class="w-1 h-10 bg-primaryColor rounded-full" />
+      <div class="hidden md:block w-1 h-10 bg-primaryColor rounded-full" />
       {{ item.value }}
+      <div class="md:hidden h-1 w-10 mb-5 bg-primaryColor rounded-full" />
     </h1>
 
     <main class="relative flex flex-col lg:flex-row items-start">
@@ -57,6 +58,11 @@ const findFirstIndex = (items, category) => {
 @media screen and (max-width: 1279px) {
  main {
   align-items: center;
+ }
+}
+@media screen and (max-width: 767px) {
+ h1{
+  text-align: center;
  }
 }
 </style>

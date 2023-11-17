@@ -506,6 +506,14 @@ export const useMealsStore = defineStore("meals", () => {
       meal.isOnWishlist = !meal.isOnWishlist;
     }
   };
+  const filter = (value, query) => {
+    return (
+      value != null &&
+      query != null &&
+      typeof value === "string" &&
+      categories.value.includes(value)
+    );
+  };
 
-  return { meals, categories, getDatesForWeek, toggleWishlistStatus };
+  return { meals, categories, getDatesForWeek, toggleWishlistStatus, filter };
 });

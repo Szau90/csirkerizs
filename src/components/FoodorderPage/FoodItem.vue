@@ -54,7 +54,10 @@ const orders = ref(
 );
 
 const handleSubmit = () => {
-  console.log(orders.value);
+  const currentOrders = orders.value.map((order) => ({ ...order }));
+
+  console.log(currentOrders);
+  
   orders.value.forEach((order) => {
     order.quantity = 0;
   });

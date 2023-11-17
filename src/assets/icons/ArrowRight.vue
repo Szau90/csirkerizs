@@ -1,7 +1,8 @@
 <script setup>
 defineProps({
   fill: {
-    type:String
+    type:String,
+    default:'#000000'
   }
 })
 </script>

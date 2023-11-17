@@ -1,6 +1,6 @@
 <template>
   <div
-    class="hidden z-10 md:flex flex-row items-center justify-around rounded-full bg-primaryColor min-w-12 md:max-lg:max-w-[14rem] w-[19rem] xl:w-[22rem] 2xl:w-[24.687rem] xl:h-[5.625rem] flex-initial"
+    class="hidden z-10 md:flex flex-row items-center justify-around rounded-full bg-primaryColor min-w-12 md:max-lg:max-w-[14rem] w-[19rem] xl:w-[22rem] 2xl:w-[24.687rem] md:h-[4.5rem] xl:h-[5.625rem] flex-initial"
   >
    <SearchIcon class="w-[1.25rem] h-[1.25rem] lg:w-[1.687rem] lg:h-[1.687rem]"/>
     <input
