@@ -11,7 +11,7 @@ const toggleNotificationOff = () => {
 
 <template>
   <section
-    class=" xl:w-[57.5rem] 2xl:w-[68.062rem] lg:h-[20.4375rem] xl:mt-16 p-2 flex flex-col  bg-inherit rounded-[30px] shadow-lg"
+    class="md:w-[30rem] lg:w-[45rem] xl:w-[60rem]  2xl:w-[68.062rem] lg:h-[20.4375rem] md:ml-10 2xl:ml-0 xl:mt-16 p-2 flex flex-col  bg-inherit rounded-[30px] shadow-lg"
     v-if="showNotification"
   >
     <div
@@ -58,5 +58,10 @@ const toggleNotificationOff = () => {
   p {
     text-align: center;
   }
+}
+@media screen and (max-width: 640px) {
+section {
+  margin-top: 2rem;
+}
 }
 </style>

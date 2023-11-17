@@ -41,14 +41,15 @@ const search = ref("Reggelik (széngidrát mentes)");
   <BaseLayout>
     <template #sidebar>
       <div
-        class="hidden lg:flex flex-col w-full xl:w-[333px] 2xl:w-[400px] mt-24"
+        class="hidden 2xl:flex flex-col w-[400px] mt-24"
       >
-      <NotificationModal class="xl:hidden" />
         <h1 class="md:text-center xl:text-start text-title">Ételrendelés</h1>
-        <div class="flex w-36 h-[0.312rem] md:mx-auto xl:mx-0 bg-primaryColor rounded-full mt-4" />
+        <div
+          class="flex w-36 h-[0.312rem] md:mx-auto xl:mx-0 bg-primaryColor rounded-full mt-4"
+        />
         <PrimaryBtn
           title="Allergén táblázat"
-          class="w-56 bg-primaryColor  text-white mt-10 md:mx-auto xl:mx-0"
+          class="w-56 bg-primaryColor text-white mt-10 md:mx-auto xl:mx-0"
           :fill-icon="'#ffffff'"
         />
         <h2 class="mt-10 hidden xl:block">Kategóriák</h2>
@@ -82,48 +83,77 @@ const search = ref("Reggelik (széngidrát mentes)");
         </v-item-group>
       </div>
     </template>
-    <NotificationModal class="hidden xl:flex" />
-    <v-menu
-      transition="slide-y-transition"
-      :close-on-content-click="false"
-      :scroll-strategy="'close'"
-    >
-      <template v-slot:activator="{ props }">
-        <v-btn color="#F0F0F8" v-bind="props" class="d-lg-none mt-10" width="400">
-          Kategóriák
-        </v-btn>
-      </template>
-      <v-sheet color="#F0F0F8" width="400">
-        <v-item-group
-          v-model="categories"
-          multiple
-          variant="plain"
-          mandatory
-          class="xl:w-[22.125rem] mt-8 md:max-xl:flex md:max-xl:flex-row md:max-xl:flex-wrap md:max-xl:justify-center"
-        >
-          <template v-for="category in uniqueCategories" :key="category">
-            <v-item v-slot="{ isSelected, toggle }" :value="category">
-              <div
-                class="flex flex-row md:max-xl:min-w-[360px] items-center gap-3"
+
+    <div class="flex flex-col-reverse md:flex-col">
+      <div class="flex flex-col items-center mb-5">
+        <h1 class=" mt-5 md:text-center lg:text-start text-title 2xl:hidden">
+          Ételrendelés
+        </h1>
+        <div
+          class="flex w-36 h-[0.312rem] md:mx-auto lg:mx-0 bg-primaryColor rounded-full mt-4 2xl:hidden"
+        />
+      </div>
+      <div class="flex flex-col-reverse md:flex-row items-center">
+        <div class="2xl:hidden flex-col">
+          <PrimaryBtn
+            title="Allergén táblázat"
+            class="2xl:hidden w-56 bg-primaryColor text-white mt-10 md:mx-auto lg:mx-0"
+            :fill-icon="'#ffffff'"
+          />
+
+          <v-menu
+            transition="slide-x-transition"
+            :close-on-content-click="false"
+            :scroll-strategy="'close'"
+            :location="'bottom'"
+          >
+            <template v-slot:activator="{ props }">
+              <v-btn
+                color="#F0F0F8"
+                rounded
+                v-bind="props"
+                class="mt-10"
+                width="224"
+                height="56"
               >
-                <div
-                  @click="toggle"
-                  :value="category"
-                  class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
-                >
-                  <CheckIcon v-if="isSelected" class="mt-1 ml-1" />
-                </div>
-                <p
-                  class="xl:w-[250px] 2xl:w-[280px] flex items-center text-textColor md:max-2xl:text-content-md"
-                >
-                  {{ category }}
-                </p>
-              </div>
-            </v-item>
-          </template>
-        </v-item-group>
-      </v-sheet>
-    </v-menu>
+                Kategóriák
+              </v-btn>
+            </template>
+            <v-sheet color="#F0F0F8">
+              <v-item-group
+                v-model="categories"
+                multiple
+                variant="plain"
+                mandatory
+                class="xl:w-[22.125rem] mt-8 md:max-xl:flex md:max-xl:flex-row md:max-xl:flex-wrap md:max-xl:justify-center"
+              >
+                <template v-for="category in uniqueCategories" :key="category">
+                  <v-item v-slot="{ isSelected, toggle }" :value="category">
+                    <div
+                      class="flex flex-row  md:max-2xl:min-w-[360px] items-center gap-3"
+                    >
+                      <div
+                        @click="toggle"
+                        :value="category"
+                        class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+                      >
+                        <CheckIcon v-if="isSelected" class="mt-1 ml-1" />
+                      </div>
+                      <p
+                        class="w-[280px] xl:w-[250px] 2xl:w-[280px] flex items-center text-textColor md:max-2xl:text-content-md"
+                      >
+                        {{ category }}
+                      </p>
+                    </div>
+                  </v-item>
+                </template>
+              </v-item-group>
+            </v-sheet>
+          </v-menu>
+        </div>
+        <NotificationModal />
+      </div>
+    </div>
 
     <v-data-iterator
       v-model="categories"
