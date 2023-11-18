@@ -5,28 +5,46 @@ import { VDataIterator } from "vuetify/lib/labs/components.mjs";
 import BaseLayout from "../components/Layouts/BaseLayout.vue";
 import CategoryHeader from "../components/FoodorderPage/CategoryHeader.vue";
 import TheCategories from "../components/FoodorderPage/TheCategories.vue";
+import NextIcon from "../assets/icons/NextIcon.vue";
+import PrimaryBtn from "../components/UI/PrimaryBtn.vue";
 
 const store = useMealsStore();
 
 const meals = computed(() => store.meals);
 
-const categories = ref(['Táplálék kiegészítők', 'Fitnesz kiegészítők', 'Sport eszközök', 'Italok', 'Sportszeletek', 'Ital és ételtartók'])
-const uniqueCategories = ref(['Táplálék kiegészítők', 'Fitnesz kiegészítők', 'Sport eszközök', 'Italok', 'Sportszeletek', 'Ital és ételtartók'])
+const numberOfItems = ref([10, 20, 30, 50]);
+const sortby = ref([
+  "népszerűek előre",
+  "ár szerint növekvő",
+  "ár szerint csökkenő",
+]);
+const categories = ref([
+  "Táplálék kiegészítők",
+  "Fitnesz kiegészítők",
+  "Sport eszközök",
+  "Italok",
+  "Sportszeletek",
+  "Ital és ételtartók",
+]);
+const uniqueCategories = ref([
+  "Táplálék kiegészítők",
+  "Fitnesz kiegészítők",
+  "Sport eszközök",
+  "Italok",
+  "Sportszeletek",
+  "Ital és ételtartók",
+]);
 const currentPage = ref(1);
 
 const itemsPerPage = ref(20);
 
 const mice = ref([
   {
-    name: "Logitech G Pro X",
-    color: "14, 151, 210",
-    dpi: 16000,
-    buttons: 8,
-    weight: "63g",
-    wireless: true,
+    name: "Termék hangzatos neve",
+    color: "",
     price: 149.99,
-    description: "Logitech G Pro X",
-    src: "https://cdn.vuetifyjs.com/docs/images/graphics/mice/1.png",
+    description: "Whey protein isolate drink powder with glutamine and BCAA",
+    src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
   },
   {
     name: "Razer DeathAdder V2",
@@ -198,7 +216,7 @@ const mice = ref([
           multiple
           variant="plain"
           mandatory
-          class=" xl:w-[22.125rem] mt-8 md:max-xl:flex md:max-xl:flex-row md:max-xl:flex-wrap md:max-xl:justify-center"
+          class="xl:w-[22.125rem] mt-8 md:max-xl:flex md:max-xl:flex-row md:max-xl:flex-wrap md:max-xl:justify-center"
         >
           <template v-for="category in uniqueCategories" :key="category">
             <v-item v-slot="{ isSelected, toggle }" :value="category">
@@ -220,66 +238,94 @@ const mice = ref([
       :item-value="(item) => `${item.category}`"
     >
       <template v-slot:header="{ page, pageCount, prevPage, nextPage }">
-       
+        <div class="flex flex-row justify-between">
+          <div class="w-[246px]">
+            <v-select
+              :items="numberOfItems"
+              :single-line="true"
+              :rounded="true"
+              :hide-details="true"
+              menu-icon="$expand"
+              v-model="itemsPerPage"
+              label="találatok"
+              variant="solo"
+              bg-color="#F0F0F8"
+            >
+              <template #prepend-inner>
+                <p class="text-[#CBCBD6] mr-[5.4rem]">Találatok</p>
+              </template>
+              <template #item="{ item, props }">
+                <v-list-item v-bind="props" bg-color="primary"> </v-list-item>
+              </template>
+            </v-select>
+          </div>
+          <div class="w-[556px]">
+            <v-select
+              :items="sortby"
+              :single-line="true"
+              :rounded="true"
+              :hide-details="true"
+              menu-icon="$expand"
+              variant="solo"
+              class="w-[556px]"
+              bg-color="#F0F0F8"
+            >
+              <template #prepend-inner>
+                <p class="text-[#CBCBD6] mr-[16rem]">rendezés</p>
+              </template>
+            </v-select>
+          </div>
+        </div>
       </template>
 
       <template v-slot:default="{ items }">
         <v-row>
           <v-col v-for="(item, i) in items" :key="i" cols="3" sm="6" xl="3">
-            <v-sheet border>
+            <v-sheet
+              min-height="406"
+              color="#F0F0F8"
+              elevation="2"
+              :rounded="'xl'"
+              class="pt-2"
+            >
               <v-img
                 :gradient="`to top right, rgba(255, 255, 255, .1), rgba(${item.raw.color}, .15)`"
                 :src="item.raw.src"
                 cover
-                height="150"
+                height="218"
               ></v-img>
 
               <v-list-item
                 :title="item.raw.name"
                 lines="two"
                 density="comfortable"
-                subtitle="Lorem ipsum dil orei namdie dkaf"
+                :subtitle="item.raw.description"
+                min-height="77"
               >
                 <template v-slot:title>
                   <strong class="text-h6">
                     {{ item.raw.name }}
                   </strong>
                 </template>
+                <template v-slot:subtitle>
+                  <p class="min-h-[45px] mt-2">
+                    {{ item.raw.description }}
+                  </p>
+                </template>
               </v-list-item>
 
-              <v-table density="compact" class="text-caption">
-                <tbody>
-                  <tr align="right">
-                    <th>DPI:</th>
-
-                    <td>{{ item.raw.dpi }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Buttons:</th>
-
-                    <td>{{ item.raw.buttons }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Weight:</th>
-
-                    <td>{{ item.raw.weight }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Wireless:</th>
-
-                    <td>{{ item.raw.wireless ? "Yes" : "No" }}</td>
-                  </tr>
-
-                  <tr align="right">
-                    <th>Price:</th>
-
-                    <td>${{ item.raw.price }}</td>
-                  </tr>
-                </tbody>
-              </v-table>
+              <div class="flex flex-row justify-center my-4 w-full">
+                <div
+                  class="w-28 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
+                >
+                  {{ item.raw.price }}
+                </div>
+                <PrimaryBtn
+                  title="kosárba"
+                  :isCartBtn="true"
+                  class="w-32 h-10 rounded-l-none text-content"
+                />
+              </div>
             </v-sheet>
           </v-col>
         </v-row>
