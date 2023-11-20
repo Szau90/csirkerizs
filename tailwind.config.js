@@ -34,6 +34,7 @@ export default {
       'title-md': ['24px', '34px'],
       'title-sm': ['20px', '30px'],
       'title-xs': ['18px', '28px'],
+      'subtitle': ['16.5px', '41px'],
       'content': ['16px', '21px'],
       'content-md': ['13px', '17px'],
       'content-sm': ['11px', '15px'],

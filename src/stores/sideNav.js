@@ -9,23 +9,23 @@ export const useSideNavStore = defineStore("sidenav", () => {
     },
     {
       title: "kik vagyunk?",
-      link: "/rólunk",
+      link: "/rolunk",
     },
     {
       title: "technológia",
-      link: "/technológia",
+      link: "/technologia",
     },
     {
       title: "szállítási terület",
-      link: "/szállítási-terület",
+      link: "/szallitasi-terulet",
     },
     {
       title: "viszonteladóknak",
-      link: "/viszonteladóknak",
+      link: "/viszonteladoknak",
     },
     {
       title: "galéria",
-      link: "/galéria",
+      link: "/galeria",
     },
     {
       title: "shop",
@@ -33,11 +33,11 @@ export const useSideNavStore = defineStore("sidenav", () => {
     },
     {
       title: "adatvédelmi szabályzat",
-      link: "/adatvédelmi-szabályzat",
+      link: "/adatvedelmi-szabalyzat",
     },
     {
       title: "felhasználási feltételek",
-      link: "/felhasználási-feltételek",
+      link: "/felhasznalasi-feltetelek",
     },
   ]);
 
