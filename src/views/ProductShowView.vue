@@ -2,10 +2,11 @@
 import { computed, watchEffect } from "vue";
 import { useProductStore } from "../stores/products";
 import { storeToRefs } from "pinia";
-import { useRoute } from 'vue-router';
-import NotFoundView  from '../views/NotFoundView.vue'
+import { useRoute } from "vue-router";
+import NotFoundView from "../views/NotFoundView.vue";
+import ProductDetails from "@/components/ShopDetailPage/ProductDetails.vue";
 
-const route  = useRoute();
+const route = useRoute();
 
 const store = useProductStore();
 
@@ -16,21 +17,28 @@ const productId = computed(() => {
 });
 
 const currentProduct = computed(() => {
-    return products.value.find(product => product.id === productId.value )
+  return products.value.find((product) => product.id === productId.value);
 });
 
-watchEffect(route, currentProduct)
+const similarProducts = products.value.filter(item => item.category === currentProduct.value.category)
+
+watchEffect(route, currentProduct);
 </script>
 
 <template>
-  <div v-if="currentProduct">
-    <h2>{{ currentProduct.name }}</h2>
-    <p>{{ currentProduct.id }}</p>
-    <p>{{ currentProduct.description }}</p>
-  <v-img :src="currentProduct.src" width="300"></v-img>
-  <router-link :to="`/shop/${Math.floor(Math.random() *1000 )}`" > click</router-link>
-  </div>
+  <ProductDetails
+    v-if="currentProduct"
+    :id="currentProduct.id"
+    :title="currentProduct.name"
+    :subtitle="currentProduct.description"
+    :description="currentProduct.description"
+    :price="currentProduct.price"
+    :image="currentProduct.src"
+    :flavour="currentProduct.flavour"
+    :weight="currentProduct.weight"
+    :gallery="currentProduct.galery"
+    :similarProducts="similarProducts"
+  />
 
-  <NotFoundView v-else/>
-  
+  <NotFoundView v-else />
 </template>
