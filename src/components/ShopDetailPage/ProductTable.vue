@@ -3,7 +3,7 @@ defineProps(["flavour", "weight"]);
 </script>
 
 <template>
-  <v-table density="compact" class="text-caption">
+  <v-table density="compact" class="text-caption " >
     <tbody class="bg-[#F0F0F8]">
       <tr align="right">
         <th>Ízesítés</th>
@@ -31,3 +31,13 @@ defineProps(["flavour", "weight"]);
     </tbody>
   </v-table>
 </template>
+
+<style scoped>
+tbody {
+  font-family: 'Poppins', sans-serif;
+  color: #707070;
+}
+td {
+  font-weight: 600;
+}
+</style>

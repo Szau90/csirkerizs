@@ -12,14 +12,14 @@ defineProps(["id", "title", "description", "price", "productCounter", "image"]);
 <template>
   <div class="flex flex-row justify-center md:w-52 md:mx-auto lg:w-full">
     <div
-      class="w-28 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
+      class="w-36 h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
     >
       {{ price }}
     </div>
     <PrimaryBtn
       title="kosárba"
       :isCartBtn="true"
-      class="w-32 h-10 rounded-l-none text-content"
+      class="w-40 h-14 rounded-l-none text-content"
       @click="
         addToCart({
           id: id,

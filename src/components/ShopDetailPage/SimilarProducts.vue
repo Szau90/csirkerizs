@@ -24,7 +24,7 @@ const currentPage = ref(1);
   >
     <template v-slot:default="{ items }">
       <v-row class="flex items-center justify-center">
-        <v-col v-for="(item, i) in items" :key="i" cols="9" sm="4" xl="3">
+        <v-col v-for="(item, i) in items" :key="i" cols="9" sm="4" xl="4">
           <v-sheet
             min-height="386"
             color="#F0F0F8"

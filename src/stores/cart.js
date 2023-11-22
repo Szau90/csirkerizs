@@ -23,13 +23,14 @@ export const useCartStore = defineStore("cart", () => {
         id: newItem.id,
         name: newItem.title,
         description: newItem.description,
-        price: newItem.price,
+        price: newItem.price * newItem.quantity,
         quantity: newItem.quantity,
         image: newItem.image
       });
     } else {
-      existingItem.price += newItem.price;
       existingItem.quantity += newItem.quantity;
+      existingItem.price += newItem.price * newItem.quantity;
+     
     }
     totalQuantity.value += newItem.quantity;
     quantity.value = newItem.quantity;

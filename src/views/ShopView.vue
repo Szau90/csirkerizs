@@ -189,14 +189,15 @@ const search = ref("Táplálék kiegészítők");
               elevation="2"
               :rounded="'xl'"
               class="pt-2 md:mt-14 lg:mt-[5.6rem]"
-            >
-              <v-img
-                :src="item.raw.src"
-                cover
-                width="218"
-                class="mx-auto"
-                min-height="218"
-              ></v-img>
+              ><RouterLink :to="`/shop/${item.raw.id}`">
+                <v-img
+                  :src="item.raw.src"
+                  cover
+                  width="218"
+                  class="mx-auto"
+                  min-height="218"
+                ></v-img>
+              </RouterLink>
 
               <v-list-item
                 :title="item.raw.name"
@@ -209,7 +210,6 @@ const search = ref("Táplálék kiegészítők");
                   <h1 class="text-subtitle text-center min-w-full">
                     {{ item.raw.name }}
                   </h1>
-                  <h1>{{ item.raw.id }}</h1>
                 </template>
                 <template v-slot:subtitle>
                   <p
@@ -240,11 +240,10 @@ const search = ref("Táplálék kiegészítők");
                       description: item.raw.description,
                       price: item.raw.price,
                       quantity: 1,
-                      image: item.raw.src
+                      image: item.raw.src,
                     })
                   "
                 />
-                <RouterLink :to="`/shop/${item.raw.id}`">click</RouterLink>
               </div>
             </v-sheet>
           </v-col>
