@@ -30,5 +30,8 @@
   h1 {
     margin-top: 1rem;
   }
+  #description {
+    padding: 0 2rem;
+  }
 }
 </style>

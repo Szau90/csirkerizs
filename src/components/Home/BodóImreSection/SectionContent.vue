@@ -6,7 +6,7 @@ import PrimaryBtn from "../../UI/PrimaryBtn.vue";
   <div class="container mx-auto flex flex-col md:flex-row mt-24 md:mt-12 items-center">
     <div class="md:w-1/2">
       <img
-        src="../../../assets/shapes/BodóImi.svg"
+        src="@/assets/shapes/BodóImi.svg"
         alt="Bodó Imre with some csirkerizs.hu products"
         width="740"
         height="740"

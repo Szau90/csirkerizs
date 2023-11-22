@@ -20,12 +20,12 @@ const router = createRouter({
     {
       path: "/vip",
       name: "vip",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/VipView.vue"),
     },
     {
       path: "/rolunk",
       name: "Kik vagyunk?",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/AboutView.vue"),
     },
     {
       path: "/technologia",

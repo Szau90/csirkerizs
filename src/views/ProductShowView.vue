@@ -6,9 +6,6 @@ import { useRoute } from "vue-router";
 import NotFoundView from "../views/NotFoundView.vue";
 import ProductDetails from "@/components/ShopDetailPage/ProductDetails.vue";
 
-
-
-
 const route = useRoute();
 
 const store = useProductStore();
@@ -23,11 +20,13 @@ const currentProduct = computed(() => {
   return products.value.find((product) => product.id === productId.value);
 });
 
-const similarProducts = products.value.filter(item => item.category === currentProduct.value.category)
+const similarProducts = products.value.filter(
+  (item) => item.category === currentProduct.value.category
+);
 
 watchEffect(route, currentProduct);
 
-provide('product', currentProduct)
+provide("currentProduct", { currentProduct });
 </script>
 
 <template>
