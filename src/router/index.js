@@ -30,12 +30,12 @@ const router = createRouter({
     {
       path: "/technologia",
       name: "technológia",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/TechnologyView.vue"),
     },
     {
       path: "/szallitasi-terulet",
       name: "szállítási terület",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/DeliveryAreasView.vue"),
     },
     {
       path: "/viszonteladoknak",

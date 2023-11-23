@@ -12,19 +12,35 @@ const advantages = ref([
 </script>
 
 <template>
-  <section class="flex flex-col gap-5 ">
+  <section class="flex flex-col gap-5  md:max-lg:mx-auto">
     <h1
-      class="text-title-sm md:text-title-md 2xl:text-title w-[18rem] md:w-full md:text-start lg:w-96 xl:w-full 2xl:w-[524px]"
+      class="text-title-sm md:text-title-md 2xl:text-title w-[16rem] md:w-[20rem] md:text-start lg:w-[22rem]  2xl:w-[32.75rem]"
     >
       Csatlakozz te is a Csirkerizs VIP ügyfeleihez!
     </h1>
-    <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
-    <p class="font-semibold text-textColor ">Milyen előnyöket nyújt a VIP tagság?</p>
-    <ol v-for="(advantage, index) in advantages" :key="index" >
-      <li class="flex items-center text-[15px] leading-5">
-        <span class="min-w-[2rem] text-primaryColor font-semibold">{{ index + 1 }}</span>
-        <span class="min-w-[26rem] max-w-[26.5rem] text-textColor "> {{ advantage }} </span>
+    <div id="border" class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
+    <p class="font-semibold text-textColor md:max-lg:text-center ">Milyen előnyöket nyújt a VIP tagság?</p>
+    <ol v-for="(advantage, index) in advantages" :key="index" class="flex flex-col items-center" >
+      <li class="flex items-center text-content-md md:text-[15px] leading-5">
+        <span class="min-w-[1rem] md:min-w-[2rem] text-primaryColor font-semibold">{{ index + 1 }}</span>
+        <span class="min-w-[24rem] md:min-w-[26rem] max-w-[26.5rem] text-textColor "> {{ advantage }} </span>
       </li>
     </ol>
   </section>
 </template>
+
+<style scoped>
+@media screen and (max-width: 1023px) {
+  section {
+    padding: 0 0.5rem;
+  }
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #border {
+    margin: 0 auto;
+  }
+ 
+}
+</style>
