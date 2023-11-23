@@ -68,6 +68,7 @@ import SmileIcon from "../../assets/icons/SmileIcon.vue";
         <p>A megadott területre sajnos nem szállítunk!</p>
       </div>
     </div>
+    <img src="@/assets/shapes/Hungary.svg">
   </section>
 </template>
 
