@@ -48,6 +48,7 @@ const findFirstIndex = (items, category) => {
           :energy="item.raw.energy"
           :allergens="item.raw.allergens"
           :price="item.raw.price"
+          :image="item.raw.image"
         />
       </div>
     </main>

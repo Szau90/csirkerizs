@@ -144,13 +144,16 @@ const resetPestCounty = () => {
       </h1>
       <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
 
-      <div class="flex flex-row gap-20">
-        <div class="w-[250px]">
+      <div class="flex flex-col xl:flex-row  xl:gap-20">
+        <div class="w-[360px] md:w-[250px]">
           <h1>Budapest egész területe</h1>
           <v-select
             v-model="searchInBudapestExceptions"
             label="Kivételek Budapesten"
             density="compact"
+            rounded="xl"
+            bg-color="#F0F0F8"
+            menu-icon="$expand"
             :items="budapestExceptions"
             variant="solo"
             @click="resetBudapestExeption"
@@ -163,12 +166,15 @@ const resetPestCounty = () => {
             </template>
           </v-select>
         </div>
-        <div class="w-[250px]">
+        <div class="w-[360px] md:w-[250px]">
           <h1>Pest megyei települések</h1>
           <v-select
             v-model="searchInPestCountyTowns"
             label="Pest megyei települések"
             density="compact"
+            rounded="xl"
+            bg-color="#F0F0F8"
+            menu-icon="$expand"
             :items="pestCountyTowns"
             variant="solo"
             @click="resetPestCounty"

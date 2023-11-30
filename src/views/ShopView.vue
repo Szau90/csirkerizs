@@ -100,7 +100,7 @@ const search = ref("Táplálék kiegészítők");
       :sort-by="sortBy"
       multi-sort
     >
-      <template v-slot:header="{ page, pageCount, prevPage, nextPage }">
+      <template v-slot:header>
         <div class="flex flex-row justify-between md:mt-12 xl:mt-[9.25rem]">
           <div class="hidden md:block lg:w-[246px]">
             <v-select
@@ -236,9 +236,10 @@ const search = ref("Táplálék kiegészítők");
                   @click="
                     addToCart({
                       id: item.raw.id,
-                      name: item.raw.title,
+                      name: item.raw.name,
                       description: item.raw.description,
                       price: item.raw.price,
+                      calculatedPrice: item.raw.price,
                       quantity: 1,
                       image: item.raw.src,
                     })

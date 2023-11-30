@@ -3,6 +3,16 @@ import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import Orders from "./Orders.vue";
 import { ref } from "vue";
 import { useMealsStore } from "../../stores/meals";
+import { useCartStore } from "../../stores/cart";
+import { storeToRefs } from "pinia";
+
+
+const cartStore = useCartStore();
+
+const cart = storeToRefs(cartStore);
+const cartItems = cart.cartItems
+
+const {incrementQuantity, decrementQuantity, addMealToCart} = cartStore
 
 const store = useMealsStore();
 
@@ -39,15 +49,18 @@ const props = defineProps({
     type: Array,
   },
   price: {
-    type: String,
+    type: Number,
     required: true,
     default: "__NO_PRICE",
+  },
+  image: {
+    type: String,
+    required: true,
   },
 });
 
 const orders = ref(
   dates.value.map((date) => ({
-    id: props.id,
     date,
     quantity: 0,
   }))
@@ -56,7 +69,28 @@ const orders = ref(
 const handleSubmit = () => {
   const currentOrders = orders.value.map((order) => ({ ...order }));
 
-  console.log(currentOrders);
+  const ordersWithQuantity = currentOrders.filter((order) => order.quantity > 0);
+
+  const totalQuantity = ordersWithQuantity.reduce(
+    (total, order) => total + order.quantity,
+    0
+  );
+
+  console.log(ordersWithQuantity);
+  const mealData = {
+    id: props.id,
+    name: props.title,
+    description: props.description,
+    energy: props.energy,
+    allergens: props.allergens,
+    price: props.price,
+    orders: ordersWithQuantity,
+    image: props.image,
+    quantity:totalQuantity,
+    isMeal:true
+  }
+
+  addMealToCart(mealData)
   
   orders.value.forEach((order) => {
     order.quantity = 0;

@@ -40,6 +40,9 @@ export default {
       'content-md': ['13px', '17px'],
       'content-sm': ['11px', '15px'],
     },
+    borderRadius: {
+      'card': '1.875rem'
+    },
     screens: {
   
       // => @media (min-width: 1px) { ... }
