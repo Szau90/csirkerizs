@@ -11,7 +11,7 @@ const { shippingData } = storeToRefs(store);
 
 const datas = reactive({
   cashOnDelivery: {
-    label: "Uténvétel + 500 Forint",
+    label: "Utánvétel + 500 Forint",
     value: 500,
     isSelected: false,
   },
@@ -24,9 +24,8 @@ const datas = reactive({
 </script>
 
 <template>
-  <section class="flex flex-col w-[816px]">
+  <section class="flex flex-col">
     <h1>Válassz fizetési módot</h1>
-    {{ shippingData.payByFee }}
     <v-item-group v-model="shippingData.payByFee" mandatory>
       <template v-for="data in datas" :key="data.label">
         <v-item v-slot="{ isSelected, toggle }" :value="data.value">
@@ -49,30 +48,32 @@ const datas = reactive({
         </v-item>
       </template>
     </v-item-group>
-    <v-item-group v-model="shippingData.isEqualToShippingDetails" multiple>
-      <h1>Számlázási adatok</h1>
-      <v-item
-        v-slot="{ isSelected, toggle }"
-        :value="true"
+
+    <h1>Számlázási adatok</h1>
+    <button
+      class="flex flex-row items-center gap-3"
+      v-bind="shippingData.isEqualToShippingDetails"
+    >
+      <div
+        @click="
+          shippingData.isEqualToShippingDetails =
+            !shippingData.isEqualToShippingDetails
+        "
+        class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
       >
-        <div
-          class="flex flex-row md:max-xl:min-w-[360px] xl:w-[500px] items-center gap-3"
-        >
-          <div
-            @click="toggle"
-            class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
-          >
-            <CheckIcon v-if="isSelected" class="mt-1 ml-1" />
-          </div>
-          <p
-            class="w-[280px] flex items-center text-textColor md:max-2xl:text-content-md"
-          >
-            megegyezik a szállítási címmel
-          </p>
-        </div>
-      </v-item>
-    </v-item-group>
-    <v-form v-if="shippingData.isEqualToShippingDetails">
+        <CheckIcon
+          v-if="shippingData.isEqualToShippingDetails"
+          class="mt-1 ml-1"
+        />
+      </div>
+      <p
+        class="w-[280px] flex items-center text-textColor md:max-2xl:text-content-md"
+      >
+        megegyezik a szálíltási címmel
+      </p></button
+    >
+
+    <v-form v-if="!shippingData.isEqualToShippingDetails">
       <v-text-field
         v-model="shippingData.invoiceData.name"
         class="w-96"

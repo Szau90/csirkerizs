@@ -3,12 +3,10 @@ defineProps(["quantity", "isMeal", "calculatedPrice"]);
 </script>
 
 <template>
-  <v-col
-    cols="3"
-    align="center"
-    class="flex flex-col justify-center items-center"
+  <section
+    class="flex flex-col md:w-[220px] text-content-sm md:text-content justify-center items-center"
   >
-    <div class="flex flex-row items-center justify-center gap-2">
+    <div class="hidden md:flex flex-row items-center justify-center gap-2">
       <p>
         {{ quantity }}
       </p>
@@ -17,9 +15,9 @@ defineProps(["quantity", "isMeal", "calculatedPrice"]);
       </p>
     </div>
     <p
-      class="w-44 h-14 bg-primaryColor rounded-full flex items-center justify-center text-white"
+      class="w-20 h-8 md:w-36 lg:w-44 md:h-14 bg-primaryColor rounded-full flex items-center justify-center text-white"
     >
       {{ calculatedPrice.toFixed(0) + " Forint" }}
     </p>
-  </v-col>
+  </section>
 </template>

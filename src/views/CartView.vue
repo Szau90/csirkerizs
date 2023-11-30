@@ -7,11 +7,13 @@ import TheSummary from "../components/Cart/TheSummary.vue";
 import ShippingData from "../components/Cart/ShippingData.vue";
 import PayData from "../components/Cart/PayData.vue";
 import OrderDetails from "../components/Cart/OrderDetails.vue";
+import OrderSent from "../components/Cart/OrderSent.vue";
 import { useOrdersStore } from "../stores/orders";
 
 const store = useOrdersStore();
 
-const { shippingData, nameRules, emailRules, formIsValid } = storeToRefs(store);
+const { shippingData, orderSent, nameRules, emailRules, formIsValid } =
+  storeToRefs(store);
 
 const cartStore = useCartStore();
 
@@ -21,78 +23,76 @@ const cartItems = cart.cartItems;
 const items = ref(["kosarad", "szállítás", "fizetés", "összesítő"]);
 
 const step = ref(1);
-
-const isValid =  computed(()=> {
-if (step.value === 2 && shippingData.value.dataIsValid) {
-  return true
-}
-})
-const isValid2 =  computed(()=> {
-  if (step.value === 3 && shippingData.value.dataIsValid2) {
-  return true
-}
-})
-
-
-
-
-
-const next = () => {
-  step.value++
-};
 </script>
 
 <template>
   <h1 v-if="cartItems.length < 1">a kosarad üres</h1>
 
-  <v-card v-else color="transparent" elevation="0">
-    <v-tabs
-      v-model="step"
-      bg-color="transparent"
-      hide-slider
-      selected-class="active"
-      height="60"
-      class="w-[1011px] mx-auto"
-    >
-      <v-tab
-        v-for="(item, index) in items"
-        :key="item"
-        :value="index + 1"
-        rounded="xl"
-        elevation="2"
-        class="w-44 mx-5"
-        height="56"
-        :disabled=" formIsValid || isValid2"
+  <div v-else class="w-full flex flex-col items-center">
+    <div class="hidden md:block">
+      <v-tabs
+        v-model="step"
+        bg-color="transparent"
+        hide-slider
+        selected-class="active"
+        height="60"
       >
-        {{ item }}
-      </v-tab>
-    </v-tabs>
+        <v-tab
+          v-for="(item, index) in items"
+          :key="item"
+          :value="index + 1"
+          rounded="xl"
+          elevation="2"
+          class="w-40 lg:w-44 mx-5"
+          height="56"
+        >
+          {{ item }}
+        </v-tab>
+      </v-tabs>
+    </div>
 
-    <v-window v-model="step" class="mt-12" >
+    <v-window v-model="step" class="mt-12">
       <v-window-item :value="1">
-        <div class="flex flex-row">
+        <div class="flex flex-col items-center xl:items-start xl:flex-row ">
           <CartItem />
-          <TheSummary :step="step" @prev="step--" @next="next" />
+          <TheSummary :step="step" @prev="step--" @next="step++"   class="2xl:mr-4" />
         </div>
       </v-window-item>
-      <v-window-item :value="2" >
-        <div class="flex w-[1257px] mx-auto">
+      <v-window-item :value="2">
+        <div
+          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-32 xl:gap-60"
+        >
           <ShippingData />
-          <TheSummary :step="step" @prev="step--" @next="next" />
+          <TheSummary
+            :step="step"
+            @prev="step--"
+            @next="step++"
+            class="xl:mr-4"
+          />
         </div>
       </v-window-item>
       <v-window-item :value="3">
-        <div class="flex w-[1257px] mx-auto">
+        <div
+          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-32 xl:gap-64"
+        >
           <PayData />
-          <TheSummary :step="step" @prev="step--" @next="next" />
+          <TheSummary
+            :step="step"
+            @prev="step--"
+            @next="step++"
+            class="xl:mr-4"
+          />
         </div>
       </v-window-item>
       <v-window-item :value="4">
-        <OrderDetails />
-        <TheSummary :step="step" @prev="step--" @next="next" />
+        <OrderSent v-if="orderSent" />
+        <div v-else class="flex flex-col-reverse xl:flex-row  2xl:w-[1257px] mx-auto gap-12">
+          <OrderDetails />
+          <TheSummary :step="step" @prev="step--" @next="step++" class="xl:mr-4" />
+        </div>
       </v-window-item>
     </v-window>
-  </v-card>
+  </div>
 </template>
 
 <style scoped>

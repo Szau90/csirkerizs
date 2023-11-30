@@ -4,53 +4,52 @@ import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
 import { useOrdersStore } from "../../stores/orders";
 
-
 const store = useOrdersStore();
 
-const { shippingData } = storeToRefs(store);
+const { shippingData, orderSent } = storeToRefs(store);
 
 const props = defineProps({
   step: {
     type: Number,
-  }
+  },
 });
 
-const emit = defineEmits([
-  'next',
-  'prev'
-])
-
+const emit = defineEmits(["next", "prev"]);
 
 function buttonClick() {
-  emit('next')
+  emit("next");
 
-console.log(props.step + 1)
+  console.log(props.step + 1);
+}
+
+const handleOrder = () => {
+  orderSent.value = !orderSent.value
+  console.log(shippingData.value)
 }
 
 const prev = () => {
-  emit('prev')
-  console.log(props.step - 1)
-}
+  emit("prev");
+  console.log(props.step - 1);
+};
 const cartStore = useCartStore();
 
 const cart = storeToRefs(cartStore);
 
 const cartItems = cart.cartItems;
 
-
-
 const totalPrice = computed(() => {
   return (
     cartItems.value.reduce((total, item) => total + item.calculatedPrice, 0) +
-    shippingData.value.shippingFee + shippingData.value.payByFee
+    shippingData.value.shippingFee +
+    shippingData.value.payByFee
   );
 });
 </script>
 
 <template>
-  <div class="w-[443px] h-[610px] shadow-xl rounded-card ml-20 mb-10">
+  <section class=" md:mt-10 py-2 w-[360px] md:w-[690px] xl:w-[423px] text-content-sm md:text-content 2xl:w-[443px] h-fit shadow-xl rounded-card 2xl:ml-20 mb-10">
     <div
-      class="w-44 h-14 rounded-full shadow-xl flex items-center justify-center bg-transparent"
+      class=" w-28 h-8 md:w-44 md:h-14 rounded-full shadow-xl flex items-center justify-center bg-transparent"
     >
       <p class="text-primaryColor">Összegzés</p>
     </div>
@@ -72,19 +71,21 @@ const totalPrice = computed(() => {
         </p>
       </div>
     </template>
-    <div class="w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
+    <div class="w-[25rem] md:w-[650px] xl:w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
     <div class="flex justify-between px-5 mt-8">
       <p class="min-w-[12.5rem]">Szállítás / utánvét</p>
-      <p class="min-w-[6rem] text-center">{{ shippingData.shippingFee +  shippingData.payByFee + " " }}Forint</p>
+      <p class="min-w-[6rem] text-center">
+        {{ shippingData.shippingFee + shippingData.payByFee + " " }}Forint
+      </p>
     </div>
-    <div class="w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
+    <div class="w-[25rem] md:w-[650px] xl:w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
     <div class="flex justify-between px-5 mt-8">
       <p class="min-w-[12.5rem] font-bold">Összesen</p>
       <p class="min-w-[6rem] text-center">
         {{ totalPrice.toFixed(0) + " " }}Forint
       </p>
     </div>
-    <div class="w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
+    <div class="w-[25rem] md:w-[650px] xl:w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
     <v-text-field
       variant="solo"
       rounded="xl"
@@ -94,19 +95,34 @@ const totalPrice = computed(() => {
     ></v-text-field>
     <div class="w-full mt-8 px-5 flex justify-end">
       <button
-      v-if="step > 1"
+        v-if="step > 1"
         @click="prev"
-        class="w-44 h-14 bg-transparent rounded-full shadow-xl"
+        class="w-28 h-8 md:w-44 md:h-14 bg-transparent rounded-full shadow-xl"
       >
         vissza
       </button>
       <button
-      v-if="step < 4"
+        v-if="step < 4"
         @click="buttonClick"
-        class="w-44 h-14 bg-primaryColor rounded-full text-white"
+        class="w-28 h-8 md:w-44 md:h-14 bg-primaryColor rounded-full text-white"
       >
         tovább
       </button>
+      <button
+        v-if="step === 4 && shippingData.isAccepted"
+        class="w-28 h-8 md:w-44 md:h-14 bg-primaryColor rounded-full text-white"
+        @click="handleOrder"
+      >
+        megrendelem
+      </button>
     </div>
-  </div>
+  </section>
 </template>
+
+<style scoped>
+@media screen and (max-width:767px) {
+  section {
+    margin-top: 2rem;
+  }
+}
+</style>

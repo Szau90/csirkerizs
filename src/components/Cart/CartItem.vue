@@ -14,9 +14,9 @@ const cartItems = cart.cartItems;
 </script>
 
 <template>
-  <section>
+  <section class="lg:w-[938px] xl:w-[850px] 2xl:w-[938px]">
     <template v-for="item in cartItems" :key="item.id">
-      <v-row class="w-[1110px]">
+      <div class="flex flex-row items-center  text-center xl:flex-row w-[360px] py-2 md:w-[757px] lg:max-xl:w-[938px] xl:w-[850px] 2xl:w-[938px]">
         <CartItemImage :image="item.image" />
         <CartItemContent
           :name="item.name"
@@ -24,30 +24,20 @@ const cartItems = cart.cartItems;
           :energy="item.energy"
           :is-meal="item.isMeal"
         />
-        <v-divider
-          class="border-opacity-100"
-          color="#D9D9E5"
-          vertical
-          inset
-        ></v-divider>
+       <div class="hidden md:block w-px h-[130px] bg-lightBorder"/>
         <CartitemQuantity
           :item="item"
           :quantity="item.quantity"
           :is-meal="item.isMeal"
         />
-
-        <v-divider class="border-opacity-100" color="#D9D9E5" vertical inset>
-        </v-divider>
+        <div class="hidden md:block w-px h-[130px] bg-lightBorder"/>
         <CartItemPrice
           :quantity="item.quantity"
           :is-meal="item.isMeal"
           :calculated-price="item.calculatedPrice"
         />
-      </v-row>
-      <v-divider
-        class="border-opacity-100 w-[938px] my-10"
-        color="#D9D9E5"
-      ></v-divider>
+      </div>
+      <div class="hidden md:block h-px mx-4  bg-lightBorder"/>
     </template>
   </section>
 </template>

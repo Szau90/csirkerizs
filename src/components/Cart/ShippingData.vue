@@ -28,7 +28,7 @@ const datas = reactive({
 </script>
 
 <template>
-  <section class="flex flex-col w-[816px]">
+  <section class="flex flex-col">
     <h1>Válassz szállítási módot</h1>
     <v-form fast-fail @submit.prevent="handleSubmit">
       <v-item-group v-model="shippingData.shippingFee" mandatory>

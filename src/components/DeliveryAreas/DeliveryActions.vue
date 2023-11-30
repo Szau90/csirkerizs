@@ -129,7 +129,7 @@ const resetPestCounty = () => {
     <div class="md:w-1/2">
       <img
         src="@/assets/shapes/DeliverySecoundaryPattern.svg"
-        alt="Bodó Imre with some csirkerizs.hu products"
+        alt=""
         width="740"
         height="740"
       />

@@ -13,7 +13,7 @@ export const useOrdersStore = defineStore("orders", () => {
     phone: "",
     shippingFee: 0,
     payByFee: 0,
-    isEqualToShippingDetails: true,
+    isEqualToShippingDetails: false,
     invoiceData: {
       name: "",
       postCode: "",
@@ -22,10 +22,12 @@ export const useOrdersStore = defineStore("orders", () => {
       houseNumber: "",
     },
     isAccepted: false,
-    dataIsValid: false,
-    dataIsValid2: true,
-
+    
   });
+
+  const orderSent = ref(false)
+
+  
   
   const nameRules = ref([
     (value) => {
@@ -70,5 +72,5 @@ const handleSubmit = () => {
   shippingData.dataIsValid = true
 }
 
-  return { shippingData, nameRules, emailRules, formIsValid, reset };
+  return { shippingData, orderSent, nameRules, emailRules, formIsValid, reset };
 });
