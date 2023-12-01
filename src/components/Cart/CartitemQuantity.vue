@@ -6,15 +6,17 @@ import { storeToRefs } from "pinia";
 
 defineProps(["isMeal", "quantity", "item"]);
 
+
+
 const store = useCartStore();
 
-const {cartItems} = storeToRefs(store)
-
-
+const {cartItems, isUpdating, overlay} = storeToRefs(store)
 
 const { incrementQuantity, decrementQuantity } = store;
 
-
+const handleUpdate = () => {
+  isUpdating.value = !isUpdating.value
+}
 
 </script>
 
@@ -24,7 +26,8 @@ const { incrementQuantity, decrementQuantity } = store;
     class="flex flex-col md:w-[220px] text-content-sm md:text-content justify-center items-center"
   >
     <p class="hidden md:block">adagok és időpontok</p>
-    <PrimaryBtn :title="'szerkesztés'" class="w-28 h-8 md:h-14 md:w-40 lg:w-44 text-content-sm md:text-content" @click="cartItems.isUpdating = !cartItems.isUpdating" />
+    <PrimaryBtn :title="'szerkesztés'" class="w-28 h-8 md:h-14 md:w-40 lg:w-44 text-content-sm md:text-content" @click="handleUpdate" />
+    
   </section>
   <section
     v-else

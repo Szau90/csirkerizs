@@ -96,8 +96,9 @@ export const useCartStore = defineStore("cart", () => {
         calculatedPrice: newMeal.price * newMeal.quantity,
         quantity: newMeal.quantity,
         energy: newMeal.energy,
+        allergens: newMeal.allergens,
         image: newMeal.image,
-        orders: newMeal.currentOrder,
+        orders: newMeal.orders,
         isMeal: newMeal.isMeal,
         isUpdating: newMeal.isUpdating
       });
@@ -116,6 +117,8 @@ export const useCartStore = defineStore("cart", () => {
 
   const isUpdating = ref(false)
 
+  const overlay = ref(false)
+
   return {
     cartItems,
     totalItems,
@@ -123,6 +126,7 @@ export const useCartStore = defineStore("cart", () => {
     quantity,
     totalPrice,
     isUpdating,
+    overlay,
     addToCart,
     incrementQuantity,
     decrementQuantity,

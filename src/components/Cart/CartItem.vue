@@ -5,20 +5,29 @@ import CartitemQuantity from "./CartitemQuantity.vue";
 import CartItemPrice from "./CartItemPrice.vue";
 import { useCartStore } from "../../stores/cart";
 import { storeToRefs } from "pinia";
-import FoodItem from "../FoodorderPage/FoodItem.vue";
+import UpdateMealItem from "./UpdateMealItem.vue";
 
-const cartStore = useCartStore();
+const store = useCartStore();
 
-const cart = storeToRefs(cartStore);
-
-const cartItems = cart.cartItems;
-
-const isUpdating = cart.isUpdating;
+const { cartItems, isUpdating, overlay } = storeToRefs(store);
 </script>
 
 <template>
   <section class="lg:w-[938px] xl:w-[850px] 2xl:w-[938px]">
     <template v-for="(item, index) in cartItems" :key="item.id">
+      <v-overlay v-model="isUpdating" class="align-center justify-center">
+        <UpdateMealItem
+          v-if="isUpdating && item.isMeal"
+          :id="item.id"
+          :index="index"
+          :title="item.name"
+          :description="item.description"
+          :energy="item.energy"
+          :allergens="item.allergens"
+          :price="item.price"
+          :image="item.image"
+        />
+      </v-overlay>
       <div
         class="flex flex-row items-center text-center xl:flex-row w-[360px] py-2 md:w-[757px] lg:max-xl:w-[938px] xl:w-[850px] 2xl:w-[938px]"
       >
@@ -29,18 +38,7 @@ const isUpdating = cart.isUpdating;
           :energy="item.energy"
           :is-meal="item.isMeal"
         />
-        <FoodItem
-          v-if="isUpdating && item.isMeal"
-          class="z-100"
-          :id="item.id"
-          :index="index"
-          :title="item.name"
-          :description="item.description"
-          :energy="item.energy"
-          :allergens="item.allergens"
-          :price="item.price"
-          :image="item.image"
-        />
+
         <div class="hidden md:block w-px h-[130px] bg-lightBorder" />
         <CartitemQuantity
           :item="item"

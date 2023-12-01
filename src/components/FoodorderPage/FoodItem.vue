@@ -4,15 +4,10 @@ import Orders from "./Orders.vue";
 import { ref } from "vue";
 import { useMealsStore } from "../../stores/meals";
 import { useCartStore } from "../../stores/cart";
-import { storeToRefs } from "pinia";
-
 
 const cartStore = useCartStore();
 
-const cart = storeToRefs(cartStore);
-const cartItems = cart.cartItems
-
-const {incrementQuantity, decrementQuantity, addMealToCart} = cartStore
+const { addMealToCart } = cartStore;
 
 const store = useMealsStore();
 
@@ -42,8 +37,8 @@ const props = defineProps({
     default: 0,
   },
   energy: {
-   type: Object,
-   required: true
+    type: Object,
+    required: true,
   },
   allergens: {
     type: Array,
@@ -61,18 +56,20 @@ const props = defineProps({
 
 const orders = ref(
   dates.value.map((date) => ({
-    date,
-    quantity: 0,
+    date: {date, quantity:0},
+    
   }))
 );
 
 const handleSubmit = () => {
   const currentOrders = orders.value.map((order) => ({ ...order }));
 
-  const ordersWithQuantity = currentOrders.filter((order) => order.quantity > 0);
+  const ordersWithQuantity = currentOrders.filter(
+    (order) => order.date.quantity > 0
+  );
 
   const totalQuantity = ordersWithQuantity.reduce(
-    (total, order) => total + order.quantity,
+    (total, order) => total + order.date.quantity,
     0
   );
 
@@ -86,15 +83,15 @@ const handleSubmit = () => {
     price: props.price,
     orders: ordersWithQuantity,
     image: props.image,
-    quantity:totalQuantity,
-    isMeal:true,
-    isUpdating:false
-  }
+    quantity: totalQuantity,
+    isMeal: true,
+    isUpdating: false,
+  };
 
-  addMealToCart(mealData)
-  
+  addMealToCart(mealData);
+
   orders.value.forEach((order) => {
-    order.quantity = 0;
+    order.date.quantity = 0;
   });
 };
 </script>

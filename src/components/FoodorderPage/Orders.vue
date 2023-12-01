@@ -10,18 +10,18 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col w-[5.5rem] items-center justify-center">
+  <div class="flex flex-col w-[5.5rem] items-center justify-center text-content-sm md:text-content">
     <label for="date">{{
-      order.date.slice(0, 5).replace("-", ".").concat(".")
+      order.date.date.slice(0, 5).replace("-", ".").concat(".")
     }}</label>
     <div
-      class="w-full h-10 flex flex-row items-center justify-between px-3 bg-white rounded-full"
+      class="w-20 md:w-full h-8 md:h-10 flex flex-row items-center justify-between px-3 bg-white rounded-full"
     >
       <button
         @click.prevent="
           () => {
-            if (order.quantity !== 0) {
-              order.quantity--;
+            if (order.date.quantity !== 0) {
+              order.date.quantity--;
             }
           }
         "
@@ -31,13 +31,13 @@ defineProps({
       <input
         type="text"
         id="order"
-        class="w-[14px] flex mx-auto outline-none text-center"
-        v-model="order.quantity"
+        class="w-[14px] flex mx-auto outline-none text-center "
+        v-model="order.date.quantity"
       />
       <button
         @click.prevent="
           () => {
-            order.quantity++;
+            order.date.quantity++;
           }
         "
       >
