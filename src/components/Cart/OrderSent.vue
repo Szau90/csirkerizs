@@ -1,6 +1,12 @@
 <script setup>
 import PrimaryBtn from '../UI/PrimaryBtn.vue';
+import {useRouter} from 'vue-router'
 
+const router = useRouter()
+
+const handleClick = () => {
+  router.push('/')
+}
 </script>
 
 <template>
@@ -27,7 +33,7 @@ import PrimaryBtn from '../UI/PrimaryBtn.vue';
  
     
         <p> További információkat e-mailben elküldtük neked</p> 
-        <PrimaryBtn title=" vissza a főöldalra" class="w-60" />
+        <PrimaryBtn title=" vissza a főöldalra" class="w-60 mb-4"  @click="handleClick"/>
         
      
     </div>

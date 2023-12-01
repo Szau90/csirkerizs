@@ -47,7 +47,7 @@ const totalPrice = computed(() => {
 </script>
 
 <template>
-  <section class=" md:mt-10 py-2 w-[360px] md:w-[690px] xl:w-[423px] text-content-sm md:text-content 2xl:w-[443px] h-fit shadow-xl rounded-card 2xl:ml-20 mb-10">
+  <section class=" md:mt-10 py-2 w-[360px] md:w-[690px] lg:w-[443px] text-content-sm md:text-content 2xl:w-[443px] h-fit shadow-xl rounded-card 2xl:ml-20 mb-10">
     <div
       class=" w-28 h-8 md:w-44 md:h-14 rounded-full shadow-xl flex items-center justify-center bg-transparent"
     >
@@ -71,21 +71,21 @@ const totalPrice = computed(() => {
         </p>
       </div>
     </template>
-    <div class="w-[25rem] md:w-[650px] xl:w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
+    <div class="h-px bg-lightBorder mt-8 mx-5" />
     <div class="flex justify-between px-5 mt-8">
       <p class="min-w-[12.5rem]">Szállítás / utánvét</p>
       <p class="min-w-[6rem] text-center">
         {{ shippingData.shippingFee + shippingData.payByFee + " " }}Forint
       </p>
     </div>
-    <div class="w-[25rem] md:w-[650px] xl:w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
+    <div class="h-px bg-lightBorder mt-8 mx-5" />
     <div class="flex justify-between px-5 mt-8">
       <p class="min-w-[12.5rem] font-bold">Összesen</p>
       <p class="min-w-[6rem] text-center">
         {{ totalPrice.toFixed(0) + " " }}Forint
       </p>
     </div>
-    <div class="w-[25rem] md:w-[650px] xl:w-[25rem] h-px bg-lightBorder mt-8 mx-auto" />
+    <div class=" h-px bg-lightBorder mt-8 mx-5" />
     <v-text-field
       variant="solo"
       rounded="xl"

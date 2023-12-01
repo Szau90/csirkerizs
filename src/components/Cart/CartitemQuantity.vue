@@ -1,12 +1,21 @@
 <script setup>
+import {computed, ref} from 'vue'
 import { useCartStore } from "../../stores/cart";
 import PrimaryBtn from "../../components/UI/PrimaryBtn.vue";
+import { storeToRefs } from "pinia";
 
 defineProps(["isMeal", "quantity", "item"]);
 
-const cartStore = useCartStore();
+const store = useCartStore();
 
-const { incrementQuantity, decrementQuantity } = cartStore;
+const {cartItems} = storeToRefs(store)
+
+
+
+const { incrementQuantity, decrementQuantity } = store;
+
+
+
 </script>
 
 <template>
@@ -15,7 +24,7 @@ const { incrementQuantity, decrementQuantity } = cartStore;
     class="flex flex-col md:w-[220px] text-content-sm md:text-content justify-center items-center"
   >
     <p class="hidden md:block">adagok és időpontok</p>
-    <PrimaryBtn :title="'szerkesztés'" class="w-28 h-8 md:h-14 md:w-40 lg:w-44 text-content-sm md:text-content" />
+    <PrimaryBtn :title="'szerkesztés'" class="w-28 h-8 md:h-14 md:w-40 lg:w-44 text-content-sm md:text-content" @click="cartItems.isUpdating = !cartItems.isUpdating" />
   </section>
   <section
     v-else

@@ -87,7 +87,8 @@ const handleSubmit = () => {
     orders: ordersWithQuantity,
     image: props.image,
     quantity:totalQuantity,
-    isMeal:true
+    isMeal:true,
+    isUpdating:false
   }
 
   addMealToCart(mealData)

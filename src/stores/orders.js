@@ -1,4 +1,4 @@
-import { reactive, ref, computed } from "vue";
+import { reactive, ref, computed, watch } from "vue";
 import { defineStore } from 'pinia'
 
 export const useOrdersStore = defineStore("orders", () => {
@@ -24,6 +24,10 @@ export const useOrdersStore = defineStore("orders", () => {
     isAccepted: false,
     
   });
+
+
+
+
 
   const orderSent = ref(false)
 

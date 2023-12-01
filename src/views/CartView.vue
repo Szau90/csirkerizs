@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, reactive } from "vue";
 import CartItem from "../components/Cart/CartItem.vue";
 import { useCartStore } from "../stores/cart";
 import { storeToRefs } from "pinia";
@@ -9,6 +9,11 @@ import PayData from "../components/Cart/PayData.vue";
 import OrderDetails from "../components/Cart/OrderDetails.vue";
 import OrderSent from "../components/Cart/OrderSent.vue";
 import { useOrdersStore } from "../stores/orders";
+import CartIcon from "../assets/icons/tabIcons/CartIcon.vue";
+import ArrowRight from "../assets/icons/tabIcons/ArrowIcon.vue";
+import ShippingIcon from "../assets/icons/tabIcons/ShippingIcon.vue";
+import PayIcon from "../assets/icons/tabIcons/PayIcon.vue";
+import CheckmarkIcon from "../assets/icons/tabIcons/CheckmarkIcon.vue";
 
 const store = useOrdersStore();
 
@@ -28,7 +33,7 @@ const step = ref(1);
 <template>
   <h1 v-if="cartItems.length < 1">a kosarad üres</h1>
 
-  <div v-else class="w-full flex flex-col items-center">
+  <div v-else class="md:mt-20 lg:mt-32 w-full flex flex-col items-center">
     <div class="hidden md:block">
       <v-tabs
         v-model="step"
@@ -38,57 +43,103 @@ const step = ref(1);
         height="60"
       >
         <v-tab
-          v-for="(item, index) in items"
-          :key="item"
-          :value="index + 1"
+          :value="1"
           rounded="xl"
           elevation="2"
-          class="w-40 lg:w-44 mx-5"
+          class="w-40 lg:w-56 mx-5"
           height="56"
+          :prepend-icon="CartIcon"
+          :append-icon="ArrowRight"
         >
-          {{ item }}
+          kosarad
+        </v-tab>
+        <v-tab
+          :value="2"
+          rounded="xl"
+          elevation="2"
+          class="w-40 lg:w-56 mx-5"
+          height="56"
+          :prepend-icon="ShippingIcon"
+          :append-icon="ArrowRight"
+        >
+          szállítás
+        </v-tab>
+        <v-tab
+          :value="3"
+          rounded="xl"
+          elevation="2"
+          class="w-40 lg:w-56 mx-5"
+          height="56"
+          :prepend-icon="PayIcon"
+          :append-icon="ArrowRight"
+        >
+          fizetés
+        </v-tab>
+        <v-tab
+          :value="4"
+          rounded="xl"
+          elevation="2"
+          class="w-40 lg:w-56 mx-5"
+          height="56"
+          :prepend-icon="CheckmarkIcon"
+          :append-icon="ArrowRight"
+        >
+          összesítő
         </v-tab>
       </v-tabs>
     </div>
 
     <v-window v-model="step" class="mt-12">
       <v-window-item :value="1">
-        <div class="flex flex-col items-center xl:items-start xl:flex-row ">
+        <div class="flex flex-col items-center xl:items-start xl:flex-row">
           <CartItem />
-          <TheSummary :step="step" @prev="step--" @next="step++"   class="2xl:mr-4" />
+          <TheSummary
+            :step="step"
+            @prev="step--"
+            @next="step++"
+            class="2xl:mr-4 lg:max-xl:w-[690px]"
+          />
         </div>
       </v-window-item>
       <v-window-item :value="2">
         <div
-          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-32 xl:gap-60"
+          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-20 xl:gap-60"
         >
           <ShippingData />
           <TheSummary
             :step="step"
             @prev="step--"
             @next="step++"
-            class="xl:mr-4"
+            class="lg:mr-4"
           />
         </div>
       </v-window-item>
       <v-window-item :value="3">
         <div
-          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-32 xl:gap-64"
+          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-20 xl:gap-64"
         >
           <PayData />
           <TheSummary
             :step="step"
             @prev="step--"
             @next="step++"
-            class="xl:mr-4"
+            class="lg:mr-4"
           />
         </div>
       </v-window-item>
       <v-window-item :value="4">
         <OrderSent v-if="orderSent" />
-        <div v-else class="flex flex-col-reverse xl:flex-row  2xl:w-[1257px] mx-auto gap-12">
+        <div
+          v-else
+          class="flex flex-col-reverse xl:flex-row 2xl:w-[1257px] mx-auto gap-12"
+        >
           <OrderDetails />
-          <TheSummary :step="step" @prev="step--" @next="step++" class="xl:mr-4" />
+          <TheSummary
+            :step="step"
+            @prev="step--"
+            @next="step++"
+            class="xl:mr-4"
+          />
         </div>
       </v-window-item>
     </v-window>
@@ -99,5 +150,6 @@ const step = ref(1);
 .active {
   background-color: #ff5f5c;
   color: white;
+  fill: white;
 }
 </style>

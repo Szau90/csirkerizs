@@ -98,7 +98,8 @@ export const useCartStore = defineStore("cart", () => {
         energy: newMeal.energy,
         image: newMeal.image,
         orders: newMeal.currentOrder,
-        isMeal: newMeal.isMeal
+        isMeal: newMeal.isMeal,
+        isUpdating: newMeal.isUpdating
       });
     } else {
       existingMeal.quantity += newMeal.quantity;
@@ -113,12 +114,15 @@ export const useCartStore = defineStore("cart", () => {
   
   }
 
+  const isUpdating = ref(false)
+
   return {
     cartItems,
     totalItems,
     totalQuantity,
     quantity,
     totalPrice,
+    isUpdating,
     addToCart,
     incrementQuantity,
     decrementQuantity,

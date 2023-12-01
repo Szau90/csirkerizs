@@ -1,6 +1,6 @@
 <script setup>
 import CheckIcon from "../../assets/icons/CheckIcon.vue";
-import {reactive, ref}  from "vue"
+import {reactive, ref, watch}  from "vue"
 import { useOrdersStore } from "../../stores/orders";
 import { storeToRefs } from "pinia";
 
@@ -9,10 +9,8 @@ const store = useOrdersStore();
 const { shippingData } = storeToRefs(store);
 
 
-const clientData = reactive({
-  name: shippingData.value.name,
-  city: shippingData.value.city
-})
+
+
 
 </script>
 
