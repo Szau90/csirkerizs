@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 
 export const useMealsStore = defineStore("meals", () => {
   const categories = ref([
-    "Reggelik (széngidrát mentes)",
+    "Reggelik (szénhidrát mentes)",
     "Tálcás menük",
     "Csirkék, marhák, halak",
     "Szénhidrátos köretek",
@@ -26,7 +26,7 @@ export const useMealsStore = defineStore("meals", () => {
         const year = currentDate.getFullYear();
         const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
         const day = ("0" + currentDate.getDate()).slice(-2);
-        const formattedDate = `${day}-${month}-${year}`;
+        const formattedDate = `${year}-${month}-${day}`;
   
         dates.push(formattedDate);
       }
@@ -48,7 +48,7 @@ export const useMealsStore = defineStore("meals", () => {
       image: "src/assets/images/csirke_rizs_home-image.png",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
-      category: "Reggelik (széngidrát mentes)",
+      category: "Reggelik (szénhidrát mentes)",
       allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
       energy: {
         kalória: 436,
@@ -200,7 +200,7 @@ export const useMealsStore = defineStore("meals", () => {
       image: "src/assets/images/csirke_rizs_home-image.png",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
-      category: "Reggelik (széngidrát mentes)",
+      category: "Reggelik (szénhidrát mentes)",
       allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
       energy: {
         kalória: 436,
@@ -352,7 +352,7 @@ export const useMealsStore = defineStore("meals", () => {
       image: "src/assets/images/csirke_rizs_home-image.png",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
-      category: "Reggelik (széngidrát mentes)",
+      category: "Reggelik (szénhidrát mentes)",
       allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
       energy: {
         kalória: 436,

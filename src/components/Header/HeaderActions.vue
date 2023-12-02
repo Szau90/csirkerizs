@@ -9,10 +9,13 @@
       placeholder="keresés"
       class="flex bg-primaryColor w-[5rem] h-[2rem] lg:w-[7.375rem] lg:h-[3rem] outline-0 border-r text-[15px] xl:text-[20px] text-white placeholder:text-white"
     />
-    <router-link to="/kosar"
+    <RouterLink to="/kosar"
       ><CartIcon class="w-[1.25rem] h-[1.25rem] lg:w-[1.853rem] lg:h-7"
-    /></router-link>
-    <UserIcon class="w-[1.25rem] h-[1.25rem] lg:w-[1.625rem] lg:h-[1.625rem]" />
+    /></RouterLink>
+    <RouterLink to="/login">
+      <UserIcon class="w-[1.25rem] h-[1.25rem] lg:w-[1.625rem] lg:h-[1.625rem]" />
+    </RouterLink>
+   
   </div>
 </template>
 

@@ -37,7 +37,7 @@ const filter = (value, query) => {
 
 const sortBy = ref([{ key: "category", order: "desc" }]);
 
-const search = ref("Reggelik (széngidrát mentes)");
+const search = ref("Reggelik (szénhidrát mentes)");
 </script>
 
 <template>
