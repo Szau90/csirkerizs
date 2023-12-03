@@ -7,7 +7,7 @@ import { storeToRefs } from "pinia";
 
 const store = useOrdersStore();
 
-const { shippingData } = storeToRefs(store);
+const { shippingData, inputRules } = storeToRefs(store);
 
 const datas = reactive({
   cashOnDelivery: {
@@ -76,6 +76,7 @@ const datas = reactive({
     <v-form v-if="!shippingData.isEqualToShippingDetails">
       <v-text-field
         v-model="shippingData.invoiceData.name"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="név"
@@ -83,6 +84,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.invoiceData.postCode"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="irányítószám"
@@ -90,6 +92,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.invoiceData.city"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="város"
@@ -97,6 +100,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.invoiceData.street"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="utca"
@@ -104,6 +108,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.invoiceData.houseNumber"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="házszám"

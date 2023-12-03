@@ -1,6 +1,21 @@
+<script setup>
+import {ref} from 'vue'
+import ImgCarousel from '../components/Gallery/ImgCarousel.vue';
+const showModal = ref(false)
+</script>
+
 <template>
+  <v-btn @click="showModal= !showModal">show</v-btn>
+<v-overlay v-model="showModal" min-width="100%" class="align-center justify-center">
+  <ImgCarousel class=""/>
+</v-overlay>
+    
+     
+    
+   
+
   <div
-    class="mt-32 p-2.5 max-w-[1536px] mx-auto bg-[#f2f2f2] grid grid-cols-[auto_minmax(250px,_1fr)] auto-rows-[250px] grid-flow-dense gap-6"
+    class="mt-32 p-2.5 max-w-[1536px] mx-auto bg-transparent grid grid-cols-[auto_minmax(250px,_1fr)] auto-rows-[250px] grid-flow-dense gap-2.5 xl:gap-6"
   >
     <div class="v-strech row-span-1 md:row-span-4">
       <img
@@ -37,7 +52,7 @@
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="big-strech row-span-1 col-span-1 md:row-span-2 md:col-span-2">
+    <div class="big-strech ">
       <img
         src="@/assets/Gallery/375.jpg"
         alt=""
@@ -100,28 +115,28 @@
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div>
+    <div class="col-span-2">
       <img
         src="@/assets/Gallery/386.jpg"
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="h-strech">
+    <div class="col-span-1">
       <img
         src="@/assets/Gallery/387.jpg"
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div>
+    <div class="col-span-2">
       <img
         src="@/assets/Gallery/388.jpg"
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="big-strech">
+    <div class="col-span-">
       <img
         src="@/assets/Gallery/389.jpg"
         alt=""
@@ -129,4 +144,6 @@
       />
     </div>
   </div>
+  
+  
 </template>

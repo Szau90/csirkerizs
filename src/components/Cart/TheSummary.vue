@@ -18,8 +18,6 @@ const emit = defineEmits(["next", "prev"]);
 
 function buttonClick() {
   emit("next");
-
-  console.log(props.step + 1);
 }
 
 const handleOrder = () => {
@@ -29,7 +27,6 @@ const handleOrder = () => {
 
 const prev = () => {
   emit("prev");
-  console.log(props.step - 1);
 };
 const cartStore = useCartStore();
 

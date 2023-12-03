@@ -17,8 +17,14 @@ import CheckmarkIcon from "../assets/icons/tabIcons/CheckmarkIcon.vue";
 
 const store = useOrdersStore();
 
-const { shippingData, orderSent, nameRules, emailRules, formIsValid } =
-  storeToRefs(store);
+const {
+  shippingData,
+  orderSent,
+  nameRules,
+  emailRules,
+  formIsValid,
+  invoiceDataIsValid,
+} = storeToRefs(store);
 
 const cartStore = useCartStore();
 
@@ -61,6 +67,7 @@ const step = ref(1);
           height="56"
           :prepend-icon="ShippingIcon"
           :append-icon="ArrowRight"
+          :disabled="step < 2"
         >
           szállítás
         </v-tab>
@@ -72,6 +79,7 @@ const step = ref(1);
           height="56"
           :prepend-icon="PayIcon"
           :append-icon="ArrowRight"
+          :disabled="step < 3"
         >
           fizetés
         </v-tab>
@@ -83,6 +91,7 @@ const step = ref(1);
           height="56"
           :prepend-icon="CheckmarkIcon"
           :append-icon="ArrowRight"
+          :disabled="step < 4"
         >
           összesítő
         </v-tab>
@@ -109,7 +118,7 @@ const step = ref(1);
           <TheSummary
             :step="step"
             @prev="step--"
-            @next="step++"
+            @next="formIsValid ? step++ : step"
             class="lg:mr-4"
           />
         </div>
@@ -122,7 +131,11 @@ const step = ref(1);
           <TheSummary
             :step="step"
             @prev="step--"
-            @next="step++"
+            @next="
+              shippingData.isEqualToShippingDetails || invoiceDataIsValid
+                ? step++
+                : step
+            "
             class="lg:mr-4"
           />
         </div>

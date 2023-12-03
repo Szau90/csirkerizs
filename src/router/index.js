@@ -40,7 +40,7 @@ const router = createRouter({
     {
       path: "/viszonteladoknak",
       name: "viszonteladóknak",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/ResellerView.vue"),
     },
     {
       path: "/galeria",

@@ -7,7 +7,7 @@ import { storeToRefs } from "pinia";
 
 const store = useOrdersStore();
 
-const { shippingData, nameRules, emailRules } = storeToRefs(store);
+const { shippingData, nameRules, emailRules, inputRules } = storeToRefs(store);
 
 const { handleSubmit} = store
 
@@ -67,6 +67,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.postCode"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="irányítószám"
@@ -74,6 +75,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.city"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="város"
@@ -81,6 +83,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.street"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="utca"
@@ -88,6 +91,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.houseNumber"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="házszám"
@@ -103,6 +107,7 @@ const datas = reactive({
       ></v-text-field>
       <v-text-field
         v-model="shippingData.phone"
+        :rules="inputRules"
         class="w-96"
         variant="underlined"
         label="telefonszámod"
