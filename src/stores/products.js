@@ -25,7 +25,7 @@ export const useProductStore = defineStore("products", () => {
       price: 100.99,
       description: "Whey protein isolate drink powder with glutamine and BCAA",
       category: "Táplálék kiegészítők",
-      src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+      src: "/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 5,
       flavour: "vanilia",
       weight: "450g",
