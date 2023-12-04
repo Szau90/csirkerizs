@@ -85,7 +85,7 @@ const totalPrice = computed(() => {
     <div class=" h-px bg-lightBorder mt-8 mx-5" />
     <v-text-field
       variant="solo"
-      rounded="xl"
+      rounded="pill"
       label="kuponkódod"
       class="px-5 mt-8"
       hide-details

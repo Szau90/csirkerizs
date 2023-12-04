@@ -66,7 +66,7 @@ defineProps({
         id="price"
         class="w-40 h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
       >
-        {{ meal.price }}
+        {{ meal.price }} Forint
       </div>
       <PrimaryBtn
         id="button"

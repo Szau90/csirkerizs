@@ -77,7 +77,7 @@ const currentPage = ref(1);
                 @click="
                   addToCart({
                     id: item.raw.id,
-                    name: item.raw.title,
+                    name: item.raw.name,
                     description: item.raw.description,
                     price: item.raw.price,
                     quantity: 1,

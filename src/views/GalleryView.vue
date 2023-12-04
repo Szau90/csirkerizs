@@ -1,19 +1,4 @@
-<script setup>
-import {ref} from 'vue'
-import ImgCarousel from '../components/Gallery/ImgCarousel.vue';
-const showModal = ref(false)
-</script>
-
 <template>
-  <v-btn @click="showModal= !showModal">show</v-btn>
-<v-overlay v-model="showModal" min-width="100%" class="align-center justify-center">
-  <ImgCarousel class=""/>
-</v-overlay>
-    
-     
-    
-   
-
   <div
     class="mt-32 p-2.5 max-w-[1536px] mx-auto bg-transparent grid grid-cols-[auto_minmax(250px,_1fr)] auto-rows-[250px] grid-flow-dense gap-2.5 xl:gap-6"
   >
@@ -40,7 +25,7 @@ const showModal = ref(false)
     </div>
     <div>
       <img
-        src="@/assets/Gallery/377.jpg"
+        src="@/assets/Gallery/377.jpg "
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
@@ -52,7 +37,7 @@ const showModal = ref(false)
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="big-strech ">
+    <div class="big-strech">
       <img
         src="@/assets/Gallery/375.jpg"
         alt=""
@@ -144,6 +129,4 @@ const showModal = ref(false)
       />
     </div>
   </div>
-  
-  
 </template>

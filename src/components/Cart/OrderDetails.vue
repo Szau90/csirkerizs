@@ -14,23 +14,25 @@ const { shippingData, clientData } = storeToRefs(store);
     <section class="flex flex-col md:flex-row gap-12">
       <div class="flex flex-col w-[300px]">
         <h1 class="font-semibold">Szállítási mód</h1>
-        <p>
+        <p class="h-14 flex items-center">
           {{
             shippingData.shippingFee === 2290
               ? "Futárszolgálat + 2 290 Forint"
               : "Személyes átvétel üzletünkben"
           }}
         </p>
+        <div class="w-[300px] bg-lightBorder h-px" />
       </div>
       <div class="flex flex-col">
         <h1 class="font-semibold">Fizetési mód</h1>
-        <p>
+        <p class="h-14 flex items-center">
           {{
             shippingData.payByFee === 500
               ? "Utánvétel + 500 Forint"
               : "Bankártyás fizetés"
           }}
         </p>
+        <div class="w-[300px] bg-lightBorder h-px" />
       </div>
     </section>
 
@@ -56,13 +58,17 @@ const { shippingData, clientData } = storeToRefs(store);
         <h1 class="font-semibold">Számlázási adatok</h1>
         <div v-if="!shippingData.isEqualToShippingDetails">
           <template v-for="detail in shippingData.invoiceData" :key="detail">
-            <p>{{ detail }}</p>
+            <p class="h-14 flex items-center">{{ detail }}</p>
+            <div class="w-[300px] bg-lightBorder h-px" />
           </template>
         </div>
-        <p v-else>megegyezik a szállítási adatokkal</p>
+        <p v-else class="h-14 flex items-center">
+          megegyezik a szállítási adatokkal
+        </p>
+        <div class="w-[300px] bg-lightBorder h-px" />
 
         <button
-          class="flex flex-row items-center gap-3"
+          class="flex flex-row items-center gap-3 mt-12"
           v-bind="shippingData.isAccepted"
         >
           <div

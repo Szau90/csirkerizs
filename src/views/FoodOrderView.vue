@@ -10,12 +10,19 @@ import TheCategories from "../components/FoodorderPage/TheCategories.vue";
 import CategoryHeader from "../components/FoodorderPage/CategoryHeader.vue";
 import SmallScreenCategoryHeader from "../components/FoodorderPage/SmallScreenCategoryHeader.vue";
 import CategoriesBtn from "../components/FoodorderPage/CategoriesBtn.vue";
+import { useCartStore } from "../stores/cart";
+import { storeToRefs } from "pinia";
+
+const cartStore = useCartStore();
+
 
 const store = useMealsStore();
 
 const meals = computed(() => store.meals);
 
-const categories = ref(store.categories);
+const {categories} = storeToRefs(store);
+
+const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
 const currentPage = ref(1);
 
@@ -141,5 +148,14 @@ const search = ref("Reggelik (szénhidrát mentes)");
         <div class="w-full h-20" />
       </template>
     </v-data-iterator>
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      color="#FF5F5C"
+      location="bottom end"
+      rounded="xl"
+    >
+      {{ snackbarText }} hozzáadva a kosárhoz
+    </v-snackbar>
   </BaseLayout>
 </template>

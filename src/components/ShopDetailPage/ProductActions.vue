@@ -1,12 +1,18 @@
 <script setup>
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import { useCartStore } from "@/stores/cart";
+import { useProductCounterStore } from "../../stores/productCounter";
+import { storeToRefs } from "pinia";
+
+const store = useProductCounterStore();
+
+const { productCounter } = storeToRefs(store);
 
 const cartStore = useCartStore();
 
 const { addToCart } = cartStore;
 
-defineProps(["id", "title", "description", "price", "productCounter", "image"]);
+defineProps(["id", "title", "description", "price", "quantity", "image"]);
 </script>
 
 <template>
@@ -14,7 +20,7 @@ defineProps(["id", "title", "description", "price", "productCounter", "image"]);
     <div
       class="w-36 h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
     >
-      {{ price }}
+      {{ price }} Forint
     </div>
     <PrimaryBtn
       title="kosárba"

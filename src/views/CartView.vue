@@ -50,7 +50,7 @@ const step = ref(1);
       >
         <v-tab
           :value="1"
-          rounded="xl"
+          rounded="pill"
           elevation="2"
           class="w-40 lg:w-56 mx-5"
           height="56"
@@ -61,7 +61,7 @@ const step = ref(1);
         </v-tab>
         <v-tab
           :value="2"
-          rounded="xl"
+          rounded="pill"
           elevation="2"
           class="w-40 lg:w-56 mx-5"
           height="56"
@@ -73,7 +73,7 @@ const step = ref(1);
         </v-tab>
         <v-tab
           :value="3"
-          rounded="xl"
+          rounded="pill"
           elevation="2"
           class="w-40 lg:w-56 mx-5"
           height="56"
@@ -85,7 +85,7 @@ const step = ref(1);
         </v-tab>
         <v-tab
           :value="4"
-          rounded="xl"
+          rounded="pill"
           elevation="2"
           class="w-40 lg:w-56 mx-5"
           height="56"

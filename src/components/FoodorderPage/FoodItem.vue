@@ -88,7 +88,9 @@ const handleSubmit = () => {
     isUpdating: false,
   };
 
-  addMealToCart(mealData);
+  if(totalQuantity > 0) {
+    addMealToCart(mealData);
+  }
 
   orders.value.forEach((order) => {
     order.date.quantity = 0;
@@ -153,7 +155,7 @@ const handleSubmit = () => {
         <div
           class="w-32 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
         >
-          {{ price }}
+          {{ price }} Forint
         </div>
         <PrimaryBtn
           title="rendeld meg!"

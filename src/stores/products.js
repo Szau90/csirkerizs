@@ -11,7 +11,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 5,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -27,7 +27,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 5,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -43,7 +43,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 5,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -59,7 +59,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 4,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -75,7 +75,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 4,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -91,7 +91,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Ital és ételtartók",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 4,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -107,7 +107,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 4,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -123,7 +123,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Fitnesz kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 4,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -139,7 +139,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Sport eszközök",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 4,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -155,7 +155,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Italok",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 3,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -171,7 +171,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Sportszeletek",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 3,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -187,7 +187,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Ital és ételtartók",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 3,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -203,7 +203,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Táplálék kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 3,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -219,7 +219,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Fitnesz kiegészítők",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 3,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -235,7 +235,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Sport eszközök",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 2,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -251,7 +251,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Italok",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 2,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -267,7 +267,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Sportszeletek",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 2,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
@@ -283,7 +283,7 @@ export const useProductStore = defineStore("products", () => {
       category: "Ital és ételtartók",
       src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
       rating: 5,
-      flavour: "vanillia",
+      flavour: "vanilia",
       weight: "450g",
       galery: [
         "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",

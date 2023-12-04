@@ -7,6 +7,12 @@ import SimilarProducts from "./SimilarProducts.vue";
 import ProductDescription from "./ProductDescription.vue";
 import ProductContent from "./ProductContent.vue";
 import ProductImage from "./ProductImage.vue";
+import { useCartStore } from "../../stores/cart";
+import { storeToRefs } from "pinia";
+
+const cartStore = useCartStore();
+
+const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
 defineProps([
   "id",
@@ -62,6 +68,15 @@ defineProps([
 
       <SimilarProducts :similarProducts="similarProducts" />
     </div>
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      color="#FF5F5C"
+      location="bottom end"
+      rounded="xl"
+    >
+      {{ snackbarText }} hozzáadva a kosárhoz
+    </v-snackbar>
   </section>
 </template>
 
@@ -73,7 +88,6 @@ defineProps([
   }
   #social {
     justify-content: center;
-    
   }
   #share {
     margin: 0 1.5rem;
@@ -81,6 +95,5 @@ defineProps([
   h1 {
     margin-top: 1rem;
   }
- 
 }
 </style>

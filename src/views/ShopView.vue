@@ -15,9 +15,8 @@ const store = useProductStore();
 const { products } = storeToRefs(store);
 
 const { addToCart } = cartStore;
-const cartItems = storeToRefs(cartStore);
 
-console.log(cartItems.items);
+const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
 const numberOfItems = ref([10, 20, 30, 50]);
 
@@ -58,6 +57,8 @@ const filter = (value, query) => {
   );
 };
 const search = ref("Táplálék kiegészítők");
+
+
 </script>
 
 <template>
@@ -227,7 +228,7 @@ const search = ref("Táplálék kiegészítők");
                 <div
                   class="w-28 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
                 >
-                  {{ item.raw.price }}
+                  {{ item.raw.price }} Forint
                 </div>
                 <PrimaryBtn
                   title="kosárba"
@@ -272,6 +273,16 @@ const search = ref("Táplálék kiegészítők");
         <div class="w-full h-20" />
       </template>
     </v-data-iterator>
+
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      color="#FF5F5C"
+      location="bottom end"
+      rounded="xl"
+    >
+      {{ snackbarText }} hozzáadva a kosárhoz
+    </v-snackbar>
   </ShopLayout>
 </template>
 

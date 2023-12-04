@@ -8,18 +8,26 @@ import TwitterIcon from "./assets/icons/TwitterIcon.vue";
 import SocialIconWrapper from "./components/UI/SocialIconWrapper.vue";
 import { useSideNavStore } from "./stores/sideNav";
 import { ref, computed } from "vue";
+import { useRouter } from "vue-router";
+import CartIcon from "./assets/icons/CartIcon.vue";
+import SearchIcon from "./assets/icons/SearchIcon.vue";
+import UserIcon from "./assets/icons/UserIcon.vue";
+import MobileMenuIcon from "./assets/icons/MobileMenuIcon.vue";
 
 const store = useSideNavStore();
 const navLinks = computed(() => store.navLinks);
 const drawer = ref(null);
+
+const router = useRouter();
 </script>
 
 <template>
   <v-app id="v-app">
     <v-navigation-drawer
+      id="drawer"
       v-model="drawer"
+      width="654"
       temporary
-      :style="{ height: '90%', width: '30%' }"
       class="rounded-r-[30px] rounded-bl-[30px] flex flex-col items-center justify-center"
       scrim="#F0F0F8"
       color="#F0F0F8"
@@ -76,6 +84,31 @@ const drawer = ref(null);
 
     <main>
       <router-view></router-view>
+
+    <v-bottom-navigation
+        id="nav"
+        :elevation="0"
+        class="d-sm-none fixed top-screen "
+        bg-color="#FF5F5C"
+        rounded="pill"
+        height="72"
+        grow
+      >
+        <v-btn value="menu" @click="drawer = !drawer">
+          <MobileMenuIcon />
+        </v-btn>
+        <v-btn value="search" >
+          <SearchIcon />
+        </v-btn>
+        <v-btn value="cart" @click="router.push('/kosar')">
+          <CartIcon />
+        </v-btn>
+
+        <v-btn value="login" @click="router.push('/login')">
+          <UserIcon />
+        </v-btn>
+      </v-bottom-navigation>
+ 
     </main>
     <footer>
       <TheFooter />
@@ -96,5 +129,29 @@ const drawer = ref(null);
   border-top: 1px solid #d9d9e5;
   margin-top: 1.5rem;
   padding-top: 2.25rem;
+}
+#drawer {
+  height: 90% !important;
+}
+
+
+
+@media screen and (max-width: 1439px) {
+  #drawer {
+    width: 45% !important;
+    height: 90% !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  #drawer {
+    width: 60% !important;
+    height: 90% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #drawer {
+    width: 100% !important;
+    height: 90% !important;
+  }
 }
 </style>

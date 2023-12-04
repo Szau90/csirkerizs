@@ -2,16 +2,10 @@
 import ProductActions from "./ProductActions.vue";
 import ProductTable from "./ProductTable.vue";
 import ProductCounter from "./ProductCounter.vue";
-import { useProductCounterStore } from "@/stores/productCounter";
+import { useCartStore } from "@/stores/cart";
 import { storeToRefs } from "pinia";
-
-const store = useProductCounterStore();
-
-const { productCounter } = storeToRefs(store);
-
-const { incrementQuantity, decrementQuantity } = store;
-
-defineProps([
+import {computed, watch} from 'vue'
+const props = defineProps([
   "id",
   "title",
   "subtitle",
@@ -21,6 +15,30 @@ defineProps([
   "price",
   "image",
 ]);
+
+const store = useCartStore();
+
+const { cartItems } = storeToRefs(store);
+
+
+
+const itemInCart = computed(()=>{
+  cartItems.value.find(item => item.id === props.id)
+})
+
+const quantity = computed(()=>{
+
+if(itemInCart.value) {
+  return itemInCart.value.quantity
+}else {
+  return 1
+}
+})
+
+
+
+console.log(quantity.value)
+
 </script>
 
 <template>
@@ -30,13 +48,13 @@ defineProps([
       <p class="text-content-md text-textColor">{{ subtitle }}</p>
       <p class=" mt-2 text-content-md text-[#B4B4B4]">{{ description }}</p>
       <ProductTable :flavour="flavour" :weight="weight" />
-      <ProductCounter/>
+      <ProductCounter :quantity="quantity" :id="props.id" />
       <ProductActions
         :id="id"
         :title="title"
         :description="description"
         :price="price"
-        :product-counter="productCounter"
+        :quantity="quantity"
         :image="image"
         class="mt-5"
       />
