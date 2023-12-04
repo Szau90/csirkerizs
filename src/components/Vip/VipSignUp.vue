@@ -102,7 +102,7 @@ const handleSubmit = () => {
         />
       </div>
       <p
-        class="w-[300px] flex items-center text-start text-textColor md:max-2xl:text-content-md"
+        class="w-[295px] flex items-center text-start text-textColor text-content-md md:max-2xl:text-content-md"
       >
       Elolvastam és megértettem az ÁSZF feltételeit
       </p></button>

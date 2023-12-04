@@ -9,6 +9,13 @@ import ProductContent from "./ProductContent.vue";
 import ProductImage from "./ProductImage.vue";
 import { useCartStore } from "../../stores/cart";
 import { storeToRefs } from "pinia";
+import { useRouter } from "vue-router";
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.back()
+}
 
 const cartStore = useCartStore();
 
@@ -50,7 +57,7 @@ defineProps([
       id="social"
       class="lg:w-[55.125rem] mx-auto md:max-lg:px-2 mt-8 gap-8 md:gap-5 flex flex-row flex-wrap md:flex-nowrap items-center md:justify-start"
     >
-      <PrimaryBtn title="vissza" class="w-56" />
+      <PrimaryBtn @click="handleClick" title="vissza" class="w-56" />
       <p id="share">megosztás</p>
       <FacebookIcon />
       <Instagramicon />

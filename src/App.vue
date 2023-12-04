@@ -12,6 +12,7 @@ import CartIcon from "./assets/icons/CartIcon.vue";
 import SearchIcon from "./assets/icons/SearchIcon.vue";
 import UserIcon from "./assets/icons/UserIcon.vue";
 import MobileMenuIcon from "./assets/icons/MobileMenuIcon.vue";
+import InstagramIcon from "./assets/icons/InstagramIcon.vue";
 
 const store = useSideNavStore();
 const navLinks = computed(() => store.navLinks);
@@ -61,7 +62,7 @@ const router = useRouter();
           color="black"
           variant="plain"
           id="navlinks"
-          class="w-[353px]"
+          class="w-[353px] ml-5"
         ></v-list-item>
       </v-list>
       <div class="flex flex-row w-full gap-9 mt-9 justify-center">
@@ -72,7 +73,7 @@ const router = useRouter();
         </SocialIconWrapper>
         <SocialIconWrapper>
           <a href="https://www.instagram.com/csirkerizshu/">
-            <FacebookIcon/>
+            <InstagramIcon />
           </a>
         </SocialIconWrapper>
         <SocialIconWrapper>

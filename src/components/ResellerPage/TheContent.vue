@@ -20,7 +20,7 @@ const advantages = ref([
     </h1>
     <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
     <div
-      class="flex-col gap-5 text-content md:text-content-sm lg:text-content-md xl:text-content text-textColor md:text-start w-[22.5rem] md:w-[350px] lg:w-[490px] xl:w-[550px] 2xl:w-[824px] flex shrink"
+      class="flex-col gap-5 text-content-md md:text-content-sm lg:text-content-md xl:text-content text-textColor md:text-start w-[22.5rem] md:w-[350px] lg:w-[490px] xl:w-[550px] 2xl:w-[824px] flex shrink"
     >
       <ul v-for="(advantage, index) in advantages" :key="index">
         <li class="flex flex-row items-center gap-4">

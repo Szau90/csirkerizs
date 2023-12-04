@@ -19,7 +19,7 @@ import LocationsModal from "../components/DeliveryAreas/LocationsModal.vue";
       <div
         class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full mx-auto mt-6"
       />
-      <div class="text-center text-textColor px-5 my-8 text-content md:text-content-md xl:text-content">
+      <div class="text-center text-textColor px-5 my-8 text-content-md md:text-content-md xl:text-content">
         <p>Ezekben az edzőtermekben találod meg a Csirkerizs hűtőt ;)</p>
         <p>További részleteket találsz az ikonokra kattintva!</p>
         <p>

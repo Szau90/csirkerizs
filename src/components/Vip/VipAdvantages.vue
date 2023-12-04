@@ -38,7 +38,7 @@ const advantages = ref([
           >
         </div>
         <span
-          class="max-w-[21rem] md:min-w-[26rem] max-w-[26.5rem] text-textColor"
+          class="max-w-[17rem] md:min-w-[26rem] lg:max-w-[26.5rem] text-textColor"
         >
           {{ advantage }}
         </span>

@@ -13,7 +13,7 @@
     />
 
     <div
-      class="flex flex-col gap-5 md:text-content-sm lg:text-content-md xl:text-content text-textColor"
+      class="flex flex-col  gap-5 text-content-md md:text-content-sm lg:text-content-md xl:text-content text-textColor"
     >
       <p>
         Ahogy már említettem az ételek egy speciális tasakba kerülnek, amikből a

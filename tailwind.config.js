@@ -18,7 +18,7 @@ export default {
         'highlightedBg': "url('src/assets/shapes/HighlightedBg.svg')",
         'highlightedBgTablet': "url('src/assets/shapes/HighlightedBgTablet.svg')",
         'highlightedBgMobile': "url('src/assets/shapes/HighlightedBgMobile.svg')",
-        'checkboxBg': "url('/assets/shapes/CheckboxBg.svg')"
+        'checkboxBg': "url('src/assets/shapes/CheckboxBg.svg')"
         
       },
       backgroundSize: {

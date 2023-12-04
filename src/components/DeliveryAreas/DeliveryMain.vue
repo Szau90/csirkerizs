@@ -116,7 +116,7 @@ const handleSubmit = () => {
     </h1>
     <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
     <div
-      class="flex-col gap-5 text-content md:text-content-sm lg:text-content-md xl:text-content text-textColor md:text-start w-[22.5rem] md:w-[18.75rem] lg:w-[20.625rem] xl:w-[26.312rem] flex shrink"
+      class="flex-col gap-5 text-content-md md:text-content-sm lg:text-content-md xl:text-content text-textColor md:text-start w-[22.5rem] md:w-[18.75rem] lg:w-[20.625rem] xl:w-[26.312rem] flex shrink"
     >
       <h1 class="font-semibold">JÓ TUDNI</h1>
       <p>

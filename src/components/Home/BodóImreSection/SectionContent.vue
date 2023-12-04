@@ -1,16 +1,18 @@
 <script setup>
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
-import { useRouter } from "vue-router"; 
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 
-const handleClick= () => {
-  router.push('/technologia')
-}
+const handleClick = () => {
+  router.push("/technologia");
+};
 </script>
 
 <template>
-  <div class="container mx-auto flex flex-col md:flex-row mt-24 md:mt-12 items-center">
+  <div
+    class="container mx-auto flex flex-col md:flex-row mt-24 md:mt-12 items-center"
+  >
     <div class="md:w-1/2">
       <img
         src="@/assets/shapes/BodóImi.svg"
@@ -29,7 +31,7 @@ const handleClick= () => {
       </h1>
       <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
       <p
-        class="text-content  md:text-[15px] md:text-start lg:text-content text-textColor w-20rem md:w-[24rem] xl:w-[37rem]"
+        class="text-content w-[22.5rem] md:text-[15px] md:text-start lg:text-content text-textColor w-20rem md:w-[24rem] xl:w-[37rem]"
       >
         Ez a vállalkozás olyan szellemiségben született, amelyben az egészséges,
         fitt életmód alapját képező tudatos táplálkozást igyekszünk úgy
@@ -42,11 +44,11 @@ const handleClick= () => {
 
 <style scoped>
 @media screen and (max-width: 639px) {
- h1 {
-  text-align: center;
- }
- p {
-  text-align: center;
- }
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
 }
 </style>

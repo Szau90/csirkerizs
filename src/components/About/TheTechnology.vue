@@ -28,7 +28,7 @@ const handleClick= () => {
       </h1>
       <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
       <p
-        class="flex flex-col gap-1 text-content md:text-[13px] md:text-start lg:text-content text-textColor w-20rem md:w-[22rem] lg:w-full xl:w-[37rem]"
+        class="flex flex-col gap-1 text-content-md md:text-[13px] md:text-start lg:text-content text-textColor w-20rem md:w-[22rem] lg:w-full xl:w-[37rem]"
       >
        <p>
         Több száz nm-es, csúcstechnológiával felszerelt konyhával rendelkezünk,
