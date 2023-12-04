@@ -55,12 +55,12 @@ const router = createRouter({
     {
       path: "/adatvedelmi-szabalyzat",
       name: "adatvédelmi szabályzat",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/PrivacyPolicyView.vue"),
     },
     {
       path: "/felhasznalasi-feltetelek",
       name: "felhasználási feltételek",
-      component: () => import("../views/FoodOrderView.vue"),
+      component: () => import("../views/TermsOfUseView.vue"),
     },
     {
       path: "/kosar",
@@ -71,6 +71,11 @@ const router = createRouter({
       path: "/login",
       name: "login",
       component: () => import("../views/LoginView.vue"),
+    },
+    {
+      path: "/registration",
+      name: "registration",
+      component: () => import("../views/RegistrationView.vue"),
     },
     {
       path: "/shop/:productId",

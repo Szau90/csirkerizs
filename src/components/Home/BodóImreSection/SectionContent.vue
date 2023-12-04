@@ -1,5 +1,12 @@
 <script setup>
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/technologia')
+}
 </script>
 
 <template>
@@ -28,7 +35,7 @@ import PrimaryBtn from "../../UI/PrimaryBtn.vue";
         fitt életmód alapját képező tudatos táplálkozást igyekszünk úgy
         hozzáigazítani felgyorsult világunk igényeihez…
       </p>
-      <PrimaryBtn title="ismerj meg!" class="w-56" />
+      <PrimaryBtn @click="handleClick" title="ismerj meg!" class="w-56" />
     </div>
   </div>
 </template>

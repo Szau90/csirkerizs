@@ -4,6 +4,13 @@ import AddedToWishlistIcon from "../../../assets/icons/AddedToWishlistIcon.vue";
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
 import { useMealsStore } from "../../../stores/meals";
 import { computed } from "vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/etelrendeles')
+}
 
 const store = useMealsStore();
 
@@ -72,6 +79,7 @@ defineProps({
         id="button"
         title="rendeld meg!"
         class="w-[14.437rem] h-14 rounded-l-none text-content"
+        @click="handleClick"
       />
     </div>
   </section>

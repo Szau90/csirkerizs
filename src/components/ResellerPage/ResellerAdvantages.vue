@@ -65,7 +65,7 @@ const advantages = ref([
                 <CheckIcon class="mt-1 ml-1" />
               </div>
               <p
-                class="md:max-w-[400px] lg:max-w-[410px] xl:max-w-[480px] 2xl:max-w-[588px]"
+                class="md:max-w-[400px] lg:max-w-[410px] xl:max-w-[450px] 2xl:max-w-[588px]"
               >
                 {{ advantage }}
               </p>

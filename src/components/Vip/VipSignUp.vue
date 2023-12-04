@@ -1,6 +1,7 @@
 <script setup>
 import { reactive, ref, computed } from "vue";
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
+import CheckIcon from "../../assets/icons/CheckIcon.vue";
 
 const nameRules = ref([
   (value) => {
@@ -86,10 +87,25 @@ const handleSubmit = () => {
         density="compact"
         class="md:max-lg:w-[414px]"
       ></v-text-field>
-      <v-checkbox
-        v-model="checkbox"
-        :label="'Elolvastam és megértettem az ÁSZF feltételeit'"
-      ></v-checkbox>
+      <button
+      type="button"
+      class="flex flex-row  gap-1"
+      v-bind="checkbox"
+    >
+      <div
+        @click="checkbox = !checkbox"
+        class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+      >
+        <CheckIcon
+          v-if="checkbox"
+          class="mt-1 ml-1"
+        />
+      </div>
+      <p
+        class="w-[300px] flex items-center text-start text-textColor md:max-2xl:text-content-md"
+      >
+      Elolvastam és megértettem az ÁSZF feltételeit
+      </p></button>
       <PrimaryBtn title="jelentkezem" class="w-56" />
     </v-form>
   </section>

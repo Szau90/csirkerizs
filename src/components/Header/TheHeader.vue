@@ -14,10 +14,17 @@ import MenuIcon from "../../assets/icons/MenuIcon.vue";
     >
       <MenuIcon class="cursor-pointer" @click.stop="$emit('toggle')" />
       <div class="w-[1px] h-12 bg-[#707070]"></div>
-      <RouterLink to="/" class="font-semibold"> home</RouterLink>
+      <RouterLink to="/"> home</RouterLink>
       <RouterLink to="/etelrendeles">ételrendelés</RouterLink>
     </nav>
     <TheLogo />
     <HeaderActions />
   </div>
 </template>
+
+<style scoped>
+.router-link-active {
+  font-weight: 600;
+  
+}
+</style>

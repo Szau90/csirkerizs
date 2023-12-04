@@ -2,6 +2,13 @@
 import { ref } from "vue";
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import CheckIcon from "../../assets/icons/CheckIcon.vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/etelrendeles')
+}
 
 const advantages = ref([
     'Mesterséges színezék és tartósítószer mentes ételek',
@@ -46,7 +53,7 @@ const advantages = ref([
     </strong>
     
     </p>
-    <PrimaryBtn :title="'étlapunk'" class="w-56 xl:mt-8" />
+    <PrimaryBtn @click="handleClick" :title="'étlapunk'" class="w-56 xl:mt-8" />
   </div>
 </template>
 

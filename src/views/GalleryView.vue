@@ -1,22 +1,22 @@
 <template>
-  <div
+  <section
     class="mt-32 p-2.5 max-w-[1536px] mx-auto bg-transparent grid grid-cols-[auto_minmax(250px,_1fr)] auto-rows-[250px] grid-flow-dense gap-2.5 xl:gap-6"
   >
-    <div class="v-strech row-span-1 md:row-span-4">
+    <div class="v-strech col-span-2 row-span-2 lg:row-span-4 lg:col-auto">
       <img
         src="@/assets/Gallery/370.jpg"
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="h-strech row-span-1 col-span-1 md:row-span-3 md:col-span-2">
+    <div class="row-span-2 col-span-2 lg:row-span-3 lg:col-span-2">
       <img
         src="@/assets/Gallery/371.jpg"
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="row-span-1 md:row-span-4">
+    <div class="row-span-1 lg:row-span-4">
       <img
         src="@/assets/Gallery/374.jpg"
         alt=""
@@ -121,12 +121,20 @@
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-    <div class="col-span-">
+    <div class="md:col-span-2">
       <img
         src="@/assets/Gallery/389.jpg"
         alt=""
         class="w-full h-full object-cover rounded-xl"
       />
     </div>
-  </div>
+  </section>
 </template>
+
+<style scoped>
+@media screen and (max-width: 767px) {
+  section {
+    margin-top: 2rem;
+  }
+}
+</style>

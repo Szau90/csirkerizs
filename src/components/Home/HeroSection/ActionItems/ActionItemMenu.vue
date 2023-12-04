@@ -1,9 +1,16 @@
 <script setup>
 import ServicesArrow from '../../../../assets/icons/ServicesArrow.vue';
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/etelrendeles')
+}
 </script>
 
 <template>
-  <div class="flex items-center justify-between">
+  <div @click="handleClick" class="flex items-center justify-between cursor-pointer">
     <p class="inline-flex">étlapunk</p>
     <ServicesArrow class="inline-flex" />
   </div>

@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import CheckIcon from "../../assets/icons/CheckIcon.vue";
 
 const advantages = ref([
@@ -12,7 +11,7 @@ const advantages = ref([
 </script>
 <template>
   <div
-    class="flex flex-col order-2 gap-3 lg:gap-4 w-full md:w-[43%] xl:w-[35%] justify-center items-center md:items-start "
+    class="flex flex-col order-2 gap-3 lg:gap-4 w-full md:w-[43%] xl:w-[35%] justify-center items-center md:items-start"
   >
     <h1
       class="text-title-sm md:text-title-md 2xl:text-title w-[20rem] md:w-full md:text-start lg:w-96 xl:w-full 2xl:w-[624px]"
@@ -30,11 +29,14 @@ const advantages = ref([
           >
             <CheckIcon class="mt-1 ml-1" />
           </div>
-          <p class="md:max-w-[270px] lg:max-w-[390px] xl:max-w-[450px] 2xl:max-w-[588px]">{{ advantage }}</p>
+          <p
+            class="md:max-w-[270px] lg:max-w-[390px] xl:max-w-[450px] 2xl:max-w-[588px]"
+          >
+            {{ advantage }}
+          </p>
         </li>
       </ul>
     </div>
-    <PrimaryBtn :title="'étlapunk'" class="w-56 xl:mt-8" />
   </div>
 </template>
 

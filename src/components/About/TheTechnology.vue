@@ -1,5 +1,12 @@
 <script setup>
 import PrimaryBtn from "../UI/PrimaryBtn.vue"
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/technologia')
+}
 </script>
 <template>
   <section class="flex flex-col md:flex-row">
@@ -38,7 +45,7 @@ import PrimaryBtn from "../UI/PrimaryBtn.vue"
          ha jóllakott vagyok.” (Bud Spencer)
        </p>
       </p>
-      <PrimaryBtn title="technológia" class="w-56" />
+      <PrimaryBtn @click="handleClick" title="technológia" class="w-56" />
     </div>
   </section>
 </template>

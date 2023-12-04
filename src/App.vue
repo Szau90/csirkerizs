@@ -67,10 +67,14 @@ const router = useRouter();
       </v-list>
       <div class="flex flex-row w-full gap-9 mt-9 justify-center">
         <SocialIconWrapper>
-          <FacebookIcon />
+          <a href="https://www.facebook.com/csirkerizs.hu">
+            <FacebookIcon />
+          </a>
         </SocialIconWrapper>
         <SocialIconWrapper>
-          <Instagramicon />
+          <a href="https://www.instagram.com/csirkerizshu/">
+            <Instagramicon />
+          </a>
         </SocialIconWrapper>
         <SocialIconWrapper>
           <TwitterIcon />
@@ -85,10 +89,10 @@ const router = useRouter();
     <main>
       <router-view></router-view>
 
-    <v-bottom-navigation
+      <v-bottom-navigation
         id="nav"
         :elevation="0"
-        class="d-sm-none fixed top-screen "
+        class="d-sm-none fixed top-screen"
         bg-color="#FF5F5C"
         rounded="pill"
         height="72"
@@ -97,7 +101,7 @@ const router = useRouter();
         <v-btn value="menu" @click="drawer = !drawer">
           <MobileMenuIcon />
         </v-btn>
-        <v-btn value="search" >
+        <v-btn value="search">
           <SearchIcon />
         </v-btn>
         <v-btn value="cart" @click="router.push('/kosar')">
@@ -108,7 +112,6 @@ const router = useRouter();
           <UserIcon />
         </v-btn>
       </v-bottom-navigation>
- 
     </main>
     <footer>
       <TheFooter />
@@ -134,11 +137,15 @@ const router = useRouter();
   height: 90% !important;
 }
 
-
-
 @media screen and (max-width: 1439px) {
   #drawer {
-    width: 45% !important;
+    width: 30% !important;
+    height: 90% !important;
+  }
+}
+@media screen and (max-width: 1279px) {
+  #drawer {
+    width: 40% !important;
     height: 90% !important;
   }
 }

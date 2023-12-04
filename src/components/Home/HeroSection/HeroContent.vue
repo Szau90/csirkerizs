@@ -1,5 +1,12 @@
 <script setup>
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/etelrendeles')
+}
 </script>
 
 <template>
@@ -18,7 +25,7 @@ import PrimaryBtn from "../../UI/PrimaryBtn.vue";
       Edzz, dolgozz, pihenj és a fitt ételek készítését bízd ránk! Mesterséges
       színezék, tartósítószer mentes ételek profiktól Neked
     </p>
-    <PrimaryBtn :title="'étlapunk'" class="w-56  xl:mt-8" />
+    <PrimaryBtn :title="'étlapunk'" class="w-56  xl:mt-8" @click="handleClick"/>
   </div>
 </template>
 

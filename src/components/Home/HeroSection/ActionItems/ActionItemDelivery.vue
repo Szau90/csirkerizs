@@ -1,9 +1,16 @@
 <script setup>
 import ServicesArrow from '../../../../assets/icons/ServicesArrow.vue';
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/szallitasi-terulet')
+}
 </script>
 
 <template>
-  <div class="flex w-full items-center justify-between">
+  <div @click="handleClick" class="flex w-full items-center justify-between cursor-pointer">
     <p class="inline-flex text-white ml-5 md:ml-2 lg:ml-5">szállítás</p>
     <ServicesArrow class="inline-flex" />
   </div>

@@ -1,5 +1,13 @@
 <script setup>
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/etelrendeles')
+}
+
 </script>
 
 <template>
@@ -34,7 +42,7 @@ import PrimaryBtn from "../UI/PrimaryBtn.vue";
     </strong>
     <p>Csirkerizs Csapat :)</p>
     </p>
-    <PrimaryBtn :title="'étlapunk'" class="w-56 xl:mt-8" />
+    <PrimaryBtn @click="handleClick" :title="'étlapunk'" class="w-56 xl:mt-8" />
   </div>
 </template>
 

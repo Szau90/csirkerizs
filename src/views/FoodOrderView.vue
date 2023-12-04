@@ -15,12 +15,11 @@ import { storeToRefs } from "pinia";
 
 const cartStore = useCartStore();
 
-
 const store = useMealsStore();
 
 const meals = computed(() => store.meals);
 
-const {categories} = storeToRefs(store);
+const { categories } = storeToRefs(store);
 
 const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
@@ -71,7 +70,7 @@ const search = ref("Reggelik (szénhidrát mentes)");
         </v-item-group>
       </div>
     </template>
-   <!-- small screen -->
+    <!-- small screen -->
     <div class="flex flex-col-reverse md:flex-col">
       <SmallScreenCategoryHeader />
       <div class="flex flex-col-reverse md:flex-row items-center">
@@ -134,6 +133,7 @@ const search = ref("Reggelik (szénhidrát mentes)");
           class="absolute left-0 flex w-full items-center justify-center text-body-2 mt-4"
         >
           <v-pagination
+            v-if="pageCount > 1"
             v-model="currentPage"
             :length="pageCount"
             rounded="circle"

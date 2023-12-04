@@ -19,19 +19,23 @@ import SocialIconWrapper from "../UI/SocialIconWrapper.vue";
     >
       <RouterLink :to="'/'">Home</RouterLink>
       <RouterLink :to="'/etelrendeles'">Ételrendelés</RouterLink>
-      <RouterLink :to="'/'">Vip</RouterLink>
-      <RouterLink :to="'/'">Kik vagyunk?</RouterLink>
-      <RouterLink :to="'/'">Technológia</RouterLink>
-      <RouterLink :to="'/'">Szállítási területek</RouterLink>
-      <RouterLink :to="'/'">Viszonteladóknak</RouterLink>
-      <RouterLink :to="'/'">Galéria</RouterLink>
+      <RouterLink :to="'/vip'">Vip</RouterLink>
+      <RouterLink :to="'/rolunk'">Kik vagyunk?</RouterLink>
+      <RouterLink :to="'/technologia'">Technológia</RouterLink>
+      <RouterLink :to="'/szallitasi-terulet'">Szállítási területek</RouterLink>
+      <RouterLink :to="'/viszonteladoknak'">Viszonteladóknak</RouterLink>
+      <RouterLink :to="'/galeria'">Galéria</RouterLink>
     </nav>
     <div class="flex flex-row w-full gap-9 mt-9 justify-center">
       <SocialIconWrapper>
-        <FacebookIcon />
+        <a href="https://www.facebook.com/csirkerizs.hu">
+          <FacebookIcon />
+        </a>
       </SocialIconWrapper>
       <SocialIconWrapper>
-        <Instagramicon />
+        <a href="https://www.instagram.com/csirkerizshu/">
+          <Instagramicon />
+        </a>
       </SocialIconWrapper>
       <SocialIconWrapper>
         <TwitterIcon />
@@ -58,17 +62,23 @@ import SocialIconWrapper from "../UI/SocialIconWrapper.vue";
       <div class="flex flex-col gap-7">
         <p>További információk</p>
 
-        <p>Adatvédelmi szabályzat</p>
-
-        <p>Felhasználási feltételek</p>
+        <router-link to="/adatvedelmi-szabalyzat"
+          >Adatvédelmi szabályzat</router-link
+        >
+        <router-link to="/felhasznalasi-feltetelek"
+          >Felhasználási feltételek</router-link
+        >
       </div>
 
       <div class="hidden md:flex flex-col gap-7">
         <p>További információk</p>
 
-        <p>Adatvédelmi szabályzat</p>
-
-        <p>Felhasználási feltételek</p>
+        <router-link to="/adatvedelmi-szabalyzat"
+          >Adatvédelmi szabályzat</router-link
+        >
+        <router-link to="/felhasznalasi-feltetelek"
+          >Felhasználási feltételek</router-link
+        >
       </div>
     </div>
   </div>

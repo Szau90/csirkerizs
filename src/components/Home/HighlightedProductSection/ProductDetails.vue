@@ -1,5 +1,12 @@
 <script setup>
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/etelrendeles')
+}
 defineProps({
   meal: {
     type: Object,
@@ -45,6 +52,7 @@ defineProps({
         id="button"
         title="rendeld meg!"
         class="w-40 xl:w-[14.437rem] h-11 xl:h-14 rounded-l-none  md:text-content bg-secoundaryColor"
+        @click="handleClick"
       />
     </div>
   </section>
