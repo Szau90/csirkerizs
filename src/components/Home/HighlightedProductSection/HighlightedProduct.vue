@@ -17,7 +17,7 @@ const meals = computed(() => store.meals.filter((f) => f.isHighlightedProduct));
       class="flex flex-col h-[650px] md:h-[400px] xl:h-[650px] md:flex-row w-full lg:text-start xl:justify-start xl:ml-10 md:gap-2 xl:gap-20"
     >
       <img
-        src="../../../assets/Images/csirke_rizs_home-image.png"
+        src="src/assets/Images/csirke_rizs_home-image.png"
         class="w-[290px] md:w-[350px] xl:w-[609px]  md:ml-8 xl:ml-2  md:mb-12"
       />
 
