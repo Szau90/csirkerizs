@@ -2,7 +2,7 @@
 import TheLogo from "../UI/TheLogo.vue";
 import { RouterLink } from "vue-router";
 import FacebookIcon from "../../assets/icons/FacebookIcon.vue";
-import Instagramicon from "../../assets/icons/Instagramicon.vue";
+
 import TwitterIcon from "../../assets/icons/TwitterIcon.vue";
 import SocialIconWrapper from "../UI/SocialIconWrapper.vue";
 </script>
@@ -34,7 +34,7 @@ import SocialIconWrapper from "../UI/SocialIconWrapper.vue";
       </SocialIconWrapper>
       <SocialIconWrapper>
         <a href="https://www.instagram.com/csirkerizshu/">
-          <Instagramicon />
+          <FacebookIcon />
         </a>
       </SocialIconWrapper>
       <SocialIconWrapper>

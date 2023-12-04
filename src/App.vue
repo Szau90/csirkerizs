@@ -3,7 +3,6 @@ import TheHeader from "./components/Header/TheHeader.vue";
 import TheFooter from "./components/Footer/TheFooter.vue";
 import CloseIcon from "./assets/icons/CloseIcon.vue";
 import FacebookIcon from "./assets/icons/FacebookIcon.vue";
-import InstagramIcon from "./assets/icons/Instagramicon.vue";
 import TwitterIcon from "./assets/icons/TwitterIcon.vue";
 import SocialIconWrapper from "./components/UI/SocialIconWrapper.vue";
 import { useSideNavStore } from "./stores/sideNav";
@@ -73,7 +72,7 @@ const router = useRouter();
         </SocialIconWrapper>
         <SocialIconWrapper>
           <a href="https://www.instagram.com/csirkerizshu/">
-            <InstagramIcon />
+            <FacebookIcon/>
           </a>
         </SocialIconWrapper>
         <SocialIconWrapper>
