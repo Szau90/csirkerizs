@@ -1,5 +1,5 @@
 <template>
-  <section class="md:w-[22rem] lg:w-[30.75rem]  2xl:w-[40.875rem] flex flex-col gap-5 text-textColor">
+  <section class="md:w-[22rem] lg:w-[30.75rem] xl:w-[37rem]  2xl:w-[40.875rem] flex flex-col gap-5 text-textColor">
     <h1 class="font-semibold text-black md:text-content-sm lg:text-content-md xl:text-content ">Védőgázas tasak:</h1>
     <div class="flex flex-col gap-5  text-content-md md:text-content-sm lg:text-content-md xl:text-content">
         <p>

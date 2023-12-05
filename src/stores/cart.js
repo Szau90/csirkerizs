@@ -20,23 +20,20 @@ export const useCartStore = defineStore("cart", () => {
 
   const quantity = ref(0);
 
-
-
   const snackbar = ref(false);
 
   const snackbarText = ref("");
 
-  const timeout = ref(2000)
+  const timeout = ref(2000);
 
   const incrementQuantity = (item) => {
     const newItem = item;
     const existingItem = cartItems.value.find((item) => item.id === newItem.id);
 
-      existingItem.quantity++;
-      existingItem.calculatedPrice = existingItem.price * existingItem.quantity;
-      totalQuantity.value++;
-      console.log("totalquantity:" + totalQuantity.value);
-
+    existingItem.quantity++;
+    existingItem.calculatedPrice = existingItem.price * existingItem.quantity;
+    totalQuantity.value++;
+  
   };
 
   const decrementQuantity = (item) => {
@@ -56,7 +53,7 @@ export const useCartStore = defineStore("cart", () => {
         existingItem.calculatedPrice =
           existingItem.price * existingItem.quantity;
         totalQuantity.value--;
-        console.log("totalquantity:" + totalQuantity.value);
+       
       }
     }
   };
@@ -91,7 +88,6 @@ export const useCartStore = defineStore("cart", () => {
     totalQuantity.value += newItem.quantity;
     quantity.value = newItem.quantity;
     snackbar.value = true;
-   
   };
 
   const addMealToCart = (meal) => {
@@ -103,7 +99,7 @@ export const useCartStore = defineStore("cart", () => {
         id: newMeal.id,
         name: newMeal.name,
         description: newMeal.description,
-        price: newMeal.price * newMeal.quantity,
+        price: newMeal.price,
         calculatedPrice: newMeal.price * newMeal.quantity,
         quantity: newMeal.quantity,
         energy: newMeal.energy,
@@ -124,7 +120,43 @@ export const useCartStore = defineStore("cart", () => {
     snackbar.value = true;
   };
 
-  const isUpdating = ref(false);
+  const updateCartItem = (meal) => {
+    const newMeal = meal;
+    const existingMeal = cartItems.value.find((meal) => meal.id === newMeal.id);
+
+    existingMeal.quantity = newMeal.quantity;
+    existingMeal.calculatedPrice = newMeal.price * newMeal.quantity;
+
+    const itemId = meal.id;
+    const existingItemIndex = cartItems.value.findIndex(
+      (cartItem) => cartItem.id === itemId
+    );
+
+   
+
+      if (newMeal.quantity === 0) {
+        cartItems.value.splice(existingItemIndex, 1);
+        totalQuantity.value--;
+      } 
+
+      existingMeal.isUpdating = false
+    }
+
+
+
+
+  const openUpdateModal = (id) => {
+    const currentItem = cartItems.value.find((item) => item.id === id);
+
+    currentItem.isUpdating = true;
+  };
+
+  const closeUpdateModal = (id) => {
+    const currentItem = cartItems.value.find((item) => item.id === id);
+
+    currentItem.isUpdating = false;
+  };
+ 
 
   const overlay = ref(false);
 
@@ -134,7 +166,6 @@ export const useCartStore = defineStore("cart", () => {
     totalQuantity,
     quantity,
     totalPrice,
-    isUpdating,
     overlay,
     snackbar,
     snackbarText,
@@ -143,5 +174,8 @@ export const useCartStore = defineStore("cart", () => {
     incrementQuantity,
     decrementQuantity,
     addMealToCart,
+    updateCartItem,
+    openUpdateModal,
+    closeUpdateModal,
   };
 });

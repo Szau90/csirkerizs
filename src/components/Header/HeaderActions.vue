@@ -31,8 +31,7 @@ const totalQuantity = computed(() => {
           hide-details
           flat
           validate-on="submit"
-          v-model="search"
-          class="w-[5rem] h-[2rem] lg:w-[7.375rem] lg:h-[3rem] text-[15px] xl:text-[20px] text-white placeholder:text-white outline-none"
+          class="md:mb-5 lg:mb-2 w-[6rem] h-[2rem] lg:w-[7.375rem] lg:h-[3rem] text-[15px] xl:text-[20px] text-white placeholder:text-white outline-none"
         />
       </v-form>
     </div>

@@ -1,9 +1,16 @@
 <script setup>
 import ServicesArrow from "../../../../assets/icons/ServicesArrow.vue";
+import { useRouter } from "vue-router"; 
+
+const router = useRouter()
+
+const handleClick= () => {
+  router.push('/registration')
+}
 </script>
 
 <template>
-  <div class="flex items-center justify-between">
+  <div @click="handleClick" class="flex items-center justify-between cursor-pointer">
     <p class="inline-flex ml-5">regisztráció</p>
     <ServicesArrow class="inline-flex" />
   </div>

@@ -1,11 +1,13 @@
 <script setup>
+import {ref, onUnmounted} from 'vue'
 import { useMealsStore } from "../../../stores/meals";
-import { computed } from "vue";
 import ProductDetails from "./ProductDetails.vue";
+import { storeToRefs } from "pinia";
 
 const store = useMealsStore();
 
-const meals = computed(() => store.meals.filter((f) => f.isHighlightedProduct));
+const { meals } = storeToRefs(store);
+
 </script>
 
 <template>
@@ -18,12 +20,13 @@ const meals = computed(() => store.meals.filter((f) => f.isHighlightedProduct));
     >
       <img
         src="../../../assets/images/csirke_rizs_home-image.png"
-        class="w-[290px] md:w-[350px] xl:w-[609px]  md:ml-8 xl:ml-2  md:mb-12"
+        class="w-[290px] md:w-[350px] xl:w-[609px] md:ml-8 xl:ml-2 md:mb-12"
       />
-
-      <div class="flex ml-3">
-        <ProductDetails v-for="meal in meals" :key="meal.id" :meal="meal" />
-      </div>
+      <template v-for="meal in meals" :key="meal.id">
+        <div class="flex ml-3">
+          <ProductDetails v-if="meal.isHighlightedProduct" :meal="meal" />
+        </div>
+      </template>
     </div>
   </section>
 </template>

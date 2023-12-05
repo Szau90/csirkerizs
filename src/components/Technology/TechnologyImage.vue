@@ -1,6 +1,6 @@
 <template>
     <div
-      class="flex justify-end items-end md:order-2 w-[130%] md:w-[27.9rem] xl:w-[65%]"
+      class="flex justify-end items-end md:order-2 w-[130%] md:w-[27.9rem] xl:w-[72.5%]"
     >
       <img
         src="@/assets/shapes/SecoundaryPattern.svg"

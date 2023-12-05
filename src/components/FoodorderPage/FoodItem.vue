@@ -4,11 +4,12 @@ import Orders from "./Orders.vue";
 import { ref } from "vue";
 import { useMealsStore } from "../../stores/meals";
 import { useCartStore } from "../../stores/cart";
+import { storeToRefs } from "pinia";
 
 const cartStore = useCartStore();
 
 const { addMealToCart } = cartStore;
-
+const {cartItems} = storeToRefs(cartStore)
 const store = useMealsStore();
 
 const { getDatesForWeek } = store;
@@ -54,6 +55,7 @@ const props = defineProps({
   },
 });
 
+
 const orders = ref(
   dates.value.map((date) => ({
     date: {date, quantity:0},
@@ -62,18 +64,15 @@ const orders = ref(
 );
 
 const handleSubmit = () => {
-  const currentOrders = orders.value.map((order) => ({ ...order }));
+  const currentOrders = orders.value.map((order) => JSON.parse(JSON.stringify(order)));
 
-  const ordersWithQuantity = currentOrders.filter(
-    (order) => order.date.quantity > 0
-  );
 
-  const totalQuantity = ordersWithQuantity.reduce(
+  const totalQuantity = currentOrders.reduce(
     (total, order) => total + order.date.quantity,
     0
   );
 
-  console.log(ordersWithQuantity);
+  
   const mealData = {
     id: props.id,
     name: props.title,
@@ -81,7 +80,7 @@ const handleSubmit = () => {
     energy: props.energy,
     allergens: props.allergens,
     price: props.price,
-    orders: ordersWithQuantity,
+    orders: currentOrders,
     image: props.image,
     quantity: totalQuantity,
     isMeal: true,

@@ -13,10 +13,19 @@ import LastSection from "../components/Technology/LastSection.vue"
       <TechnologyImage />
     </div>
     <TheThreeTechnology />
-    <div class="2xl:w-[96rem] mt-5 px-2 flex flex-col md:flex-row md:gap-6 lg:gap-8 xl:gap-20 2xl:gap-36 mx-auto">
+    <div id="container" class="2xl:w-[96rem] mt-5 px-2 flex flex-col md:flex-row md:gap-6 lg:gap-8 xl:gap-20 2xl:gap-36 mx-auto">
         <VacuumBag />
         <LastSection />
     </div>
     
   </section>
 </template>
+
+
+<style scoped>
+@media screen and (min-width: 1400px) and (max-width: 1535px) {
+  #container {
+    gap: 10rem;
+  }
+}
+</style>

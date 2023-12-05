@@ -17,29 +17,26 @@ export const useMealsStore = defineStore("meals", () => {
     const dates = [];
     let currentDay = new Date();
     currentDay.setDate(currentDay.getDate() + 2); // Az első dátum mindig az aznapi dátum + 2 nap
-  
+
     while (dates.length < 7) {
       const currentDate = new Date(currentDay);
-  
+
       // Kihagyjuk a hétvégéket
       if (currentDate.getDay() !== 0 && currentDate.getDay() !== 6) {
         const year = currentDate.getFullYear();
         const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
         const day = ("0" + currentDate.getDate()).slice(-2);
         const formattedDate = `${year}-${month}-${day}`;
-  
+
         dates.push(formattedDate);
       }
-  
+
       // Következő napra lépünk
       currentDay.setDate(currentDay.getDate() + 1);
     }
-  
+
     return dates;
   };
-  
-
-  
 
   const meals = ref([
     {
@@ -60,6 +57,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: true,
       isDailyOffer: true,
+      isUpdating: false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -79,6 +77,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: true,
+      isUpdating: false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -98,6 +97,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -117,6 +117,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -136,6 +137,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -155,6 +157,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -174,6 +177,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -193,6 +197,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -212,6 +217,67 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Reggelik (szénhidrát mentes)",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating: false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Reggelik (szénhidrát mentes)",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating: false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Reggelik (szénhidrát mentes)",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating: false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -231,6 +297,167 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Tálcás menük",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -250,6 +477,27 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "src/assets/images/csirke_rizs_home-image.png",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Csirkék, marhák, halak",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: true,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -269,6 +517,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -288,6 +537,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -307,6 +557,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -326,6 +577,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -345,6 +597,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -364,6 +617,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: true,
+      isUpdating: false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -383,6 +637,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -402,6 +657,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: true,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -421,6 +677,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -440,6 +697,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -459,6 +717,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -478,6 +737,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
     {
       id: Math.floor(Math.random() * 100).toString(),
@@ -497,6 +757,7 @@ export const useMealsStore = defineStore("meals", () => {
       isOnWishlist: false,
       isHighlightedProduct: false,
       isDailyOffer: false,
+      isUpdating:false
     },
   ]);
 
@@ -515,9 +776,14 @@ export const useMealsStore = defineStore("meals", () => {
     );
   };
 
-  const search = ref('Reggelik (szénhidrát mentes)')
+  const search = ref("Reggelik (szénhidrát mentes)");
 
-
-
-  return { meals, categories, search, getDatesForWeek, toggleWishlistStatus, filter };
+  return {
+    meals,
+    categories,
+    search,
+    getDatesForWeek,
+    toggleWishlistStatus,
+    filter,
+  };
 });
