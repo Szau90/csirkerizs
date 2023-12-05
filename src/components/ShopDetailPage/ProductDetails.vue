@@ -1,7 +1,7 @@
 <script setup>
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import FacebookIcon from "@/assets/icons/FacebookIcon.vue";
-import Instagramicon from "@/assets/icons/InstagramIcon.vue";
+import InstagramIcon from "@/assets/icons/InstagramIcon.vue";
 import TwitterIcon from "@/assets/icons/TwitterIcon.vue";
 import SimilarProducts from "./SimilarProducts.vue";
 import ProductDescription from "./ProductDescription.vue";
@@ -59,8 +59,12 @@ defineProps([
     >
       <PrimaryBtn @click="handleClick" title="vissza" class="w-56" />
       <p id="share">megosztás</p>
-      <FacebookIcon />
-      <Instagramicon />
+      <a href="https://www.facebook.com/csirkerizs.hu">
+          <FacebookIcon />
+        </a>
+        <a href="https://www.instagram.com/csirkerizshu/">
+          <InstagramIcon/>
+        </a>
       <TwitterIcon />
     </div>
     <ProductDescription />

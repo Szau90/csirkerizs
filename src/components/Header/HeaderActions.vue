@@ -2,9 +2,10 @@
 import SearchIcon from "../../assets/icons/SearchIcon.vue";
 import CartIcon from "../../assets/icons/CartIcon.vue";
 import UserIcon from "../../assets/icons/UserIcon.vue";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useCartStore } from "../../stores/cart";
 import { storeToRefs } from "pinia";
+
 const cartStore = useCartStore();
 
 const { cartItems } = storeToRefs(cartStore);
@@ -21,11 +22,21 @@ const totalQuantity = computed(() => {
     <SearchIcon
       class="w-[1.25rem] h-[1.25rem] lg:w-[1.687rem] lg:h-[1.687rem]"
     />
-    <input
-      placeholder="keresés"
-      class="flex bg-primaryColor w-[5rem] h-[2rem] lg:w-[7.375rem] lg:h-[3rem]  text-[15px] xl:text-[20px] text-white placeholder:text-white outline-none "
-    />
-    <div class="w-px h-12 bg-secoundaryColor"/>
+    <div class="w-[5rem] lg:w-[7.375rem]">
+      <v-form>
+        <v-text-field
+          placeholder="keresés"
+          variant="solo"
+          bg-color="#FF5F5C"
+          hide-details
+          flat
+          validate-on="submit"
+          v-model="search"
+          class="w-[5rem] h-[2rem] lg:w-[7.375rem] lg:h-[3rem] text-[15px] xl:text-[20px] text-white placeholder:text-white outline-none"
+        />
+      </v-form>
+    </div>
+    <div class="w-px h-12 bg-secoundaryColor" />
     <RouterLink v-if="totalQuantity > 1" to="/kosar">
       <v-badge :content="totalQuantity" floating color="error">
         <CartIcon class="w-[1.25rem] h-[1.25rem] lg:w-[1.853rem] lg:h-7" />

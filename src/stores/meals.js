@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { defineStore } from "pinia";
 
 export const useMealsStore = defineStore("meals", () => {
@@ -515,5 +515,9 @@ export const useMealsStore = defineStore("meals", () => {
     );
   };
 
-  return { meals, categories, getDatesForWeek, toggleWishlistStatus, filter };
+  const search = ref('Reggelik (szénhidrát mentes)')
+
+
+
+  return { meals, categories, search, getDatesForWeek, toggleWishlistStatus, filter };
 });

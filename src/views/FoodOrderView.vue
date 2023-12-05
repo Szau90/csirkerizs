@@ -17,9 +17,9 @@ const cartStore = useCartStore();
 
 const store = useMealsStore();
 
-const meals = computed(() => store.meals);
 
-const { categories } = storeToRefs(store);
+
+const { categories, meals, search } = storeToRefs(store);
 
 const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
@@ -43,7 +43,7 @@ const filter = (value, query) => {
 
 const sortBy = ref([{ key: "category", order: "desc" }]);
 
-const search = ref("Reggelik (szénhidrát mentes)");
+
 </script>
 
 <template>
@@ -153,7 +153,7 @@ const search = ref("Reggelik (szénhidrát mentes)");
       :timeout="timeout"
       color="#FF5F5C"
       location="bottom end"
-      rounded="xl"
+      rounded="pill"
     >
       {{ snackbarText }} hozzáadva a kosárhoz
     </v-snackbar>

@@ -16,7 +16,7 @@ defineProps(["id", "title", "description", "price", "quantity", "image"]);
 </script>
 
 <template>
-  <div class="flex flex-row justify-center md:w-52 md:mx-auto lg:w-full">
+  <div class="flex flex-row justify-center md:w-full md:mx-auto ">
     <div
       class="w-36 h-14 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
     >

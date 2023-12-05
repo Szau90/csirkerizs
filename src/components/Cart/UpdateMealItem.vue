@@ -109,7 +109,7 @@ const handleSubmit = () => {
       class="z-10 hidden lg:block lg:mt-6  xl:ml-0 w-[246px] md:w-[280px] lg:w-[360px] xl:w-[380px] 2xl:w-[380px]"
     />
     <div
-      class="relative w-[360px] xl:px-10 md:w-[690px] lg:w-[1150px] xl:w-[941px] lg:h-[300px] 2xl:h-[327px] lg:-ml-[125px]  xl:-ml-[190px] flex items-center justify-end shadow-lg rounded-[30px] bg-secoundaryColor"
+      class="relative w-[360px] xl:px-10 md:w-[690px] lg:w-[825px] xl:w-[941px] lg:h-[300px] 2xl:h-[327px] lg:-ml-[155px]  xl:-ml-[190px] flex items-center justify-end shadow-lg rounded-[30px] bg-secoundaryColor"
     >
       <div
         class="w-12 h-12 absolute top-2 right-2 cursor-pointer flex items-center justify-center rounded-full shadow-lg place-self-end"

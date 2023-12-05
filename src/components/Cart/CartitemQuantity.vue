@@ -25,17 +25,17 @@ const handleUpdate = () => {
     <p class="hidden md:block">adagok és időpontok</p>
     <PrimaryBtn
       :title="'szerkesztés'"
-      class="w-28 h-8 md:h-14 md:w-40 lg:w-44 text-content-sm md:text-content"
+      class="w-28 h-11 md:h-14 md:w-40 lg:w-44 text-content-sm md:text-content"
       @click="handleUpdate"
     />
   </section>
   <section
     v-else
-    class="flex flex-col md:w-[220px] justify-center items-center text-content-sm md:text-content"
+    class="flex flex-col md:w-[220px] justify-center items-center text-content-md md:text-content"
   >
     <p class="hidden md:block">mennyiség</p>
     <div
-      class="w-28 h-8 md:w-36 lg:w-44 flex justify-between items-center md:h-14 px-5 rounded-full shadow-xl"
+      class="w-28 h-11 md:w-36 lg:w-44 flex justify-between items-center md:h-14 px-5 rounded-full shadow-xl"
     >
       <button @click="decrementQuantity(item)">-</button
       ><span>{{ quantity }} db</span

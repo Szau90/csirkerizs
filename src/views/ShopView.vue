@@ -223,7 +223,7 @@ const search = ref("Táplálék kiegészítők");
               </v-list-item>
 
               <div
-                class="flex flex-row justify-center md:w-52 md:mx-auto lg:w-full"
+                class="flex flex-row justify-center md:w-56 md:mx-auto lg:w-full"
               >
                 <div
                   class="w-28 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"

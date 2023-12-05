@@ -1,6 +1,13 @@
 <script setup>
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import {ref, reactive } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter()
+
+const handleRegistrationClick = () => {
+  router.push('/registration')
+}
 
 const tabs = reactive({
   client: "Vásárló vagyok",
@@ -39,11 +46,13 @@ const activeTab = ref('client')
     <v-form class="w-[334px] lg:w-[354px]" v-if="activeTab === 'client'">
       <v-text-field label="email címem" variant="underlined"></v-text-field>
       <v-text-field label="jelszavam" variant="underlined"></v-text-field>
-      <PrimaryBtn :title="'bejelentkezés'" class="w-56 xl:mt-8" />
+      <PrimaryBtn @click="handleRegistrationClick"  type="button" :title="'regisztráció'" :fill-icon="'#ffffff'" class="bg-primaryColor w-56 text-white "/>
+      <PrimaryBtn :title="'bejelentkezés'" class="w-56 mt-8" />
     </v-form>
     <v-form class="w-[334px] lg:w-[354px]" v-else>
       <v-text-field label="felhasználó azonosítóm" variant="underlined"></v-text-field>
       <v-text-field label="jelszavam" variant="underlined"></v-text-field>
+    
       <PrimaryBtn :title="'bejelentkezés'" class="w-56 xl:mt-8" />
     </v-form>
   </div>

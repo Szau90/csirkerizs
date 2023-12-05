@@ -13,6 +13,7 @@ import SearchIcon from "./assets/icons/SearchIcon.vue";
 import UserIcon from "./assets/icons/UserIcon.vue";
 import MobileMenuIcon from "./assets/icons/MobileMenuIcon.vue";
 import InstagramIcon from "./assets/icons/InstagramIcon.vue";
+import MobileNavigation from "./components/UI/MobileNavigation.vue";
 
 const store = useSideNavStore();
 const navLinks = computed(() => store.navLinks);
@@ -89,29 +90,7 @@ const router = useRouter();
     <main>
       <router-view></router-view>
 
-      <v-bottom-navigation
-        id="nav"
-        :elevation="0"
-        class="d-sm-none fixed top-screen"
-        bg-color="#FF5F5C"
-        rounded="pill"
-        height="72"
-        grow
-      >
-        <v-btn value="menu" @click="drawer = !drawer">
-          <MobileMenuIcon />
-        </v-btn>
-        <v-btn value="search">
-          <SearchIcon />
-        </v-btn>
-        <v-btn value="cart" @click="router.push('/kosar')">
-          <CartIcon />
-        </v-btn>
-
-        <v-btn value="login" @click="router.push('/login')">
-          <UserIcon />
-        </v-btn>
-      </v-bottom-navigation>
+     <MobileNavigation  @menu-click="drawer = !drawer"/>
     </main>
     <footer>
       <TheFooter />

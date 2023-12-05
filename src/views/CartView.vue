@@ -112,7 +112,7 @@ const step = ref(1);
       </v-window-item>
       <v-window-item :value="2">
         <div
-          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-20 xl:gap-60"
+          class="flex flex-col justify-center items-center lg:flex-row lg:gap-20 xl:gap-60"
         >
           <ShippingData />
           <TheSummary
@@ -125,7 +125,7 @@ const step = ref(1);
       </v-window-item>
       <v-window-item :value="3">
         <div
-          class="flex flex-col-reverse justify-center items-center lg:flex-row lg:gap-20 xl:gap-64"
+          class="flex flex-col justify-center items-center lg:flex-row lg:gap-20 xl:gap-64"
         >
           <PayData />
           <TheSummary
@@ -144,7 +144,7 @@ const step = ref(1);
         <OrderSent v-if="orderSent" />
         <div
           v-else
-          class="flex flex-col-reverse xl:flex-row 2xl:w-[1257px] mx-auto gap-12"
+          class="flex flex-col xl:flex-row 2xl:w-[1257px] mx-auto gap-12"
         >
           <OrderDetails />
           <TheSummary

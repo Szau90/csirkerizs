@@ -3,8 +3,8 @@ defineProps(["name", "isMeal", "description", "energy"]);
 </script>
 
 <template>
-  <section  class="flex flex-col justify-center gap-5">
-    <h1 class="text-[11px] md:text-title-sm lg:text-title-xl min-w-[120px]">{{ name }}</h1>
+  <section  class="flex flex-col justify-center gap-5 md:min-w-[230px]" >
+    <h1 class="text-content md:text-title-sm lg:text-title-xl min-w-[170px]">{{ name }}</h1>
     <div class="hidden md:block h-px bg-lightBorder mx-4"/>
 
     <div

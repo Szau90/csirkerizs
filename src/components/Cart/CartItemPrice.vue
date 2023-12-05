@@ -15,7 +15,7 @@ defineProps(["quantity", "isMeal", "calculatedPrice"]);
       </p>
     </div>
     <p
-      class="w-20 h-8 md:w-36 lg:w-44 md:h-14 bg-primaryColor rounded-full flex items-center justify-center text-white"
+      class="w-20 h-11 md:w-36 lg:w-44 md:h-14 bg-primaryColor rounded-full flex items-center justify-center text-white"
     >
       {{ calculatedPrice.toFixed(0) + " Forint" }}
     </p>

@@ -15,7 +15,7 @@ const { cartItems, isUpdating, overlay } = storeToRefs(store);
 <template>
   <section class="lg:w-[938px] xl:w-[850px] 2xl:w-[938px]">
     <template v-for="(item, index) in cartItems" :key="item.id">
-      <v-overlay v-model="isUpdating" class="align-center justify-center">
+      <v-overlay v-model="isUpdating" scrim="#F0F0F8" class="align-center justify-center">
         <UpdateMealItem
           v-if="isUpdating && item.isMeal"
           :id="item.id"
@@ -32,7 +32,8 @@ const { cartItems, isUpdating, overlay } = storeToRefs(store);
         class="flex flex-row items-center text-center xl:flex-row w-[360px] py-2 md:w-[757px] lg:max-xl:w-[938px] xl:w-[850px] 2xl:w-[938px]"
       >
         <CartItemImage :image="item.image" />
-        <CartItemContent
+     <div class="flex flex-col md:flex-row">
+      <CartItemContent
           :name="item.name"
           :description="item.description"
           :energy="item.energy"
@@ -45,6 +46,7 @@ const { cartItems, isUpdating, overlay } = storeToRefs(store);
           :quantity="item.quantity"
           :is-meal="item.isMeal"
         />
+     </div>
         <div class="hidden md:block w-px h-[130px] bg-lightBorder" />
         <CartItemPrice
           :quantity="item.quantity"
