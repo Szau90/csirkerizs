@@ -293,7 +293,7 @@ export const useProductStore = defineStore("products", () => {
     },
   ]);
 
-  
+  const search = ref('')
 
-  return { products };
+  return { products, search };
 });

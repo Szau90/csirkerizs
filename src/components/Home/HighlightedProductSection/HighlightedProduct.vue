@@ -23,9 +23,9 @@ const { meals } = storeToRefs(store);
         class="w-[290px] md:w-[350px] xl:w-[609px] md:ml-8 xl:ml-2 md:mb-12"
       />
       <template v-for="meal in meals" :key="meal.id">
-        <div class="flex ml-3">
+     
           <ProductDetails v-if="meal.isHighlightedProduct" :meal="meal" />
-        </div>
+        
       </template>
     </div>
   </section>

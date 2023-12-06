@@ -53,6 +53,11 @@ const router = createRouter({
       component: () => import("../views/ShopView.vue"),
     },
     {
+      path: "/searchresult",
+      name: "searchresult",
+      component: () => import("../views/SearchResultView.vue"),
+    },
+    {
       path: "/adatvedelmi-szabalyzat",
       name: "adatvédelmi szabályzat",
       component: () => import("../views/PrivacyPolicyView.vue"),

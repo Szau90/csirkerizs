@@ -2,17 +2,7 @@ import { computed, ref, watch } from "vue";
 import { defineStore } from "pinia";
 
 export const useCartStore = defineStore("cart", () => {
-  const cartItems = ref([
-    {
-      id: 12,
-      name: "Iso Whey Zero",
-      description: "Whey protein isolate drink powder with glutamine and BCAA",
-      price: 2390,
-      calculatedPrice: 2390,
-      quantity: 1,
-      image: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-    },
-  ]);
+  const cartItems = ref([]);
 
   const totalItems = cartItems.length;
 
@@ -33,7 +23,6 @@ export const useCartStore = defineStore("cart", () => {
     existingItem.quantity++;
     existingItem.calculatedPrice = existingItem.price * existingItem.quantity;
     totalQuantity.value++;
-  
   };
 
   const decrementQuantity = (item) => {
@@ -53,7 +42,6 @@ export const useCartStore = defineStore("cart", () => {
         existingItem.calculatedPrice =
           existingItem.price * existingItem.quantity;
         totalQuantity.value--;
-       
       }
     }
   };
@@ -132,18 +120,13 @@ export const useCartStore = defineStore("cart", () => {
       (cartItem) => cartItem.id === itemId
     );
 
-   
-
-      if (newMeal.quantity === 0) {
-        cartItems.value.splice(existingItemIndex, 1);
-        totalQuantity.value--;
-      } 
-
-      existingMeal.isUpdating = false
+    if (newMeal.quantity === 0) {
+      cartItems.value.splice(existingItemIndex, 1);
+      totalQuantity.value--;
     }
 
-
-
+    existingMeal.isUpdating = false;
+  };
 
   const openUpdateModal = (id) => {
     const currentItem = cartItems.value.find((item) => item.id === id);
@@ -156,7 +139,6 @@ export const useCartStore = defineStore("cart", () => {
 
     currentItem.isUpdating = false;
   };
- 
 
   const overlay = ref(false);
 
