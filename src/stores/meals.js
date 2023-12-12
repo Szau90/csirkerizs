@@ -42,7 +42,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "../assets/Images/csirke_rizs_home-image.png",
+      image: "src/assets/Images/csirke_rizs_home-image.png",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Reggelik (szénhidrát mentes)",
@@ -62,7 +62,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "src/assets/Images/csirke_rizs_home-image.png",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
