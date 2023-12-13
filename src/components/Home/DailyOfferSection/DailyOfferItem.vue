@@ -6,6 +6,7 @@ import { useMealsStore } from "../../../stores/meals";
 import { computed } from "vue";
 import { useRouter } from "vue-router"; 
 
+
 const router = useRouter()
 
 const handleClick= () => {
@@ -20,6 +21,8 @@ defineProps({
     type: Object,
   },
 });
+
+
 </script>
 
 <template>
@@ -29,7 +32,7 @@ defineProps({
     >
       <div class="-mb-1/2 flex flex-row relative">
         <img
-          :src="meal.image"
+          :src="'../../../assets/images/'+ meal.image" 
           alt="a plate of delicious food"
           width="287"
           height="286"
