@@ -16,13 +16,16 @@ const handleClick= () => {
 const store = useMealsStore();
 
 const toggleWhishlist = computed(() => store.toggleWishlistStatus);
-defineProps({
+const props =defineProps({
   meal: {
     type: Object,
   },
 });
 
 
+
+
+const img = props.meal.image
 </script>
 
 <template>
@@ -32,12 +35,13 @@ defineProps({
     >
       <div class="-mb-1/2 flex flex-row relative">
         <img
-          :src="'../../../assets/images/'+ meal.image" 
+          :src="img" 
           alt="a plate of delicious food"
           width="287"
           height="286"
           class=""
         />
+        
         <div
           v-if="!meal.isOnWishlist"
           class="w-16 h-16 flex justify-center items-center rounded-full shadow-lg bg-inherit mt-1 cursor-pointer absolute  -right-14"
