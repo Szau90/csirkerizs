@@ -28,8 +28,8 @@ const {
 
 const cartStore = useCartStore();
 
-const cart = storeToRefs(cartStore);
-const cartItems = cart.cartItems;
+
+const { snackbar, snackbarText, timeout, cartItems } = storeToRefs(cartStore);
 
 const items = ref(["kosarad", "szállítás", "fizetés", "összesítő"]);
 
@@ -156,6 +156,15 @@ const step = ref(1);
         </div>
       </v-window-item>
     </v-window>
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      color="error"
+      location="bottom end"
+      rounded="pill"
+    >
+      {{ snackbarText }} eltávolítva a kosárból
+    </v-snackbar>
   </div>
 </template>
 

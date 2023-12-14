@@ -29,9 +29,9 @@ defineProps({
         <Previcon />
       </button>
       <input
-        type="text"
+        type="number"
         id="order"
-        class="w-[14px] flex mx-auto outline-none text-center "
+        class="w-[14px] flex mx-auto outline-none text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
         v-model="order.date.quantity"
       />
       <button

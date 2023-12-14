@@ -149,7 +149,7 @@ const handleSubmit = () => {
       </div>
       <div
         id="actions"
-        class="flex before:flex-row md:max-2xl:justify-center my-4 w-[18.85rem] sm:w-full"
+        class="flex flex-row md:max-2xl:justify-center my-4 w-[18.85rem] sm:w-full"
       >
         <div
           class="w-32 h-10 flex items-center justify-center border-2 rounded-l-[30px] border-none bg-primaryColor text-white md: text-content shadow-xl"
@@ -177,5 +177,11 @@ const handleSubmit = () => {
   h1 {
     text-align: center;
   }
+}
+
+@media screen and (max-width: 380px) {
+ #actions {
+  margin-left: 0.5rem;
+ } 
 }
 </style>

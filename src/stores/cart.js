@@ -35,8 +35,11 @@ export const useCartStore = defineStore("cart", () => {
       const existingItem = cartItems.value[existingItemIndex];
 
       if (existingItem.quantity === 1) {
+        snackbar.value = true;
+        snackbarText.value = item.name;
         cartItems.value.splice(existingItemIndex, 1);
         totalQuantity.value--;
+       
       } else {
         existingItem.quantity--;
         existingItem.calculatedPrice =
@@ -121,8 +124,11 @@ export const useCartStore = defineStore("cart", () => {
     );
 
     if (newMeal.quantity === 0) {
+      snackbar.value = true;
+      snackbarText.value = meal.name;
       cartItems.value.splice(existingItemIndex, 1);
       totalQuantity.value--;
+      
     }
 
     existingMeal.isUpdating = false;

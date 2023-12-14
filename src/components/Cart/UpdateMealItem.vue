@@ -81,6 +81,7 @@ const handleSubmit = () => {
 
   const mealData = {
     id:props.id,
+    name: props.title,
     price: props.price,
     quantity: totalQuantity,
   };

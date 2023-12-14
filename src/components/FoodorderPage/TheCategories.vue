@@ -38,4 +38,10 @@ defineProps({
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 380px) {
+ p {
+  width: 240px;
+ }
+}
+
 </style>
