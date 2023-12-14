@@ -24,6 +24,7 @@ const images = Object.fromEntries(
     <v-row class="flex items-center justify-center">
         <v-col v-for="(item, i) in items" :key="i" cols="9" sm="4" xl="3">
           <v-sheet
+            id="sheet"
             v-if="!item.raw.isMeal"
             min-height="386"
             color="#F0F0F8"
@@ -92,3 +93,11 @@ const images = Object.fromEntries(
       </v-row>
      
 </template>
+
+<style scoped>
+@media screen and (max-width: 767px) {
+   #sheet {
+    margin-top: 2rem;
+   }
+}
+</style>

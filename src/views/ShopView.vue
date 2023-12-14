@@ -1,9 +1,8 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { useProductStore } from "../stores/products";
 import { VDataIterator } from "vuetify/lib/labs/components.mjs";
 import TheCategories from "../components/FoodorderPage/TheCategories.vue";
-import PrimaryBtn from "../components/UI/PrimaryBtn.vue";
 import { storeToRefs } from "pinia";
 import ShopLayout from "../components/Layouts/ShopLayout.vue";
 import { useCartStore } from "../stores/cart";
@@ -14,8 +13,6 @@ const cartStore = useCartStore();
 const store = useProductStore();
 
 const { products } = storeToRefs(store);
-
-const { addToCart } = cartStore;
 
 const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
@@ -103,7 +100,7 @@ const search = ref("Táplálék kiegészítők");
       multi-sort
     >
       <template v-slot:header>
-        <div class="flex flex-row justify-between md:mt-12 xl:mt-[9.25rem]">
+        <div  class="flex flex-row justify-between md:mt-12 xl:mt-[9.25rem]">
           <div class="hidden md:block lg:w-[246px]">
             <v-select
               :items="numberOfItems"
@@ -224,6 +221,9 @@ const search = ref("Táplálék kiegészítők");
 @media screen and (max-width: 767px) {
   #sort-items {
     margin: 1.75rem auto;
+  }
+  #item-container {
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 390px) {
