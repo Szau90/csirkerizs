@@ -79,7 +79,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.invoiceData.name"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="név"
         density="compact"
@@ -87,7 +87,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.invoiceData.postCode"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="irányítószám"
         density="compact"
@@ -95,7 +95,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.invoiceData.city"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="város"
         density="compact"
@@ -103,7 +103,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.invoiceData.street"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="utca"
         density="compact"
@@ -111,7 +111,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.invoiceData.houseNumber"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="házszám"
         density="compact"

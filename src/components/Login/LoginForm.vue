@@ -33,7 +33,7 @@ const activeTab = ref('client')
             class="flex flex-row w-[180px] md:max-xl:min-w-[190px] xl:w-[500px] items-center gap-3"
           >
             <p
-              class="lg:w-34 flex items-center text-textColor md:max-2xl:text-content-md cursor-pointer"
+              class="text-content-md xl:text-content lg:w-34 flex items-center text-textColor md:max-2xl:text-content-md cursor-pointer"
               :class="isSelected ? 'font-bold' : ''"
               @click="toggle"
             >

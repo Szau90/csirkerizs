@@ -61,7 +61,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.name"
         :rules="nameRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="név"
         density="compact"
@@ -69,7 +69,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.postCode"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="irányítószám"
         density="compact"
@@ -77,7 +77,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.city"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="város"
         density="compact"
@@ -85,7 +85,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.street"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="utca"
         density="compact"
@@ -93,7 +93,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.houseNumber"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="házszám"
         density="compact"
@@ -101,7 +101,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.email"
         :rules="emailRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="email címed"
         density="compact"
@@ -109,7 +109,7 @@ const datas = reactive({
       <v-text-field
         v-model="shippingData.phone"
         :rules="inputRules"
-        class="w-96"
+        class="md:w-96"
         variant="underlined"
         label="telefonszámod"
         density="compact"
