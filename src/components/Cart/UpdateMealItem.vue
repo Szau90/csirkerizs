@@ -114,7 +114,7 @@ const handleSubmit = () => {
         class="flex flex-col items-center w-[360px] md:w-[684px] xl:w-[684px] h-fit lg:max-2xl:h-[280px] 2xl:h-[327px] md:max-2xl:text-content-md"
       >
         <img
-          :src="image"
+          :src="images[image]"
           aspect-ratio="1.7778"
           contain
           width="160"
