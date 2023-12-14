@@ -1,5 +1,11 @@
 <script setup>
+import { filename } from 'pathe/utils' 
 defineProps(["id", "title", "image", "gallery"]);
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 </script>
 
 <template>
@@ -9,10 +15,10 @@ defineProps(["id", "title", "image", "gallery"]);
     elevation="4"
     rounded="xl"
   >
-    <v-img :src="'../' + image" :alt="title" class="mx-auto lg:w-[437px]" />
+    <v-img :src="images[image]" :alt="title" class="mx-auto lg:w-[437px]" />
     <div class="flex flex-row w-full px-3">
       <template v-for="image in gallery" :key="id">
-        <v-img :src="'../' + image" :alt="title" />
+        <v-img :src="images[image]" :alt="title" />
       </template>
     </div>
   </v-sheet>

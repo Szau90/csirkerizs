@@ -39,7 +39,7 @@ const images = Object.fromEntries(
     >
       <div class="-mb-1/2 flex flex-row relative">
         <v-img
-          :src="images[`${props.meal.image}`]"
+          :src="images[props.meal.image]"
           alt="a plate of delicious food"
           width="287"
           height="286"

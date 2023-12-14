@@ -1,10 +1,12 @@
 <script setup>
 import Orders from "../FoodorderPage/Orders.vue";
 import CloseNotificationIcon from "../../assets/icons/CloseNotificationIcon.vue";
-import { ref, computed, watch } from "vue";
+import { ref } from "vue";
 import { useMealsStore } from "../../stores/meals";
 import { useCartStore } from "../../stores/cart";
 import { storeToRefs } from "pinia";
+import { filename } from 'pathe/utils' 
+
 
 const store = useMealsStore();
 
@@ -16,6 +18,12 @@ const cartStore = useCartStore();
 const { cartItems, isUpdating } = storeToRefs(cartStore);
 
 const { addMealToCart, updateCartItem, closeUpdateModal } = cartStore;
+
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 
 const props = defineProps({
   id: {
@@ -84,7 +92,7 @@ const handleSubmit = () => {
 <template>
   <section class="flex flex-col items-center justify-center lg:flex-row z-100">
     <img
-      :src="image"
+      :src="images[image]"
       aspect-ratio="1.7778"
       contain
       width="380"

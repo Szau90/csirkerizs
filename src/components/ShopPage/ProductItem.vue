@@ -2,6 +2,7 @@
 import PrimaryBtn from '../UI/PrimaryBtn.vue';
 import { useCartStore } from '../../stores/cart';
 import { storeToRefs } from 'pinia';
+import { filename } from 'pathe/utils' 
 
 
 const cartStore = useCartStore()
@@ -11,6 +12,12 @@ const {snackbar, snackbarText, timeout} =storeToRefs(cartStore)
 const {addToCart} = cartStore
 
 defineProps(['items'])
+
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 </script>
 
 <template>
@@ -23,9 +30,9 @@ defineProps(['items'])
             elevation="2"
             :rounded="'xl'"
             class="pt-2 md:mt-14 lg:mt-[5.6rem]"
-            ><RouterLink :to="`/shop/${item.id}`">
+            ><RouterLink :to="`/shop/${item.raw.id}`">
               <v-img
-                :src="item.raw.src"
+                :src="images[item.raw.src]"
                 cover
                 width="218"
                 class="mx-auto"

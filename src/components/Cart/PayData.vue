@@ -33,9 +33,10 @@ const datas = reactive({
             class="flex flex-row md:max-xl:min-w-[360px] xl:w-[500px] items-center gap-3"
           >
             <div
+              id="check"
               @click="toggle"
               :value="data.value"
-              class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+              class="flex items-center justify-center  w-[62px] h-[62px]"
             >
               <CheckIcon v-if="isSelected" @click="toggle" class="mt-1 ml-1" />
             </div>
@@ -55,11 +56,12 @@ const datas = reactive({
       v-bind="shippingData.isEqualToShippingDetails"
     >
       <div
+        id="checkbox"
         @click="
           shippingData.isEqualToShippingDetails =
             !shippingData.isEqualToShippingDetails
         "
-        class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+        class="flex items-center justify-center w-[62px] h-[62px]"
       >
         <CheckIcon
           v-if="shippingData.isEqualToShippingDetails"
@@ -117,3 +119,11 @@ const datas = reactive({
     </v-form>
   </section>
 </template>
+
+<style scoped>
+#checkbox,#check {
+  background-image: url('../../assets/shapes/CheckboxBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

@@ -1,12 +1,11 @@
 <script setup>
 import CheckIcon from "../../assets/icons/CheckIcon.vue";
-import { reactive, ref, watch } from "vue";
 import { useOrdersStore } from "../../stores/orders";
 import { storeToRefs } from "pinia";
 
 const store = useOrdersStore();
 
-const { shippingData, clientData } = storeToRefs(store);
+const { shippingData} = storeToRefs(store);
 </script>
 
 <template>
@@ -72,8 +71,9 @@ const { shippingData, clientData } = storeToRefs(store);
           v-bind="shippingData.isAccepted"
         >
           <div
+            id="checkbox"
             @click="shippingData.isAccepted = !shippingData.isAccepted"
-            class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+            class="flex items-center justify-center w-[62px] h-[62px]"
           >
             <CheckIcon v-if="shippingData.isAccepted" class="mt-1 ml-1" />
           </div>
@@ -88,3 +88,11 @@ const { shippingData, clientData } = storeToRefs(store);
     </section>
   </main>
 </template>
+
+<style scoped>
+#checkbox {
+  background-image: url('../../assets/shapes/CheckboxBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

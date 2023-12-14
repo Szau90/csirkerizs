@@ -1,5 +1,5 @@
 <script setup>
-import {ref, onUnmounted} from 'vue'
+
 import { useMealsStore } from "../../../stores/meals";
 import ProductDetails from "./ProductDetails.vue";
 import { storeToRefs } from "pinia";
@@ -12,7 +12,8 @@ const { meals } = storeToRefs(store);
 
 <template>
   <section
-    class="container mt-20 lg:mt-36 w-[368px] md:w-[736px] xl:w-full max-w-[1265px] mx-auto bg-highlightedBgMobile md:bg-highlightedBgTablet xl:bg-highlightedBg h-[650px] md:h-[400px] xl:h-[650px] shadow-xl rounded-[30px]"
+    id="bg-image"
+    class="container mt-20 lg:mt-36 w-[368px] md:w-[736px] xl:w-full max-w-[1265px] mx-auto h-[650px] md:h-[400px] xl:h-[650px] shadow-xl rounded-[30px]"
   >
     <div
       id="content"
@@ -32,7 +33,24 @@ const { meals } = storeToRefs(store);
 </template>
 
 <style scoped>
+#bg-image {
+  background-image: url('../../../assets/shapes/HighlightedBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1279px) {
+  #bg-image {
+    background-image: url('../../../assets/shapes/HighlightedBgTablet.svg');
+    background-repeat: no-repeat;
+  background-size: cover;
+  }
+}
 @media screen and (max-width: 767px) {
+  #bg-image {
+    background-image: url('../../../assets/shapes/HighlightedBgMobile.svg');
+    background-repeat: no-repeat;
+  background-size: cover;
+  }
   img {
     margin-left: 0.5rem;
     margin-top: 0.5rem;

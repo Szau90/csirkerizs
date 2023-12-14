@@ -1,5 +1,6 @@
 <script setup>
 import FoodItem from "./FoodItem.vue";
+import { filename } from 'pathe/utils' 
 
 defineProps({
   items: {
@@ -22,6 +23,12 @@ const findFirstIndex = (items, category) => {
 
   return -1;
 };
+
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 </script>
 
 <template>
@@ -36,7 +43,7 @@ const findFirstIndex = (items, category) => {
     </h1>
 
     <main class="relative flex flex-col lg:flex-row items-start">
-      <img :src="item.raw.image" aspect-ratio="1.7778" contain width="380" height="380" class="z-10  xl:ml-0 w-[246px] md:w-[380px] lg:w-[280px] lg:max-xl:mt-10 xl:w-[380px] 2xl:w-[380px]" >
+      <img :src="images[item.raw.image]" aspect-ratio="1.7778" contain width="380" height="380" class="z-10  xl:ml-0 w-[246px] md:w-[380px] lg:w-[280px] lg:max-xl:mt-10 xl:w-[380px] 2xl:w-[380px]" >
       <div
         class="lg:w-[945px] lg:-ml-[130px] xl:-ml-[190px] flex items-center justify-end shadow-lg rounded-[30px]"
       >

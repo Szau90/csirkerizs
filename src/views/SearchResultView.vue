@@ -8,6 +8,7 @@ import { useCartStore } from "../stores/cart";
 import { storeToRefs } from "pinia";
 import FoodItem from "../components/FoodorderPage/FoodItem.vue";
 import ProductItem from "../components/ShopPage/ProductItem.vue";
+import { filename } from 'pathe/utils' 
 
 const store = useProductStore();
 const mealsStore = useMealsStore();
@@ -20,6 +21,11 @@ const { searchItems } = storeToRefs(searchStore);
 const { snackbar, snackbarText, timeout } = storeToRefs(cartStore);
 
 const currentPage = ref(null)
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 </script>
 
 <template>
@@ -36,7 +42,7 @@ const currentPage = ref(null)
           class="relative flex flex-col lg:flex-row items-center justify-center"
         >
           <img
-            :src="item.raw.image"
+            :src="images[item.raw.image]"
             aspect-ratio="1.7778"
             contain
             width="380"

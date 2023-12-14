@@ -102,7 +102,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az ételhangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Szénhidrátos köretek",
@@ -122,7 +122,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Közepesen szénhidrátos köretek",
@@ -142,7 +142,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Elhanyagolható szénhidrát tartalmú köretek",
@@ -162,7 +162,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Desszertek",
@@ -182,7 +182,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Műanyag tányér és evőeszközök",
@@ -202,7 +202,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az ételhangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Reggelik (szénhidrát mentes)",
@@ -222,27 +222,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
-      description:
-        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
-      category: "Reggelik (szénhidrát mentes)",
-      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
-      energy: {
-        kalória: 436,
-        szénhidrát: 46,
-        fehérje: 52.5,
-        zsír: 3.44,
-      },
-      price: 2390,
-      isOnWishlist: false,
-      isHighlightedProduct: false,
-      isDailyOffer: false,
-      isUpdating: false
-    },
-    {
-      id: Math.floor(Math.random() * 100).toString(),
-      title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Reggelik (szénhidrát mentes)",
@@ -262,7 +242,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Reggelik (szénhidrát mentes)",
@@ -282,7 +262,27 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
+      description:
+        "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
+      category: "Reggelik (szénhidrát mentes)",
+      allergens: ["földimogyoró", "szója", "diófélék", "szezám"],
+      energy: {
+        kalória: 436,
+        szénhidrát: 46,
+        fehérje: 52.5,
+        zsír: 3.44,
+      },
+      price: 2390,
+      isOnWishlist: false,
+      isHighlightedProduct: false,
+      isDailyOffer: false,
+      isUpdating: false
+    },
+    {
+      id: Math.floor(Math.random() * 100).toString(),
+      title: "Az étel hangzatos neve",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -302,7 +302,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -322,7 +322,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -342,7 +342,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -362,7 +362,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -382,7 +382,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -402,7 +402,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -422,7 +422,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -442,7 +442,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -462,7 +462,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Csirkék, marhák, halak",
@@ -482,7 +482,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Csirkék, marhák, halak",
@@ -502,7 +502,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az ételhangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Szénhidrátos köretek",
@@ -522,7 +522,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Közepesen szénhidrátos köretek",
@@ -542,7 +542,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Elhanyagolható szénhidrát tartalmú köretek",
@@ -562,7 +562,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Desszertek",
@@ -582,7 +582,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Műanyag tányér és evőeszközök",
@@ -602,7 +602,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az ételhangzatos neve",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Reggelik (szénhidrát mentes)",
@@ -622,7 +622,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "termék 8",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -642,7 +642,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "termék 9",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Csirkék, marhák, halak",
@@ -662,7 +662,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az ételhangzatos neve 20",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Szénhidrátos köretek",
@@ -682,7 +682,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "termék 1",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Közepesen szénhidrátos köretek",
@@ -702,7 +702,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "termék 2",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Elhanyagolható szénhidrát tartalmú köretek",
@@ -722,7 +722,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "termék 3",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Desszertek",
@@ -742,7 +742,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "termék 4",
-      image: "src/assets/images/csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Műanyag tányér és evőeszközök",

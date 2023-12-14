@@ -25,7 +25,8 @@ const advantages = ref([
       <ul v-for="(advantage, index) in advantages" :key="index">
         <li class="flex flex-row items-center gap-4">
           <div
-            class="hidden md:flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+            id="checkbox"
+            class="hidden md:flex items-center justify-center w-[62px] h-[62px]"
           >
             <CheckIcon class="mt-1 ml-1" />
           </div>
@@ -41,6 +42,11 @@ const advantages = ref([
 </template>
 
 <style scoped>
+#checkbox {
+  background-image: url('../../assets/shapes/CheckboxBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media screen and (max-width: 639px) {
   h1 {
     text-align: center;

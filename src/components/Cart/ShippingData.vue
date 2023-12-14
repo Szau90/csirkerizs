@@ -38,6 +38,7 @@ const datas = reactive({
               class="flex flex-row md:max-xl:min-w-[360px] xl:w-[500px] items-center gap-3"
             >
               <div
+              id="checkbox"
                 @click="toggle"
                 :value="data.value"
                 class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
@@ -116,3 +117,11 @@ const datas = reactive({
     </v-form>
   </section>
 </template>
+
+<style scoped>
+#checkbox {
+  background-image: url('../../assets/shapes/CheckboxBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

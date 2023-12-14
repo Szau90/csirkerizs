@@ -11,14 +11,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 5,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -29,14 +29,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 5,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -47,14 +47,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 5,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -65,14 +65,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 4,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -83,14 +83,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 4,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -101,14 +101,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Ital és ételtartók",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 4,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -119,14 +119,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 4,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -137,14 +137,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Fitnesz kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 4,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -155,14 +155,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Sport eszközök",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 4,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -173,14 +173,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Italok",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 3,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -191,14 +191,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Sportszeletek",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 3,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -209,14 +209,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Ital és ételtartók",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 3,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -227,14 +227,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Táplálék kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 3,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -245,14 +245,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Fitnesz kiegészítők",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 3,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -263,14 +263,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Sport eszközök",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 2,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -281,14 +281,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Italok",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 2,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -299,14 +299,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Sportszeletek",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 2,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -317,14 +317,14 @@ export const useSearchStore = defineStore("search", () => {
         description:
           "Whey protein isolate drink powder with glutamine and BCAA",
         category: "Ital és ételtartók",
-        src: "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+        src: "csirke_rizs_shop-image2-removebg-preview",
         rating: 5,
         flavour: "vanilia",
         weight: "450g",
         galery: [
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
-          "src/assets/images/csirke_rizs_shop-image2-removebg-preview.png",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
+          "csirke_rizs_shop-image2-removebg-preview",
         ],
         
       },
@@ -333,7 +333,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Reggelik (szénhidrát mentes)",
@@ -354,7 +354,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -375,7 +375,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Csirkék, marhák, halak",
@@ -396,7 +396,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az ételhangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Szénhidrátos köretek",
@@ -417,7 +417,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Közepesen szénhidrátos köretek",
@@ -438,7 +438,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Elhanyagolható szénhidrát tartalmú köretek",
@@ -459,7 +459,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Desszertek",
@@ -480,7 +480,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Műanyag tányér és evőeszközök",
@@ -501,7 +501,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az ételhangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Reggelik (szénhidrát mentes)",
@@ -522,7 +522,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Reggelik (szénhidrát mentes)",
@@ -543,7 +543,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Reggelik (szénhidrát mentes)",
@@ -564,7 +564,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Reggelik (szénhidrát mentes)",
@@ -585,7 +585,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -606,7 +606,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -627,7 +627,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -648,7 +648,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -669,7 +669,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -690,7 +690,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -711,7 +711,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -732,7 +732,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -753,7 +753,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -774,7 +774,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Csirkék, marhák, halak",
@@ -795,7 +795,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Csirkék, marhák, halak",
@@ -816,7 +816,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az ételhangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Szénhidrátos köretek",
@@ -837,7 +837,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Közepesen szénhidrátos köretek",
@@ -858,7 +858,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Elhanyagolható szénhidrát tartalmú köretek",
@@ -879,7 +879,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Desszertek",
@@ -900,7 +900,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az étel hangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Műanyag tányér és evőeszközök",
@@ -921,7 +921,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az ételhangzatos neve",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Reggelik (szénhidrát mentes)",
@@ -942,7 +942,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "termék 8",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Tálcás menük",
@@ -963,7 +963,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "termék 9",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Csirkék, marhák, halak",
@@ -984,7 +984,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "Az ételhangzatos neve 20",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Szénhidrátos köretek",
@@ -1005,7 +1005,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "termék 1",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Közepesen szénhidrátos köretek",
@@ -1026,7 +1026,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "termék 2",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Elhanyagolható szénhidrát tartalmú köretek",
@@ -1047,7 +1047,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "termék 3",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Desszertek",
@@ -1068,7 +1068,7 @@ export const useSearchStore = defineStore("search", () => {
       {
         id: Math.floor(Math.random() * 100).toString(),
         title: "termék 4",
-        image: "src/assets/images/csirke_rizs_home-image.png",
+        image: "csirke_rizs_home-image",
         description:
           "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
         category: "Műanyag tányér és evőeszközök",
