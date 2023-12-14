@@ -33,7 +33,7 @@ const handleSubmit = () => {
 <template>
   <v-form v-if="showInput" @submit.prevent="handleSubmit">
     <v-text-field
-      class="absolute bottom-20 left-1/2 -translate-x-1/2 w-100"
+      class="fixed top-[85%] left-1/2 -translate-x-1/2 w-100"
       variant="solo"
       rounded="pill"
       v-model="search"
