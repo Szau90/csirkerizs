@@ -7,7 +7,7 @@
     </h1>
     <div class="flex w-36 h-[0.312rem] mt-5 bg-primaryColor rounded-full" />
     <div
-      class="flex flex-col w-[360px] md:w-[690px] xl:w-[1110px] 2xl:w-[1536] 2xl:px-2 mt-5 gap-5"
+      class="flex flex-col w-[22rem] md:w-[690px] xl:w-[1110px] 2xl:w-[1536] 2xl:px-2 mt-5 gap-5"
     >
       <p>
         Ha Ön szeretné használni weboldalunkat, akkor kérjük olvassa el az

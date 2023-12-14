@@ -1,6 +1,6 @@
 <template>
   <section
-    class="md:w-[22rem] lg:w-[30.75rem] xl:w-[37rem] 2xl:w-[40.875rem] flex flex-col gap-5"
+    class="w-[22rem] lg:w-[30.75rem] xl:w-[37rem] 2xl:w-[40.875rem] flex flex-col  gap-5"
   >
     <h1
       class="text-title-sm md:text-title-md md:text-start 2xl:text-title w-[20rem] md:w-[24rem] xl:w-[30rem]"

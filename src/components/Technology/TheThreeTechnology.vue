@@ -19,7 +19,7 @@
       <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
       <h1>Sous-Vide technológia</h1>
       <div
-        class="flex flex-col gap-4 text-content-md md:text-content-sm md:text-start lg:text-content-md xl:text-content text-textColor w-20rem md:w-[22rem] lg:w-full xl:w-[37rem] 2xl:w-[40.875rem]"
+        class="flex flex-col gap-4 text-content-md md:text-content-sm md:text-start lg:text-content-md xl:text-content text-textColor w-[20rem] md:w-[22rem] lg:w-full xl:w-[37rem] 2xl:w-[40.875rem]"
       >
        <p>
         A húst, halat, tojást egy különleges eljárással egy speciális tasakban 70 Celsius fok

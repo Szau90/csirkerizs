@@ -21,7 +21,7 @@ const handleClick= () => {
     </h1>
     <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
     <p
-      class="flex-col gap-5 text-content-md md:text-[13px] lg:text-content 2xl:text-[16px] text-textColor md:text-start w-[22.5rem] md:w-[350px] lg:w-[390px] xl:w-[450px] 2xl:w-[524px] flex shrink"
+      class="flex-col gap-5 text-content-md md:text-[13px] lg:text-content 2xl:text-[16px] text-textColor md:text-start w-[22rem] md:w-[350px] lg:w-[390px] xl:w-[450px] 2xl:w-[524px] flex shrink"
     >
     <h1 class="font-semibold">
         Csirkerizs.hu A vákuumba zárt frissesség

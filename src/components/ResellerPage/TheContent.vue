@@ -57,5 +57,9 @@ const advantages = ref([
   button {
     margin-top: 2rem;
   }
+  p {
+    width: 22rem;
+    text-align: center;
+  }
 }
 </style>

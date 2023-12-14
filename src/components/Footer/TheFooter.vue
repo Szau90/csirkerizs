@@ -43,7 +43,7 @@ import InstagramIcon from "../../assets/icons/InstagramIcon.vue";
     </div>
     <div class="hidden sm:block h-px bg-lightBorder w-full mt-10" />
     <div
-      class="text-textColor w-full text-[14px] sm:text-[15px] flex flex-row gap-10 sm:gap-32 md:gap-16 lg:gap-44 justify-around md:justify-center mt-8"
+      class="text-textColor w-full text-[14px] sm:text-[15px] flex flex-row gap-1 sm:gap-32 md:gap-16 lg:gap-44 justify-around md:justify-center mt-8"
     >
       <div class="flex flex-col gap-7">
         <p>Kapcsolat</p>

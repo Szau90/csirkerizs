@@ -27,7 +27,7 @@ const handleClick= () => {
         Gasztronómia és csúcstechnológia…
       </h1>
       <div class="flex w-36 h-[0.312rem] bg-primaryColor rounded-full" />
-      <p
+      <div
         class="flex flex-col gap-1 text-content-md md:text-[13px] md:text-start lg:text-content text-textColor w-20rem md:w-[22rem] lg:w-full xl:w-[37rem]"
       >
        <p>
@@ -44,7 +44,7 @@ const handleClick= () => {
         “A filozófiám alapja, hogy “cogito ergo sum” - gondolkodni és létezni viszont csak akkor tudok,
          ha jóllakott vagyok.” (Bud Spencer)
        </p>
-      </p>
+      </div>
       <PrimaryBtn @click="handleClick" title="technológia" class="w-56" />
     </div>
   </section>
