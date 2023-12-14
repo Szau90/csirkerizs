@@ -4,7 +4,8 @@ import AddedToWishlistIcon from "../../../assets/icons/AddedToWishlistIcon.vue";
 import PrimaryBtn from "../../UI/PrimaryBtn.vue";
 import { useMealsStore } from "../../../stores/meals";
 import { computed } from "vue";
-import { useRouter } from "vue-router"; 
+import { useRouter } from "vue-router";
+import { filename } from 'pathe/utils' 
 
 
 const router = useRouter()
@@ -22,10 +23,13 @@ const props =defineProps({
   },
 });
 
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 
 
-
-const img = props.meal.image
 </script>
 
 <template>
@@ -34,8 +38,8 @@ const img = props.meal.image
       class="flex flex-col items-center justify-end w-[18.85rem] sm:w-[24.812rem] h-[27.812rem] p-4 bg-inherit rounded-[30px] shadow-xl mt-40"
     >
       <div class="-mb-1/2 flex flex-row relative">
-        <img
-          :src="img" 
+        <v-img
+          :src="images[`${props.meal.image}`]"
           alt="a plate of delicious food"
           width="287"
           height="286"

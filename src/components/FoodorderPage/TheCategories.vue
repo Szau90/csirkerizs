@@ -19,7 +19,8 @@ defineProps({
     <div
       @click="$emit('toggle')"
       :value="category"
-      class="flex items-center justify-center bg-checkboxBg bg-no-repeat bg-cover w-[62px] h-[62px]"
+      class="flex items-center justify-center  w-[62px] h-[62px]"
+      id="checkbox"
     >
       <CheckIcon v-if="isSelected" class="mt-1 ml-1" />
     </div>
@@ -30,3 +31,11 @@ defineProps({
     </p>
   </div>
 </template>
+
+<style scoped>
+#checkbox {
+  background-image: url('../../assets/shapes/CheckboxBg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

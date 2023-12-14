@@ -42,7 +42,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Reggelik (szénhidrát mentes)",
@@ -62,7 +62,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Tálcás menük",
@@ -82,7 +82,7 @@ export const useMealsStore = defineStore("meals", () => {
     {
       id: Math.floor(Math.random() * 100).toString(),
       title: "Az étel hangzatos neve",
-      image: "csirke_rizs_home-image.png",
+      image: "csirke_rizs_home-image",
       description:
         "Csirkemell, teljes kiőrlésű száraztészta, cukkini, kaliforniai paprika, kókuszolaj, só, fokhagyma, bors, bazsalikom, rozmaring ",
       category: "Csirkék, marhák, halak",
@@ -96,7 +96,7 @@ export const useMealsStore = defineStore("meals", () => {
       price: 2390,
       isOnWishlist: true,
       isHighlightedProduct: false,
-      isDailyOffer: false,
+      isDailyOffer: true,
       isUpdating:false
     },
     {
@@ -616,7 +616,7 @@ export const useMealsStore = defineStore("meals", () => {
       price: 2390,
       isOnWishlist: false,
       isHighlightedProduct: false,
-      isDailyOffer: true,
+      isDailyOffer: false,
       isUpdating: false
     },
     {
