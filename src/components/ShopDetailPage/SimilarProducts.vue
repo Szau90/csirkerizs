@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { VDataIterator } from "vuetify/lib/labs/components.mjs";
 import PrimaryBtn from "../UI/PrimaryBtn.vue";
 import { useCartStore } from "@/stores/cart";
+import { filename } from 'pathe/utils' 
 
 const cartStore = useCartStore();
 
@@ -13,6 +14,12 @@ defineProps(["similarProducts"]);
 const itemsPerPage = ref(3);
 
 const currentPage = ref(1);
+
+const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
 
 </script>
 
@@ -33,7 +40,7 @@ const currentPage = ref(1);
             class="pt-2 md:mt-14 lg:mt-20"
           >
             <v-img
-              :src="'../' + item.raw.src"
+              :src="images[item.raw.src]"
               cover
               width="218"
               class="mx-auto"
