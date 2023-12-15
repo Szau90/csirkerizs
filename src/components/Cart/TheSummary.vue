@@ -6,6 +6,9 @@ import { useOrdersStore } from "../../stores/orders";
 
 const store = useOrdersStore();
 
+const cartStore = useCartStore();
+
+const { cartItems } = storeToRefs(cartStore);
 const { shippingData, orderSent } = storeToRefs(store);
 
 const props = defineProps({
@@ -16,23 +19,31 @@ const props = defineProps({
 
 const emit = defineEmits(["next", "prev"]);
 
-function buttonClick() {
+const  buttonClick = () => {
   emit("next");
 }
 
 const handleOrder = () => {
   orderSent.value = !orderSent.value
   console.log(shippingData.value)
+  cartItems.value.forEach((item) => {
+    const cartItemData = {
+      id: item.id,
+      quantity: item.quantity,
+      totalPrice: item.calculatedPrice.toFixed(0),
+      orders:item.orders?.filter((order) => order.date.quantity !== 0)
+    }
+    console.log(cartItemData)
+    
+  })
+   cartItems.value = []
+ 
 }
 
 const prev = () => {
   emit("prev");
 };
-const cartStore = useCartStore();
 
-const cart = storeToRefs(cartStore);
-
-const cartItems = cart.cartItems;
 
 const totalPrice = computed(() => {
   return (

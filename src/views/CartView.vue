@@ -14,6 +14,7 @@ import ArrowRight from "../assets/icons/tabIcons/ArrowIcon.vue";
 import ShippingIcon from "../assets/icons/tabIcons/ShippingIcon.vue";
 import PayIcon from "../assets/icons/tabIcons/PayIcon.vue";
 import CheckmarkIcon from "../assets/icons/tabIcons/CheckmarkIcon.vue";
+import EmptyCart from "../components/Cart/EmptyCart.vue";
 
 const store = useOrdersStore();
 
@@ -37,7 +38,9 @@ const step = ref(1);
 </script>
 
 <template>
-  <h1 v-if="cartItems.length < 1">a kosarad üres</h1>
+  <div v-if="cartItems.length < 1 && !orderSent" class="container md:max-xl:h-[300px] mx-auto px-2 flex flex-col md:flex-row">
+  <EmptyCart/>
+  </div>
 
   <div v-else class="md:mt-20 lg:mt-32 w-full flex flex-col items-center">
     <div class="hidden md:block">

@@ -8,16 +8,11 @@ import { storeToRefs } from "pinia";
 import { filename } from 'pathe/utils' 
 
 
-const store = useMealsStore();
-
-const { getDatesForWeek } = store;
-
-const dates = ref(getDatesForWeek());
 const cartStore = useCartStore();
 
-const { cartItems, isUpdating } = storeToRefs(cartStore);
+const { cartItems } = storeToRefs(cartStore);
 
-const { addMealToCart, updateCartItem, closeUpdateModal } = cartStore;
+const { updateCartItem, closeUpdateModal } = cartStore;
 
 const glob = import.meta.glob('@/assets/images/*.png', { eager: true })
 

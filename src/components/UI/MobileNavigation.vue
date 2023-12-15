@@ -37,6 +37,7 @@ const handleSubmit = () => {
       variant="solo"
       rounded="pill"
       v-model="search"
+      placeholder="keresés"
       hide-details
       flat
       validate-on="submit"

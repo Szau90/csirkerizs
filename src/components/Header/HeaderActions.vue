@@ -18,14 +18,22 @@ const cartStore = useCartStore();
 
 const { cartItems } = storeToRefs(cartStore);
 
+const inputRules = ref([
+    (value) => {
+      if (value?.trim() !== "") return true;
 
+      return "a mező nem maradhat üresen";
+    },
+  ]);
 
 const totalQuantity = computed(() => {
   return cartItems.value.reduce((total, item) => total + item.quantity, 0);
 });
 
 const handleSubmit = () => {
-  router.push("/searchresult");
+  if(search.value != '') {
+    router.push("/searchresult");
+  }
 };
 </script>
 
@@ -42,12 +50,12 @@ const handleSubmit = () => {
       <v-form ref="form" @submit.prevent="handleSubmit">
         <v-text-field
           v-model="search"
+          :rules="inputRules"
           placeholder="keresés"
           variant="solo"
           bg-color="#FF5F5C"
           hide-details
           flat
-          validate-on="submit"
           clearable
           class="md:mb-5 lg:mb-2 w-[6rem] h-[2rem] lg:w-[7.375rem] 2xl:w-[10rem] lg:h-[3rem] text-[15px] xl:text-[20px] text-white placeholder:text-white outline-none"
         />
